@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo.ico') }}" type="image/x-icon">
     <title>Document</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -14,8 +15,8 @@
         <nav style="height: 77px"
             class="navbar  navbar-expand-lg navbar-light bg-light border border-secondary border-bottom-1   bg-white rounded ">
             <div class="container ">
-                <a class="navbar-brand p-0" href=""><img style="object-fit: contain" height="55" width="130"
-                        src="{{ asset('assets/images/logo.svg') }}" alt=""></a>
+                <a class="navbar-brand p-0" href=""><img style="object-fit: contain" height="55"
+                        width="130" src="{{ asset('assets/images/logo.svg') }}" alt=""></a>
 
                 <button class="btn btn-primary ms-auto rounded-circle d-lg-none d-block" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
