@@ -1,0 +1,25 @@
+.affordability_calculator label{
+    color: #4B4F72 !important;
+}
+.affordability_calculator .text-muted{
+    color: #999999 !important;
+}
+.input-group {
+  .form-control {
+    border-radius: 0.375rem 0 0 0.375rem; 
+    box-shadow: none; 
+  }
+
+  .input-group-text {
+    border-left: none; 
+    border-radius: 0 0.375rem 0.375rem 0; 
+    background-color: transparent;
+    padding-left: 10px; 
+    padding-right: 10px; 
+    color: #e2e2e2;
+  }
+
+  input {
+    border-right: none; 
+  }
+}
