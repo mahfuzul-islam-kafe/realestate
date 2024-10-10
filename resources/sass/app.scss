@@ -33,7 +33,9 @@
         transform: translateY(-20px); // Move it upwards if desired
     }
 }
-
+a{
+    text-decoration: none !important;
+}
 .nav-link {
     font-weight: 400;
     color: $dark;
