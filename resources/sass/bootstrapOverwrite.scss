@@ -1,0 +1,99 @@
+.form-control {
+    padding-top: 10px !important;
+    padding-top: 10px !important;
+    color: #2B2B2B;
+    background-color: #ffffff !important;
+
+    &:disabled {
+        background-color: #E2E8F0;
+    }
+}
+
+.form-select {
+    --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3e%3cpath d='M0 0.4h12L6 6.4 0 0.4z' fill='%23141414'/%3e%3c/svg%3e");
+    font-size: 1rem;
+
+    option {
+        background-color: #ffffff;
+    }
+}
+
+.form-check-input {
+    &[type="checkbox"] {
+        border-radius: 0px !important;
+    }
+
+    &[type="checkbox"]:checked {
+        background-color: $dark !important;
+        border-color: $dark !important;
+    }
+
+    &[type="radio"]:checked {
+        background-color: $white !important;
+        border-color: $dark !important;
+        --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='000000'/%3e%3c/svg%3e");
+
+    }
+}
+
+.form-check-label {
+    color: $dark;
+    opacity: .8;
+    font-weight: 400;
+}
+
+.form-switch {
+    .form-check-input {
+        border-radius: 16px !important;
+        background-image: var(--bs-form-switch-bg);
+
+        &[type="checkbox"]:checked {
+            background-color: $dark !important;
+            border-color: $dark !important;
+        }
+
+        &[type="radio"]:checked {
+            background-color: $white !important;
+            border-color: $dark !important;
+            --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='000000'/%3e%3c/svg%3e");
+
+        }
+    }
+}
+
+// .nav-tabs .nav-link {
+//   margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
+//   border: var(--bs-nav-tabs-border-width) solid transparent;
+//   border-top-left-radius: var(--bs-nav-tabs-border-radius);
+//   border-top-right-radius: var(--bs-nav-tabs-border-radius);
+// }
+
+#pills-tab {
+    border: 1.06px solid #E5E5E9;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    gap: 30px;
+
+    .nav-link {
+        padding: 20px;
+        color: #191C1F4D !important;
+        width: 180px;
+        text-align: center !important;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 20.25px;
+        letter-spacing: 0.25306522846221924px;
+        text-align: left;
+
+    }
+
+    .active {
+        color: $black !important;
+        font-size: 18px !important;
+        border-bottom: 4px solid #2B2B2B;
+        border-radius: 1px;
+
+    }
+}

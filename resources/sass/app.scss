@@ -1,8 +1,117 @@
-// Fonts
-@import url('https://fonts.bunny.net/css?family=Nunito');
+@import '__variables';
 
-// Variables
-@import 'variables';
+@import "/node_modules/toastr/build/toastr.min.css";
+// Import Bootstrap SCSS
+@import '/node_modules/bootstrap/scss/bootstrap';
+// Import Font Awesome Core
+@import '/node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import "/node_modules/swiper/swiper-bundle.min.css";
 
-// Bootstrap
-@import 'bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import 'bootstrapOverwrite';
+
+.form-group-inner {
+    position: relative;
+
+    label {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        color: $dark; // Adjust this variable as needed
+        opacity: .8;
+        transition: all 0.2s ease; // Smooth transition effect
+    }
+
+    input {
+        // Add your input styles here
+    }
+
+    // Hide the label when the input has a value
+    input:not(:placeholder-shown)+label {
+        opacity: 0; // Hides the label
+        transform: translateY(-20px); // Move it upwards if desired
+    }
+}
+
+.nav-link {
+    font-weight: 400;
+    color: $dark;
+
+    &:hover {
+        color: $primary !important;
+    }
+}
+
+.nav-item.active {
+    a {
+        color: $primary !important;
+    }
+
+
+}
+
+.breadcrumb {
+    display: flex;
+    gap: 10px;
+
+    .active {
+        color: $primary;
+    }
+
+    li {
+        &::after {
+            padding-left: 10px;
+            font-family: "FontAwesome";
+            content: "\f054";
+        }
+
+        &:last-child {
+            &::after {
+                content: "";
+            }
+        }
+    }
+}
+
+.hr {
+    height: 2px;
+    width: 70px;
+    background: #191C1F
+}
+
+.ls-none {
+    list-style: none;
+}
+
+
+@for $i from 1 through 100 {
+    .margin-#{$i} {
+        margin: #{$i}px  !important;
+    }
+    .margin-top-#{$i} {
+        margin-top: #{$i}px  !important;
+    }
+    .margin-right-#{$i} {
+        margin-right: #{$i}px  !important;
+    }
+    .margin-left-#{$i} {
+        margin-left: #{$i}px  !important;
+    }
+    .margin-bottom-#{$i} {
+        margin-bottom: #{$i}px  !important;
+    }
+    .fs-#{$i} {
+        font-size: #{$i}px !important;
+    }
+  }
+
+
+
+
+
+.img-rect {
+    width: 100%;
+    aspect-ratio: 1.24/1;
+    object-fit: cover;
+}

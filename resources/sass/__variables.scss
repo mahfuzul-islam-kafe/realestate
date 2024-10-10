@@ -1,0 +1,68 @@
+$font-family-sans-serif: "Inter",
+system-ui,
+-apple-system,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+"Noto Sans",
+"Liberation Sans",
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji" !default;
+
+
+$font-size:15px;
+
+$line-height:17px;
+$font-weight:400;
+
+$body-color:#191C1F;
+
+$primary : #0666EB;
+$dark:#191C1F;
+$secondary:#F4F4F4;
+$info:#1D234E;
+$light: #ffffff;
+$success : #28C937;
+$danger : #D62F2F;
+$warning:#ffcc00;
+
+
+
+$theme-colors: ("primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark);
+
+
+$border-radius: .74rem !default;
+$border-color: #E2E8F0;
+$border-width:0.15rem !default;
+
+$font-size-root: 16px !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * .875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+
+$h1-font-size: $font-size-base * 2.3 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.7 !default;
+$h4-font-size: $font-size-base * 1.4 !default;
+$h5-font-size: $font-size-base !default;
+$h6-font-size: $font-size-base !default;
+
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 90%
+) !default;
