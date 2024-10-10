@@ -67,24 +67,49 @@
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <a class="navbar-brand p-0" href=""><img style="object-fit: contain" height="55" width="130"
+                    src="{{ asset('assets/images/logo.svg') }}" alt=""></a>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-            <div>
-                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
-                lists, etc.
-            </div>
-            <div class="dropdown mt-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-bs-toggle="dropdown">
-                    Dropdown button
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+        <div class="offcanvas-body position-relative">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-25">
+                <li class="nav-item active side-by-side">
+                    <a class="nav-link" href="">Buy</a>
+                    <i class="fa fa-chevron-right"></i>
+
+                </li>
+
+                <li class="nav-item side-by-side">
+                    <a class="nav-link" href="">Rent</a>
+                    <i class="fa fa-chevron-right"></i>
+                </li>
+
+                <li class="nav-item side-by-side">
+                    <a class="nav-link" href="">My Kenma</a>
+                    <i class="fa fa-chevron-right"></i>
+
+                </li>
+
+                <li class="nav-item side-by-side">
+                    <a class="nav-link" href="">Promote with us</a>
+                    <i class="fa fa-chevron-right"></i>
+
+                </li>
+
+
+            </ul>
+
+            <div class="nav-bottom">
+
+
+                <a class="nav-link" href="">Login</a>
+
+
+
+                <a class="btn btn-primary rounded-pill" style="width: 101.2px; height: 42px;" href="">Sign
+                    up</a>
+
+
             </div>
         </div>
     </div>
