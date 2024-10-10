@@ -58,11 +58,16 @@
                   <div class="tab-content mt-5" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-desc" role="tabpanel" aria-labelledby="pills-desc-tab">
                         
-                        <p class="fw-bold fs-40 mb-50">22 700 000 ₪ </p>
-                        <p class="fs-18  margin-bottom-30">Eliezer Yaffe Street, Ra’anana District, Israel</p>
+                        <p class="fw-bold fs-40 margin-bottom-35">22 700 000 ₪ </p>
+                        <p class="fs-18  margin-bottom-30 ">Eliezer Yaffe Street, Ra’anana District, Israel</p>
     
                     </div>
-                    
+
+                    <ul class="ls-none p-0 m-0 d-flex">
+                        <li><img src="{{asset('assets/images/attributes/home.svg')}}" alt=""> 530 m<sup>2</sup> </li>
+                        <li><img src="{{asset('assets/images/attributes/bed.svg')}}" alt=""> 7 Rooms </li>
+                        <li><img src="{{asset('assets/images/attributes/bath.svg')}}" alt=""> 4 Baths </li>
+                    </ul>
                     <div class="tab-pane fade" id="pills-finance" role="tabpanel" aria-labelledby="pills-finance-tab">asd.</div>
                   
                 </div>
