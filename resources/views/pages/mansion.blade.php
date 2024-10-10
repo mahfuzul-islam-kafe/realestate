@@ -48,10 +48,12 @@
         </div>
     </section>
 
-    <section class="container mt-3">
+    <section class="container margin-top-40">
         <div class="row">
             <div class="col-lg-8">
-                <ul class="nav  mb-3" id="pills-tab" role="tablist">
+                <div style="width: 100%;overflow:scroll" class="hide-scroll">
+                    
+                <ul class="nav  mb-3 d-flex flex-row  hide-scroll" style="flex-wrap: nowrap;overflow:scroll;width:100%" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pills-desc-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-desc" type="button" role="tab" aria-controls="pills-home"
@@ -62,30 +64,36 @@
                             data-bs-target="#pills-finance" type="button" role="tab" aria-controls="pills-finance"
                             aria-selected="false">Finance</button>
                     </li>
+                
 
                 </ul>
+                
+            </div>
                 <div class="tab-content mt-5" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-desc" role="tabpanel"
                         aria-labelledby="pills-desc-tab">
 
                         <p class="fw-bold fs-40 margin-bottom-35">22 700 000 ₪ </p>
                         <p class="fs-18  margin-bottom-30 ">Eliezer Yaffe Street, Ra’anana District, Israel</p>
-                        <div class=" p-0 m-0 d-flex flex-gap-10 margin-bottom-35">
+                        <div class=" p-0 m-0 d-flex flex-wrap flex-gap-10 margin-bottom-35">
                             <div
                                 class="border border-1 border-dark padding-y-14 padding-x-21 border-radius-20 d-flex flex-gap-15">
                                 <img height="19" src="{{ asset('assets/images/attributes/home.svg') }}"
-                                    alt=""> <span>530 m<sup>2</sup></span> </div>
+                                    alt=""> <span>530 m<sup>2</sup></span>
+                            </div>
                             <div
                                 class="border border-1 border-dark padding-y-14 padding-x-21 border-radius-20 d-flex flex-gap-15">
                                 <img height="19" src="{{ asset('assets/images/attributes/bed.svg') }}"
-                                    alt=""> 7 Rooms </div>
+                                    alt=""> 7 Rooms
+                            </div>
                             <div
                                 class="border border-1 border-dark padding-y-14 padding-x-21 border-radius-20 d-flex flex-gap-15 ">
                                 <img height="19" src="{{ asset('assets/images/attributes/bath.svg') }}"
-                                    alt=""> 4 Baths </div>
+                                    alt=""> 4 Baths
+                            </div>
                         </div>
-                        <div style="height: 1px;width:100%;background-color:#DDDDDD" ></div>
-                        <h3 class="fs-25 font-weight-500 margin-y-30">
+                        <div style="height: 1px;width:100%;background-color:#DDDDDD"></div>
+                        <h3 class="fs-25 font-weight-500 margin-y-30 text-center text-md-start">
                             Description
                         </h3>
                         <p class="margin-bottom-30">
@@ -110,11 +118,12 @@
                             Possibility LCD; 140 € in average the night on Airbnb.
                         </p>
 
-                        <div style="height: 1px;width:100%;background-color:#DDDDDD"  ></div>
-                        <h3 class="fs-25 font-weight-500 margin-y-30">
+                        <div style="height: 1px;width:100%;background-color:#DDDDDD"></div>
+                        <h3
+                            class="fs-25 font-weight-500 margin-y-30 text-center text-md-start text-center text-md-start">
                             About this property
                         </h3>
-                        <div class="row row-cols-md-1 row-cols-lg-3 margin-bottom-30" >
+                        <div class="row row-cols-md-2 row-cols-1 row-cols-lg-3 g-3 margin-bottom-30 g-3">
                             <ul class="ls-none d-flex flex-column flex-gap-30">
                                 <li class="d-flex flex-gap-15">
                                     <span>Type of property</span> <span class="fw-bold">Cottage</span>
@@ -162,33 +171,101 @@
                                 <li class="d-flex flex-gap-15">
                                     <span>Price</span> <span class="fw-bold">22 700 000 ₪ </span>
                                 </li>
-                              
+
                             </ul>
                         </div>
-                        <div style="height: 1px;width:100%;background-color:#DDDDDD"  ></div>
-                        <h3 class="fs-25 font-weight-500 margin-y-30">
-                          What this house offers
+                        <div style="height: 1px;width:100%;background-color:#DDDDDD"></div>
+                        <h3 class="fs-25 font-weight-500 margin-y-30 text-center text-md-start">
+                            What this house offers
                         </h3>
-                        <div class="row row row-cols-md-1 row-cols-lg-3 margin-bottom-30">
-                            <div>
-                                <div>
-                                  <img src="{{asset('assets/images/attributes/furniture.svg')}}" alt="">  <span>Furniture included</span> 
+                        <div class="row row-cols-md-2 row-cols-1 row-cols-lg-3 g-3 margin-bottom-30">
+                            <div class="d-flex flex-gap-20 flex-column align-items-center align-items-md-start">
+                                <div class="attribute-secondary" style="">
+                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
+                                    <span>Furniture included</span>
+                                </div>
+                                <div class="attribute-secondary" style="">
+                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
+                                    <span>Furniture included</span>
+                                </div>
+                                <div class="attribute-secondary" style="">
+                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
+                                    <span>Furniture included</span>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-gap-20 flex-column align-items-center align-items-md-start">
+                                <div class="attribute-secondary" style="">
+                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
+                                    <span>Furniture included</span>
+                                </div>
+                                <div class="attribute-secondary" style="">
+                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
+                                    <span>Furniture included</span>
+                                </div>
+                                <div class="attribute-secondary" style="">
+                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
+                                    <span>Furniture included</span>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-gap-20 flex-column align-items-center align-items-md-start">
+                                <div class="attribute-secondary" style="">
+                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
+                                    <span>Furniture included</span>
+                                </div>
+                                <div class="attribute-secondary" style="">
+                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
+                                    <span>Furniture included</span>
+                                </div>
+                                <div class="attribute-secondary" style="">
+                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
+                                    <span>Furniture included</span>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
 
-                    <div class="tab-pane fade" id="pills-finance" role="tabpanel" aria-labelledby="pills-finance-tab">
+                    <div class="tab-pane fade" id="pills-finance" role="tabpanel"
+                        aria-labelledby="pills-finance-tab">
                         asd.</div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+
                 </div>
 
             </div>
-            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <div class="card border-radius-20 border-1 shadow-sm ms-auto mx-md-auto margin-bottom-15" style="width: 90%">
+                    <div class="card-body align-items-center d-flex flex-column gap-3 ">
+                        <a href="" class="btn btn-primary border-radius-99" style="width: 90%;height:66px;">
+                            <span class="fs-19">Request a tour</span>
+                            <br>
+                            <span class="fs-12">As early as today 11:00 am</span>
+                        </a>
+                        <a href=""  class="border border-dark border-radius-99 p-0 text-dark d-flex justify-content-center align-items-center gap-2" style="width: 90%;height:57px;text-decoration: none">
+                            <img src="{{ asset('assets/images/attributes/phone.svg') }}" alt="">
+                            <span>Show phone number</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="card border-radius-20 border-1 shadow-sm ms-auto mx-md-auto margin-bottom-15" style="width: 90%">
+                    <div class="card-body text-center d-flex flex-column gap-3">
+                    </div>
+                </div>
+
+            </div>
+            <div style="height: 1px;width:100%;background-color:#DDDDDD"></div>
+            <h3 class="fs-25 font-weight-500 margin-y-30 text-center text-md-start">
+                Where is this property located
+            </h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d230.0278695160656!2d90.349999610436!3d22.711661704301257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1728555158398!5m2!1sen!2sbd"
+                width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="margin-top-30">
+                Any real estate investment involves risk.
+                <br>
+                Our calculations and forecasts are not indicative of future performance.
+            </p>
         </div>
     </section>
 </x-app>

@@ -68,7 +68,20 @@
 //   border-top-right-radius: var(--bs-nav-tabs-border-radius);
 // }
 
+.hide-scroll {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+
+    /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+}
+
 #pills-tab {
+
     border: 1.06px solid #E5E5E9;
 
     border-top-left-radius: 15px;

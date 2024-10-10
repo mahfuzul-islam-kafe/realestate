@@ -201,3 +201,21 @@ $weights:(100,
     margin-bottom: 30px;
   }
   
+
+  .attribute-secondary{
+    width: 212px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+   
+    color: rgba(25,81,30,80);
+    border: 3px solid $border-color;
+    border-radius: 20px;
+    justify-content: center;
+    font-size: 14px;
+
+    img{
+        height: 13px;
+    }
+  }
