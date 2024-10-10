@@ -34,7 +34,7 @@
             1. RÉFÉRENCEMENT ET DERÉFÉRENCEMENT DES ANNONCEURS :
         </h2>
 
-        <h3 class="h6">
+        <h3 class="fs-22 fw-500">
             (i) Référencement des Annonceurs :
         </h3>
         <p>
@@ -63,8 +63,33 @@
             </li>
             <li>les constructeurs.</li>
         </ul>
-        <h3 class="h6">
+        <h3 class="fs-22 fw-500">
             (i) Référencement des Annonceurs :
         </h3>
+        <p class="margin-top-18">
+            Pour être référencée sur le Site et donc diffusée, une Annonce doit impérativement respecter les règles
+            décrites ci-dessous.
+        </p>
+        <h3 class="fs-22 fw-500 margin-top-43 margin-left-40 ">
+            <u>Contenu de l’Annonce</u>
+        </h3>
+        <p class="margin-top-18">Le bien doit être diffusé dans sa catégorie et être conforme aux produits de diffusion
+            souscrits par l’Annonceur. Sur le Site, l’Annonce ne peut porter que sur :</p>
+        <div class="margin-left-26">
+            <p style="margin-bottom: -.2rem;">- la vente et la location de biens anciens, ayant déjà fait l’objet d’un
+                transfert de propriété;</p>
+            <p>- la vente de lots associés à des programmes immobiliers neufs, n’ayant pas encore fait l’objet d’un
+                transfert de propriété.</p>
+        </div>
+        <a class="fs-22 fw-500 text-primary ">
+            https://support.myselogerpro.com/hc/fr/articles/360006057939-Charte-SeLoger
+        </a>
+        <h3 class="fs-22 fw-500 margin-top-43 margin-left-40 ">
+            <u>Contenu interdit au sein d’une Annonce</u>
+        </h3>
+        <p class="margin-top-18">
+            Toute Annonce contenant des éléments qui sembleraient contraires aux dispositions légales ou réglementaires, aux bonnes mœurs, aux règles de diffusion de notre Site ou susceptible de heurter les utilisateurs sera immédiatement refusée par la société DCF, donc non référencée sur le Site.
+        </p>
+        
     </section>
 </x-app>
