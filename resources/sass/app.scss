@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @import 'bootstrapOverwrite';
+@import 'mahfuz.scss';
 
 .form-group-inner {
     position: relative;
@@ -33,9 +34,11 @@
         transform: translateY(-20px); // Move it upwards if desired
     }
 }
-a{
+
+a {
     text-decoration: none !important;
 }
+
 .nav-link {
     font-weight: 400;
     color: $dark;
@@ -156,7 +159,7 @@ a{
     }
 
     .border-radius-#{$i} {
-        
+
         border-radius:#{$i}px;
     }
 }
@@ -187,37 +190,39 @@ $weights:(100,
     aspect-ratio: 1.24/1;
     object-fit: cover;
 }
-.side-by-side{
+
+.side-by-side {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .nav-bottom {
     display: flex;
-    align-items: center; 
-    justify-content: around; 
-    position: absolute; 
-    bottom: 0; 
-    left: 30%; 
+    align-items: center;
+    justify-content: around;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
     gap: 5rem;
     margin-bottom: 30px;
-  }
-  
+}
 
-  .attribute-secondary{
+
+.attribute-secondary {
     width: 212px;
     height: 46px;
     display: flex;
     align-items: center;
     gap: 15px;
-   
-    color: rgba(25,81,30,80);
+
+    color: rgba(25, 81, 30, 80);
     border: 3px solid $border-color;
     border-radius: 20px;
     justify-content: center;
     font-size: 14px;
 
-    img{
+    img {
         height: 13px;
     }
-  }
+}
