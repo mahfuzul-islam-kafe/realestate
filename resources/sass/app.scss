@@ -106,8 +106,56 @@
         margin-bottom: #{$i}px !important;
     }
 
+    .padding-#{$i} {
+        padding: #{$i}px !important;
+    }
+
+    .padding-top-#{$i} {
+        padding-top: #{$i}px !important;
+    }
+
+    .padding-right-#{$i} {
+        padding-right: #{$i}px !important;
+    }
+
+    .padding-left-#{$i} {
+        padding-left: #{$i}px !important;
+    }
+
+    .padding-bottom-#{$i} {
+        padding-bottom: #{$i}px !important;
+    }
+
+    .margin-x-#{$i} {
+        padding: inherit #{$i}px;
+    }
+
+    .margin-y-#{$i} {
+        padding-top: #{$i}px;
+        padding-bottom: #{$i}px;
+    }
+
+    .padding-x-#{$i} {
+        padding-right: #{$i}px;
+        padding-left: #{$i}px;
+    }
+
+    .padding-y-#{$i} {
+        padding-top: #{$i}px;
+        padding-bottom: #{$i}px;
+    }
+
+    .flex-gap-#{$i} {
+        gap: #{$i}px;
+    }
+
     .fs-#{$i} {
         font-size: #{$i}px !important;
+    }
+
+    .border-radius-#{$i} {
+        
+        border-radius:#{$i}px;
     }
 }
 
