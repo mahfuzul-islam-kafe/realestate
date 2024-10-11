@@ -81,7 +81,7 @@
             <p>- la vente de lots associés à des programmes immobiliers neufs, n’ayant pas encore fait l’objet d’un
                 transfert de propriété.</p>
         </div>
-        <a class="fs-22 fw-500 text-primary ">
+        <a href="#" class="fs-22 fw-500 text-primary ">
             https://support.myselogerpro.com/hc/fr/articles/360006057939-Charte-SeLoger
         </a>
         <h3 class="fs-22 fw-500 margin-top-34 margin-left-40 ">
