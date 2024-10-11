@@ -5,10 +5,33 @@ import "toastr/build/toastr.min.js"; // Import Bootstrap JS bundle
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import Bootstrap JS bundle
 
 import Swiper from "swiper/bundle";
-
+import Alpine from 'alpinejs'
 import toastr from "toastr/build/toastr.min.js";
 
-const formGroups = document.querySelectorAll(".form-group-inner");
+window.Alpine = Alpine
+Alpine.start()
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Select all elements with the class 'property-primary_slider'
+        document.querySelectorAll('.property-primary_slider').forEach(function (sliderEl, index) {
+            // Initialize a Swiper for each element
+            new Swiper(sliderEl, {
+                direction: 'horizontal',   // Slider direction
+                autoplay: 0,   // Slider direction
+                effect: 'cube',
+                loop: true,              // Enable looping
+                pagination: {
+                    el: sliderEl.querySelector('.swiper-pagination'),  // Target each card's pagination
+                    clickable: true,       // Make pagination dots clickable
+                },
+            });
+        });
+    });
+
+
+
+const formGroups = document.querySelectorAll('.form-group-inner');
 
 formGroups.forEach((group) => {
     const input = group.querySelector("input");
