@@ -12,6 +12,10 @@
 @import 'bootstrapOverwrite';
 @import 'mahfuz.scss';
 @import 'affordability_calculator.scss';
+p{
+    margin: 0 !important;
+    padding: 0 !important;
+}
 
 .form-group-inner {
     position: relative;
