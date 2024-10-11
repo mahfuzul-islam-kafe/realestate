@@ -36,12 +36,15 @@
                 <div class="row g-3">
                     <div class="col-md-6 col-6"><img class="rounded  img-rect"
                             src="https://picsum.photos/seed/picsum/1080/1080" alt=""></div>
-                    <div class="col-md-6 col-6"><img class="rounded  img-rect"
+                    <div class="col-md-6 col-6"><img class="rounded  img-rect "
                             src="https://picsum.photos/seed/picsum/1080/1080" alt=""></div>
                     <div class="col-md-6 col-6"><img class="rounded  img-rect"
                             src="https://picsum.photos/seed/picsum/1080/1080" alt=""></div>
-                    <div class="col-md-6 col-6"><img class="rounded  img-rect"
-                            src="https://picsum.photos/seed/picsum/1080/1080" alt=""></div>
+                    <div class="col-md-6 col-6 position-relative"><img class="rounded  img-rect"
+                            src="https://picsum.photos/seed/picsum/1080/1080" alt="">
+                        <a class="bg-light d-none d-md-block padding-y-8 padding-x-18 fs-15 text-decoration-underline text-dark border-radius-20 position-absolute" style="bottom:9px;right:18px;"
+                            href="">See all 30 pictures</a>
+                    </div>
                 </div>
             </div>
 
@@ -77,18 +80,17 @@
                         <p class="fw-bold fs-40 margin-bottom-35">22 700 000 ₪ </p>
                         <p class="fs-18  margin-bottom-30 ">Eliezer Yaffe Street, Ra’anana District, Israel</p>
                         <div class=" p-0 m-0 d-flex flex-wrap flex-gap-10 margin-bottom-35">
-                            <div
-                                class="border border-1 border-dark padding-y-14 padding-x-21 border-radius-20 d-flex flex-gap-15">
+                            <div class="attribute-primary">
                                 <img height="19" src="{{ asset('assets/images/attributes/home.svg') }}"
                                     alt=""> <span>530 m<sup>2</sup></span>
                             </div>
                             <div
-                                class="border border-1 border-dark padding-y-14 padding-x-21 border-radius-20 d-flex flex-gap-15">
+                                class="attribute-primary">
                                 <img height="19" src="{{ asset('assets/images/attributes/bed.svg') }}"
                                     alt=""> 7 Rooms
                             </div>
                             <div
-                                class="border border-1 border-dark padding-y-14 padding-x-21 border-radius-20 d-flex flex-gap-15 ">
+                                class="attribute-primary">
                                 <img height="19" src="{{ asset('assets/images/attributes/bath.svg') }}"
                                     alt=""> 4 Baths
                             </div>
@@ -126,50 +128,50 @@
                         </h3>
                         <div class="row row-cols-md-2 row-cols-1 row-cols-lg-3 g-3 margin-bottom-30 g-3">
                             <ul class="ls-none d-flex flex-column flex-gap-30">
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>Type of property</span> <span class="fw-bold">Cottage</span>
                                 </li>
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>Property condition</span> <span class="fw-bold">Renovated</span>
                                 </li>
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>City</span> <span class="fw-bold">Ra'anana</span>
                                 </li>
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>Address</span> <span class="fw-bold">23 Eliezer Yaffe Street</span>
                                 </li>
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>Area</span> <span class="fw-bold">South</span>
                                 </li>
                             </ul>
                             <ul class="ls-none d-flex flex-column flex-gap-30">
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>Number of floors</span> <span class="fw-bold">5</span>
                                 </li>
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>Number of rooms</span> <span class="fw-bold">5</span>
                                 </li>
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>Number of balcony</span> <span class="fw-bold">1</span>
                                 </li>
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>Ground/covered car park</span> <span class="fw-bold">2</span>
                                 </li>
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>Surface build</span> <span class="fw-bold">330 m<sup>2</sup></span>
                                 </li>
                             </ul>
                             <ul class="ls-none d-flex flex-column flex-gap-30">
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>Total surface</span> <span class="fw-bold">539 m<sup>2</sup></span>
                                 </li>
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>Entry date</span> <span class="fw-bold">01/12/23</span>
                                 </li>
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>Entry condition</span> <span class="fw-bold">Flexible</span>
                                 </li>
-                                <li class="d-flex flex-gap-15">
+                                <li class="d-flex flex-gap-15 fs-15">
                                     <span>Price</span> <span class="fw-bold">22 700 000 ₪ </span>
                                 </li>
 
@@ -235,7 +237,7 @@
 
             </div>
             <div class="col-lg-4">
-                <div class="card border-radius-20 border-1 shadow-sm ms-auto mx-md-auto margin-bottom-15"
+                <div class="card border-radius-20 border-1 shadow-sm mx-auto ms-md-auto margin-bottom-15"
                     style="width: 90%">
                     <div class="card-body align-items-center d-flex flex-column gap-3 ">
                         <a href="" class="btn btn-primary border-radius-99" style="width: 90%;height:66px;">
@@ -251,15 +253,50 @@
                         </a>
                     </div>
                 </div>
-                <div class="card border-radius-20 border-1 shadow-sm ms-auto mx-md-auto margin-bottom-15"
+                <div class="card border-radius-20 border-1 shadow-sm mx-auto ms-md-auto margin-bottom-15"
                     style="width: 90%">
-                    <div class="card-body text-center d-flex flex-column gap-3">
+                    <div class="card-body padding-x-28 padding-y-25 ">
+                        <div class="d-flex  align-items-center gap-3 margin-bottom-40">
+                            <img height="67" width="67" src="{{ asset('assets/companyLogo.png') }}"
+                                alt="">
+                            <p class="fs-20 mt-4">RE/MAX Agency</p>
+                        </div>
+
+                        <p class="border border-radius-10 padding-y-15 padding-x-11 margin-bottom-14">
+                            Good morning,
+                            <br>
+                            <br>
+                            I would like more information about this
+                            property.
+                            <br>
+                            Please contact me for this.
+                            <br>
+                            <br>
+                            Cordially
+                        </p>
+                        <div class="d-flex flex-column flex-gap-14 m-0 margin-bottom-16">
+                            <div class="form-group-inner">
+                                <input type="text" id="name" class="form-control" placeholder="" required>
+                                <label for="name">Name <span class="text-danger">*</span></label>
+                            </div>
+                            <div class="form-group-inner">
+                                <input type="text" id="email" class="form-control" placeholder="" required>
+                                <label for="email">Email <span class="text-danger">*</span></label>
+                            </div>
+                            <div class="form-group-inner">
+                                <input type="tel" id="phone" class="form-control" placeholder="" required>
+                                <label for="phone">Phone number </label>
+                            </div>
+                        </div>
+
+                        <button
+                            class="btn btn-dark border-radius-99 w-100 padding-y-13 fs-19 margin-bottom-17">Send</button>
+                        <a href="/" class="text-dark text-decoration-underline"> To the office website</a>
                     </div>
                 </div>
 
             </div>
-            <div  class="tab-pane fade show active" id="pills-desc" role="tabpanel"
-            aria-labelledby="pills-desc-tab">
+            <div class="tab-pane fade show active" id="pills-desc" role="tabpanel" aria-labelledby="pills-desc-tab">
 
                 <div style="height: 1px;width:100%;background-color:#DDDDDD"></div>
                 <h3 class="fs-25 font-weight-500 margin-y-30 text-center text-md-start">

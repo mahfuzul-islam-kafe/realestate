@@ -4,6 +4,7 @@ use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
+Route::view('/listing', 'pages.listing');
 Route::view('/confidential', 'pages.confidential');
 Route::view('mansion', 'pages.mansion');
 Route::view('affordability_calculator', 'pages.affordability_calculator');
