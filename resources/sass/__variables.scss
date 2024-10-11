@@ -1,4 +1,65 @@
-$font-family-sans-serif: "Inter",
+/* Aeonik Pro Medium */
+@font-face {
+  font-family: 'Aeonik Pro Trial';
+  src: url('/assets/fonts/aeonikprotrial/TRIAL with GR and CY/AeonikProTRIAL-Regular.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Aeonik Pro Trial';
+  src: url('/assets/fonts/aeonikprotrial/TRIAL with GR and CY/AeonikProTRIAL-Light.otf');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Aeonik Pro Trial';
+  src: url('/assets/fonts/aeonikprotrial/TRIAL with GR and CY/AeonikProTRIAL-Bold.otf');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Aeonik Pro Medium';
+  src: url('/assets/fonts/Aeonik Pro/Aeonik Pro Medium-normal-500-100.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Aeonik Pro Revolut 19 Black */
+@font-face {
+  font-family: 'Aeonik Pro Revolut';
+  src: url('/assets/fonts/Aeonik Pro/Aeonik Pro Revolut 19 Black-normal-900-100.ttf');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CarosSoft';
+  src: url('/assets/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-medium.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CarosSoft';
+  src: url('/assets/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-light.otf');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CarosSoft';
+  src: url('/assets/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CarosSoft';
+  src: url('/assets/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-it.otf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+$font-family-sans-serif: 'Aeonik Pro Trial','CarosSoft',
 system-ui,
 -apple-system,
 "Segoe UI",
