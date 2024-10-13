@@ -1,3 +1,19 @@
+
+.col-desk-mobile-440 {
+  width: 440px;
+}
+
+.col-desk-mobile-666 {
+  width: 666px;
+}
+
+@media (max-width: 768px) {
+  .col-desk-mobile-440,
+  .col-desk-mobile-666 {
+    width: 100%;
+  }
+}
+
 .affordability_calculator label{
     color: #4B4F72 !important;
 }
