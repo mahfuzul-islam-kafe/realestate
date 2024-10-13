@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -74,4 +74,59 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection --}}
+<x-auth>
+    <section class="center-section margin-top-47 ">
+        <div class="col-md-4 text-center">
+            <div class="fw-500 fs-40 text-center ">Registration</div>
+        </div>
+        
+
+            <form action="" class="form  margin-top-47  col-md-6 container">
+                <div class="form-group margin-bottom-18">
+                    <label for="">First name</label>
+    
+                    <input type="text" class="form-control rounded-pill" id="" placeholder="">
+                </div>
+                <div class="form-group margin-bottom-18">
+                    <label for="">Last name</label>
+    
+                    <input type="text" class="form-control rounded-pill" id="email" placeholder="">
+                </div>
+                <div class="form-group margin-bottom-18">
+                    <label for="email">Email</label>
+    
+                    <input type="text" class="form-control rounded-pill" id="email"
+                        placeholder="">
+                </div>
+                <div class="form-group margin-bottom-18">
+                    <label for="password">Password</label>
+    
+                    <input type="password" class="form-control rounded-pill" id="password" >
+                </div>
+                <div class="form-group margin-bottom-18">
+                    <label for="">Phone number</label>
+    
+                    <input type="text" class="form-control rounded-pill" id="email" placeholder="">
+                </div>
+    
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="border-radius: 3px !important;">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Receive Kemea communications
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="border-radius: 3px !important;">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        I accept the <a href="#">Terms of Service</a> and the <a href="#">Kemea Privacy Policy.</a>
+                    </label>
+                </div>
+    
+                <button type="submit" class="btn btn-primary w-100 mt-3 rounded-pill margin-top-25 margin-bottom-52 fs-18">Sign
+                    up</button>
+            </form>
+        
+
+    </section>
+</x-auth>

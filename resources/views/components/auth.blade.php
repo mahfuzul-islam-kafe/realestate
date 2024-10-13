@@ -54,7 +54,7 @@
 </head>
 <div class="main">
     <div class="d-flex">
-        <div class="col-6 auth-left">
+        <div class="col-md-6 d-none d-md-block auth-left">
             <div class="left-box text-light">
                 <h2 class="fw-500 fs-40 mb-4 ">By entering in your Kemea account...</h2>
                 <div class="margin-top-75">
@@ -79,10 +79,9 @@
     
             </div>
         </div>
-        <div class="col-6 auth-right">
-            <div class="nav">
-                <div class="d-flex gap-4 align-items-center margin-top-15 margin-right-100">
-    
+        <div class="col-md-6 auth-right">
+            <div class="nav container">
+                <div class="d-flex gap-4 align-items-center margin-top-15 ">
                     <div class="dropdown">
                         <button class="btn btn-light dropdown-toggle no-hover" type="button" id="dropdownMenuButton"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -93,10 +92,7 @@
                             <li><a class="dropdown-item no-hover" href="#">Option 2</a></li>
                             <li><a class="dropdown-item no-hover" href="#">Option 3</a></li>
                         </ul>
-                    </div>
-    
-    
-    
+                    </div>    
                     <div class="btn btn-outline-dark rounded-pill">Sign up</div>
                 </div>
             </div>
