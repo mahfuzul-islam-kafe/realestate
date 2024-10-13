@@ -11,11 +11,9 @@
     <style>
         .auth-left {
             background: #000000;
-            height: 100vh;
+            height: auto;
         }
-        .auth-right {
-            height: 100vh;
-        }
+    
 
         .nav {
             display: flex;
