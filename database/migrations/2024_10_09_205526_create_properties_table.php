@@ -13,28 +13,36 @@ return new class extends Migration {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('slug');
-            $table->decimal('price', 10, 2); 
             $table->text('description');
-            $table->foreignId('property_type')->nullable();
-            $table->integer('total_surface')->nullable();
-            $table->integer('surface_build')->nullable();
-            $table->integer('floor_count')->default(0);
-            $table->integer('rooms_count')->default(0);
-            $table->integer('bath_count')->default(0);
-            $table->integer('balcony_count')->default(0);
-            $table->timestamp('entry_date')->nullable(); 
-            $table->string('city')->nullable();
-            $table->foreignId('entry_condition')->nullable();
-            $table->foreignId('property_condition')->nullable();
-            $table->foreignId('ad_type')->nullable();
-            $table->text('address')->nullable();
-            $table->integer('car_park_count')->default(0);
-            $table->json('map'); 
-            $table->boolean('multimedia')->default(false);
+            $table->decimal('price', 15, 2);
+            $table->enum('currency', ['USD', 'EUR', 'NIS'])->default('NIS');
+            $table->decimal('surface_area', 8, 2);
+            $table->integer('rooms');
+            $table->integer('bedrooms');
+            $table->integer('bathrooms');
+            $table->integer('toilets');
+            $table->integer('construction_year')->nullable();
+            $table->date('free_date')->nullable();
+            $table->enum('type', ['Apartment', 'Villa', 'Duplex', 'Triplex', 'Penthouse', 'Cottage/House']);
+            $table->boolean('is_rented')->default(false);
+            $table->boolean('is_sold')->default(false);
+            $table->string('city');
+            $table->string('region')->nullable();
+            $table->string('address');
+            $table->boolean('is_exact_address')->default(true);
+            $table->boolean('parking')->default(false);
+            $table->boolean('balcony')->default(false);
+            $table->boolean('terrace')->default(false);
+            $table->boolean('elevator')->default(false);
+            $table->boolean('accessible')->default(false);
+            $table->boolean('air_conditioner')->default(false);
+            $table->boolean('pool')->default(false);
+            $table->boolean('furnished')->default(false);
+            $table->boolean('exclusivity')->default(false);
+            $table->boolean('is_exceptional')->default(false);
+            $table->foreignId('agent_id')->nullable()->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
-
     }
 
     /**
