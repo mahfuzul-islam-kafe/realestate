@@ -76,7 +76,12 @@ class UserResource extends Resource
                 TextColumn::make('name')->sortable()->searchable(),
                 TextColumn::make('email')->sortable()->searchable(),
                 TextColumn::make('role')->sortable(),
-                ToggleColumn::make('is_subscribed')->sortable(),
+                TextColumn::make('is_subscribed')
+                ->badge()
+                ->color(fn ($state): string => $state ? 'success' : 'danger')
+                ->label('Subscribed')
+                ->formatStateUsing(fn ($state): string => $state ? 'Yes' : 'No')
+                ->sortable(),            
                 TextColumn::make('created_at')->date(),
                 TextColumn::make('updated_at')->date(),
             ])
