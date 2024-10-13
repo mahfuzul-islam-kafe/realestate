@@ -58,6 +58,10 @@ class User extends Authenticatable
     {
         return $this->role === 'user';
     }
+    public function properties()
+    {
+        return $this->hasMany(Property::class);
+    }
     protected function casts(): array
     {
         return [
