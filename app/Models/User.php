@@ -21,6 +21,12 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone',
+        'role',
+        'is_subscribed',
+        'profile_image',
+        'social_login',
+        'last_login',
     ];
 
     /**
@@ -38,6 +44,20 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    public function isAgent(): bool
+    {
+        return $this->role === 'agent';
+    }
+
+    public function isUser(): bool
+    {
+        return $this->role === 'user';
+    }
     protected function casts(): array
     {
         return [
