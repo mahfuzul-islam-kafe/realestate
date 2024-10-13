@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\PropertyResource\Pages;
 use App\Filament\Resources\PropertyResource\RelationManagers;
 use App\Models\Property;
+use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
@@ -74,8 +75,9 @@ class PropertyResource extends Resource
                 Toggle::make('exclusivity')->default(false),
                 Toggle::make('is_exceptional')->default(false),
                 Select::make('agent_id')
-                    ->relationship('agent', 'name')
+                    ->options(User::where('role', 'agent')->pluck('name', 'id'))
                     ->nullable(),
+
             ]);
     }
 
@@ -87,12 +89,6 @@ class PropertyResource extends Resource
                 TextColumn::make('price')->sortable(),
                 TextColumn::make('currency')->sortable(),
                 TextColumn::make('city')->sortable(),
-                ToggleColumn::make('is_rented')->sortable(),
-                ToggleColumn::make('is_sold')->sortable(),
-                ToggleColumn::make('parking')->sortable(),
-                ToggleColumn::make('balcony')->sortable(),
-                ToggleColumn::make('terrace')->sortable(),
-                ToggleColumn::make('pool')->sortable(),
                 TextColumn::make('created_at')->date(),
             ])
             ->filters([
