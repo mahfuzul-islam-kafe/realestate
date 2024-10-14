@@ -5,7 +5,7 @@
             <li><a href="">Affordability Calculator</a></li>
         </ul>
 
-        <section class="padding-x-43 affordability_calculator margin-bottom-30">
+        <section class="responsive-padding affordability_calculator margin-bottom-30">
             <div class="text-center">
                 <h1 class="text-center fs-22 text-uppercase">Affordability calculator</h1>
                 <div class="mx-auto hr shadow">
@@ -62,7 +62,7 @@
 
                 </div>
                 <div class="col-desk-mobile-666 margin-top-13">
-                    <div class="shadow  padding-x-25 padding-y-40 border-radius-8">
+                    <div class="shadow padding-x-25 padding-y-40 border-radius-8">
                         <div class="card  card-custom">
                             <div class="currency-symbol d-flex">₪ <span class="currency-dash">---,---</span></div>
                             <div class="row margin-top-33 margin-bottom-28">
@@ -106,154 +106,193 @@
                 </div>
             </div>
         </section>
-        <section class="margin-top-40">
-            <h2 class="margin-top-15 text-center fs-28">How we calculate how much house you can afford?</h2>
-            <h3 class="fs-15 fw-900 margin-top-78">1. RÉFÉRENCEMENT ET DÉRÉFÉRENCEMENT DES ANNONCEURS :</h3>
+        <section class="container-fluid margin-top-40">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="margin-top-15 fs-28">How we calculate how much house you can afford?</h2>
+                </div>
 
-            <h4 class="fs-15 fw-600 margin-top-40">(i) Référencement des Annonceurs :</h4>
-            <p class="margin-top-18">
-                La diffusion d’annonces sur le Site est réservée aux Annonceurs définis ci-dessous :
-            </p>
-            <p class="margin-top-16">(i) Annonceurs professionnels ayant souscrit à titre payant un contrat de diffusion
-                d’annonces de vente
-                de biens immobiliers avec la société DCF et entrant dans l’une des catégories suivantes :</p>
-            <ul class="margin-top-12">
-                <li>Les professionnels de l’immobilier détenant une carte de transaction ou de gestion conformément à la
-                    loi Hoguet n° 70-9 du 2 janvier 1970,</li>
-                <li>Les notaires,</li>
-                <li>Les avocats exerçant à titre accessoire l’activité de mandataire en transactions immobilières,</li>
-                <li>Les huissiers,</li>
-                <li>Les promoteurs immobiliers,</li>
-                <li>Les constructeurs.</li>
-            </ul>
+                <div class="col-12">
+                    <h3 class="fs-15 fw-900 margin-top-78">1. RÉFÉRENCEMENT ET DÉRÉFÉRENCEMENT DES ANNONCEURS :</h3>
+                </div>
 
-            <h4 class="margin-top-40 fs-15 fw-600">(ii) Référencement des Annonces :</h4>
-            <p class="margin-top-18">
-                Pour être référencée sur le Site et donc diffusée, une Annonce doit impérativement respecter les règles
-                décrites ci-dessous.
-            </p>
+                <div class="col-12">
+                    <h4 class="fs-15 fw-600 margin-top-40">(i) Référencement des Annonceurs :</h4>
+                </div>
+                <div class="col-12">
+                    <p class="margin-top-18">
+                        La diffusion d’annonces sur le Site est réservée aux Annonceurs définis ci-dessous :
+                    </p>
+                    <p class="margin-top-16">
+                        (i) Annonceurs professionnels ayant souscrit à titre payant un contrat de diffusion d’annonces
+                        de vente de biens immobiliers avec la société DCF et entrant dans l’une des catégories suivantes
+                        :
+                    </p>
+                </div>
 
-            <p class="text-decoration-underline fw-500 margin-top-25 padding-left-40">Contenu de l'Annonce</p>
-            <p>
-                Le bien doit être diffusé dans sa catégorie et être conforme aux produits de diffusion souscrits par
-                l’Annonceur. Sur le Site, l’Annonce ne peut porter que sur :
-            </p>
-            <ul style="list-style: none">
-                <li><span class="margin-right-5">-</span>La vente et la location de biens anciens, ayant déjà fait
-                    l'objet d'un transfert de propriété;</li>
-                <li><span class="margin-right-5">-</span>La vente de lots associés à des programmes immobiliers neufs,
-                    n'ayant pas encore fait l'objet d'un
-                    transfert de propriété.</li>
-            </ul>
-            <p>
-                <a href="https://support.myselogerpro.com/hc/fr/articles/360000607939-Charte-SeLoger"
-                    class="text-decoration-underline"
-                    target="_blank">https://support.myselogerpro.com/hc/fr/articles/360000607939-Charte-SeLoger</a>
-            </p>
+                <div class="col-12">
+                    <ul class="margin-top-12">
+                        <li>Les professionnels de l’immobilier détenant une carte de transaction ou de gestion
+                            conformément à la loi Hoguet n° 70-9 du 2 janvier 1970,</li>
+                        <li>Les notaires,</li>
+                        <li>Les avocats exerçant à titre accessoire l’activité de mandataire en transactions
+                            immobilières,</li>
+                        <li>Les huissiers,</li>
+                        <li>Les promoteurs immobiliers,</li>
+                        <li>Les constructeurs.</li>
+                    </ul>
+                </div>
 
-            <p class="text-decoration-underline fw-500 margin-top-35 padding-left-40">Contenu interdit au sein d'une
-                Annonce</p>
-            <p>
-                Toute Annonce contenant des éléments qui sembleraient contraires aux dispositions légales ou
-                réglementaires, aux bonnes mœurs, aux règles de diffusion de notre Site ou susceptible de heurter les
-                utilisateurs sera immédiatement refusée par la société DCF, donc non référencée sur le Site.
-            </p>
-            <p>
-                Est notamment strictement interdit :
-            </p>
-            <ul>
-                <li>Tout contenu rédigé en langue étrangère comportant des termes ou des descriptions sans lien avec le
-                    contenu proposé ;</li>
-                <li>Tout contenu comportant des termes ou des descriptions sans lien avec le contenu proposé ;</li>
-                <li>Tout contenu portant sur un bien immobilier ou programme de construction fictif ;</li>
-                <li>Tout contenu frauduleux, ou visant à tromper l’utilisateur ;</li>
-                <li>Tout contenu à caractère politique, religieux ou haineux ;</li>
-                <li>Tout contenu à caractère promotionnel et/ou publicitaire ;</li>
-                <li>Toute image ou photographie sans lien avec l’offre proposée, ou encore contrefaite, ou à caractère
-                    pornographique.</li>
-            </ul>
-            <div class="margin-top-80 table-responsive d-flex justify-content-center margin-bottom-100">
-                <table class="table table-bordered w-50">
-                    <thead>
-                        <tr>
-                            <th>Percentage</th>
-                            <th>Down Payment</th>
-                            <th>Home Price</th>
-                            <th>Monthly Mortgage Payment</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>20%</td>
-                            <td>$60,000</td>
-                            <td>$300,000</td>
-                            <td>$1,779.39</td>
-                        </tr>
-                        <tr>
-                            <td>15%</td>
-                            <td>$45,000</td>
-                            <td>$300,000</td>
-                            <td>$1,253.10</td>
-                        </tr>
-                        <tr>
-                            <td>10%</td>
-                            <td>$30,000</td>
-                            <td>$300,000</td>
-                            <td>$1,326.82</td>
-                        </tr>
-                        <tr>
-                            <td>5%</td>
-                            <td>$15,000</td>
-                            <td>$300,000</td>
-                            <td>$1,400.53</td>
-                        </tr>
-                        <tr>
-                            <td>0%</td>
-                            <td>$0</td>
-                            <td>$300,000</td>
-                            <td>$1,474.24</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="col-12">
+                    <h4 class="fs-15 fw-600 margin-top-40">(ii) Référencement des Annonces :</h4>
+                </div>
+                <div class="col-12">
+                    <p class="margin-top-18">
+                        Pour être référencée sur le Site et donc diffusée, une Annonce doit impérativement respecter les
+                        règles décrites ci-dessous.
+                    </p>
+                    <p class="text-decoration-underline fw-500 margin-top-25 padding-left-40">Contenu de l'Annonce</p>
+                    <p>
+                        Le bien doit être diffusé dans sa catégorie et être conforme aux produits de diffusion souscrits
+                        par l’Annonceur. Sur le Site, l’Annonce ne peut porter que sur :
+                    </p>
+                    <ul style="list-style: none;">
+                        <li><span class="margin-right-5">-</span>La vente et la location de biens anciens, ayant déjà
+                            fait l'objet d'un transfert de propriété;</li>
+                        <li><span class="margin-right-5">-</span>La vente de lots associés à des programmes immobiliers
+                            neufs, n'ayant pas encore fait l'objet d'un transfert de propriété.</li>
+                    </ul>
+                </div>
+
+                <div class="col-12">
+                    <p>
+                        <a href="https://support.myselogerpro.com/hc/fr/articles/360000607939-Charte-SeLoger"
+                            class="text-decoration-underline text-wrap"
+                            target="_blank">https://support.myselogerpro.com/hc/fr/articles/360000607939-Charte-SeLoger</a>
+                    </p>
+                </div>
+
+                <div class="col-12">
+                    <p class="text-decoration-underline fw-500 margin-top-35 padding-left-40">Contenu interdit au sein
+                        d'une Annonce</p>
+                    <p>
+                        Toute Annonce contenant des éléments qui sembleraient contraires aux dispositions légales ou
+                        réglementaires, aux bonnes mœurs, aux règles de diffusion de notre Site ou susceptible de
+                        heurter les utilisateurs sera immédiatement refusée par la société DCF, donc non référencée sur
+                        le Site.
+                    </p>
+                    <ul>
+                        <li>Tout contenu rédigé en langue étrangère comportant des termes ou des descriptions sans lien
+                            avec le contenu proposé ;</li>
+                        <li>Tout contenu comportant des termes ou des descriptions sans lien avec le contenu proposé ;
+                        </li>
+                        <li>Tout contenu portant sur un bien immobilier ou un programme de construction fictif ;</li>
+                        <li>Tout contenu frauduleux, ou visant à tromper l’utilisateur ;</li>
+                        <li>Tout contenu à caractère politique, religieux ou haineux ;</li>
+                        <li>Tout contenu à caractère promotionnel et/ou publicitaire ;</li>
+                        <li>Toute image ou photographie sans lien avec l’offre proposée, ou encore contrefaite, ou à
+                            caractère pornographique.</li>
+                    </ul>
+                </div>
+
+                <div class="col-10">
+                    <div class="table-responsive d-flex justify-content-center margin-top-80 margin-bottom-100">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Percentage</th>
+                                    <th>Down Payment</th>
+                                    <th>Home Price</th>
+                                    <th>Monthly Mortgage Payment</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>20%</td>
+                                    <td>$60,000</td>
+                                    <td>$300,000</td>
+                                    <td>$1,779.39</td>
+                                </tr>
+                                <tr>
+                                    <td>15%</td>
+                                    <td>$45,000</td>
+                                    <td>$300,000</td>
+                                    <td>$1,253.10</td>
+                                </tr>
+                                <tr>
+                                    <td>10%</td>
+                                    <td>$30,000</td>
+                                    <td>$300,000</td>
+                                    <td>$1,326.82</td>
+                                </tr>
+                                <tr>
+                                    <td>5%</td>
+                                    <td>$15,000</td>
+                                    <td>$300,000</td>
+                                    <td>$1,400.53</td>
+                                </tr>
+                                <tr>
+                                    <td>0%</td>
+                                    <td>$0</td>
+                                    <td>$300,000</td>
+                                    <td>$1,474.24</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <h4 class="margin-top-40 fs-15 fw-600">(ii) Référencement des Annonces :</h4>
+                    <p>
+                        Pour être référencé sur le Site et donc diffusée, une Annonce doit impérativement respecter les
+                        règles décrites ci-dessous.
+                    </p>
+                    <p class="text-decoration-underline fw-500 margin-top-35 padding-left-40">Contenu de l'Annonce</p>
+                    <p>
+                        Le bien doit être diffusé dans sa catégorie et être conforme aux produits de diffusion souscrits
+                        par l’Annonceur. Sur le Site, l’Annonce ne peut porter que sur :
+                    </p>
+                    <ul style="list-style: none;">
+                        <li><span class="margin-right-5">-</span>la vente et la location de biens anciens, ayant déjà
+                            fait l'objet d'un transfert de propriété ;</li>
+                        <li><span class="margin-right-5">-</span>la vente de lots associés à des programmes immobiliers
+                            neufs, n'ayant pas encore fait l'objet d'un transfert de propriété.</li>
+                    </ul>
+                </div>
+
+                <div class="col-12">
+                    <p>
+                        <a class="text-decoration-underline text-wrap"
+                            href="https://support.myselogerpro.com/hc/fr/articles/360006057939--Charte-SeLoger">https://support.myselogerpro.com/hc/fr/articles/360006057939--Charte-SeLoger</a>
+                    </p>
+                </div>
+
+                <div class="col-12">
+                    <p class="text-decoration-underline fw-500 margin-top-35 padding-left-40">Contenu interdit au sein
+                        d'une Annonce</p>
+                    <p>
+                        Toute Annonce contenant des éléments qui sembleraient contraires aux dispositions légales ou
+                        réglementaires, aux bonnes mœurs, aux règles de diffusion de notre Site ou susceptible de
+                        heurter les utilisateurs sera immédiatement refusée par la société DCF, donc non référencée sur
+                        le Site.
+                    </p>
+                    <ul>
+                        <li>Tout contenu rédigé en langue étrangère comportant des termes ou des descriptions sans lien
+                            avec le contenu proposé ;</li>
+                        <li>Tout contenu comportant des termes ou des descriptions sans lien avec le contenu proposé ;
+                        </li>
+                        <li>Tout contenu portant sur un bien immobilier ou un programme de construction fictif ;</li>
+                        <li>Tout contenu frauduleux, au vouloir à tromper l’utilisateur ;</li>
+                        <li>Toute annonce à caractère politique, religieux ou haineux ;</li>
+                        <li>Tout contenu à caractère promotionnel et/ou publicitaire ;</li>
+                        <li>Toute image ou photographie sans lien avec l’offre proposée, non autorisée, contrefaite, ou
+                            encore à caractère pornographique.</li>
+                    </ul>
+                </div>
             </div>
-
-            <h4 class="margin-top-40 fs-15 fw-600">(ii) Référencement des Annonces :</h4>
-            <p>Pour être référencé sur le Site et donc diffusée, une Annonce doit impérativement respecter les règles
-                décrites ci-dessous.</p>
-
-            <p class="text-decoration-underline fw-500 margin-top-35 padding-left-40">Contenu de l'Annonce</p>
-            <p>Le bien doit être diffusé dans sa catégorie et être conforme aux produits de diffusion souscrits par
-                l’Annonceur. Sur le Site, l’Annonce ne peut porter que sur :</p>
-            <ul style="list-style: none">
-                <li><span class="margin-right-5">-</span>la vente et la location de biens anciens, ayant déjà fait
-                    l'objet d'un transfert de propriété ;</li>
-                <li><span class="margin-right-5">-</span>la vente de lots associés à des programmes immobiliers neufs,
-                    n'ayant pas encore fait l'objet d'un
-                    transfert de propriété.</li>
-            </ul>
-            <p><a class="text-decoration-underline"
-                    href="https://support.myselogerpro.com/hc/fr/articles/360006057939--Charte-SeLoger">https://support.myselogerpro.com/hc/fr/articles/360006057939--Charte-SeLoger</a>
-            </p>
-
-            <p class="text-decoration-underline fw-500 margin-top-35 padding-left-40">Contenu interdit au sein d'une
-                Annonce</p>
-            <p>Toute Annonce contenant des éléments qui sembleraient contraires aux dispositions légales ou
-                réglementaires, aux bonnes mœurs, aux règles de diffusion de notre Site ou susceptible de heurter les
-                utilisateurs sera immédiatement refusée par la société DCF, donc non référencée sur le Site.</p>
-
-            <p>Est notamment strictement interdit :</p>
-            <ul>
-                <li>Tout contenu rédigé en langue étrangère comportant des termes ou des descriptions sans lien avec le
-                    contenu proposé ;</li>
-                <li>Tout contenu comportant des termes ou des descriptions sans lien avec le contenu proposé ;</li>
-                <li>Tout contenu portant sur un bien immobilier ou un programme de construction fictif ;</li>
-                <li>Tout contenu frauduleux, au vouloir à tromper l’utilisateur ;</li>
-                <li>Toute annonce à caractère politique, religieux ou haineux ;</li>
-                <li>Tout contenu à caractère promotionnel et/ou publicitaire ;</li>
-                <li>Toute image ou photographie sans lien avec l’offre proposée, non autorisée, contrefaite, ou encore à
-                    caractère pornographique.</li>
-            </ul>
         </section>
+
     </div>
 
 </x-app>
