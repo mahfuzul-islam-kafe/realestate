@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav style="height: 77px"
-            class="navbar  navbar-expand-lg navbar-light bg-light border border-secondary border-bottom-1   bg-white rounded aeonik-pro-trial fw-500">
+            class="navbar  navbar-expand-lg navbar-light bg-light border border-secondary border-bottom-1   bg-white rounded aeonik-pro-trial fw-500 padding-top-22 padding-bottom-23">
             <div class="container ">
                 <a class="navbar-brand p-0" href=""><img style="object-fit: contain" height="55"
                         width="130" src="{{ asset('assets/images/logo.svg') }}" alt=""></a>
