@@ -2,9 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Models\Property;
+use App\Models\User;
 use DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
 
 class PropertiesSeeder extends Seeder
 {
@@ -13,53 +16,44 @@ class PropertiesSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('properties')->insert([
-            [
-                'title' => 'Luxurious Apartment',
-                'slug' => 'luxurious-apartment',
-                'price' => 250000.00,
-                'description' => 'A luxurious apartment in the city center with beautiful views.',
-                'property_type' => 1, 
-                'total_surface' => 120,
-                'surface_build' => 110,
-                'floor_count' => 2,
-                'rooms_count' => 4,
-                'bath_count' => 2,
-                'balcony_count' => 1,
-                'entry_date' => now()->addWeeks(3),
-                'city' => 'New York',
-                'entry_condition' => 1, 
-                'property_condition' => 1, 
-                'ad_type' => 1,
-                'address' => '123 Main St, New York, NY 10001',
-                'car_park_count' => 2,
-                'map' => json_encode(['lat' => 40.712776, 'lng' => -74.005974]),
-                'multimedia' => true,
-                
-            ],
-            [
-                'title' => 'Cozy House in the Suburbs',
-                'slug' => 'cozy-house-suburbs',
-                'price' => 180000.00,
-                'description' => 'A cozy and charming house in a quiet suburban neighborhood.',
-                'property_type' => 2,
-                'total_surface' => 200,
-                'surface_build' => 180,
-                'floor_count' => 1,
-                'rooms_count' => 3,
-                'bath_count' => 2,
-                'balcony_count' => 0,
-                'entry_date' => now()->addWeeks(2),
-                'city' => 'Los Angeles',
-                'entry_condition' => 2, 
-                'property_condition' => 2, 
-                'ad_type' => 2, 
-                'address' => '456 Suburb Lane, Los Angeles, CA 90001',
-                'car_park_count' => 1,
-                'map' => json_encode(['lat' => 34.052235, 'lng' => -118.243683]),
-                'multimedia' => false,
-                
-            ],
-        ]);
+        $faker = Faker::create();
+
+        // Fetch some agents (assuming you have at least 2 agents)
+        $agents = User::where('role', 'agent')->take(2)->get();
+
+        // Create sample properties
+        foreach (range(1, 10) as $index) {
+            Property::create([
+                'title' => $faker->sentence(3),
+                'description' => $faker->paragraph(),
+                'price' => $faker->randomFloat(2, 100000, 500000), // Price between 100,000 and 500,000
+                'currency' => 'NIS', // Default currency
+                'surface_area' => $faker->randomFloat(2, 50, 300), // Surface area between 50 and 300 m²
+                'rooms' => $faker->numberBetween(1, 10), // Random rooms between 1 and 10
+                'bedrooms' => $faker->numberBetween(1, 10), // Random bedrooms between 1 and 10
+                'bathrooms' => $faker->numberBetween(1, 5), // Random bathrooms between 1 and 5
+                'toilets' => $faker->numberBetween(1, 5), // Random toilets between 1 and 5
+                'construction_year' => $faker->optional()->year(),
+                'free_date' => $faker->optional()->date(),
+                'type' => $faker->randomElement(['Apartment', 'Villa', 'Duplex', 'Triplex', 'Penthouse', 'Cottage/House']),
+                'is_rented' => $faker->boolean(30), // 30% chance of being rented
+                'is_sold' => $faker->boolean(10), // 10% chance of being sold
+                'city' => $faker->city(),
+                'region' => $faker->optional()->word(),
+                'address' => $faker->address(),
+                'is_exact_address' => $faker->boolean(70), // 70% chance of exact address
+                'parking' => $faker->boolean(),
+                'balcony' => $faker->boolean(),
+                'terrace' => $faker->boolean(),
+                'elevator' => $faker->boolean(),
+                'accessible' => $faker->boolean(),
+                'air_conditioner' => $faker->boolean(),
+                'pool' => $faker->boolean(),
+                'furnished' => $faker->boolean(),
+                'exclusivity' => $faker->boolean(),
+                'is_exceptional' => $faker->boolean(),
+                'agent_id' => $agents->random()->id, // Random agent from the fetched list
+            ]);
+        }
     }
 }

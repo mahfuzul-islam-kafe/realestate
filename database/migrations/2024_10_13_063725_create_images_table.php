@@ -4,18 +4,20 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('ad_types', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->string('display_name');
-            $table->string('slug');
+            $table->foreignId('property_id')->constrained('properties')->onDelete('cascade');
+            $table->boolean('featured');
+            $table->boolean('three_sixty');
+            $table->string('path');
             $table->timestamps();
+
         });
     }
 
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ad_types');
+        Schema::dropIfExists('images');
     }
 };

@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="row margin-top-80 justify-content-between">
-                <div class="col-md-5" style="width: 441px">
+                <div class="col-desk-mobile-440">
                     <div class="d-flex justify-content-between fs-17 fw-600 margin-bottom-15">
                         <span>Net Income</span>
                         <span>₪69,000</span>
@@ -61,7 +61,7 @@
                     </form>
 
                 </div>
-                <div class="col-md-6 margin-top-13" style="width: 666px">
+                <div class="col-desk-mobile-666 margin-top-13">
                     <div class="shadow  padding-x-25 padding-y-40 border-radius-8">
                         <div class="card  card-custom">
                             <div class="currency-symbol d-flex">₪ <span class="currency-dash">---,---</span></div>
@@ -172,7 +172,7 @@
                 <li>Toute image ou photographie sans lien avec l’offre proposée, ou encore contrefaite, ou à caractère
                     pornographique.</li>
             </ul>
-            <div class="margin-top-80 d-flex justify-content-center margin-bottom-100">
+            <div class="margin-top-80 table-responsive d-flex justify-content-center margin-bottom-100">
                 <table class="table table-bordered w-50">
                     <thead>
                         <tr>
