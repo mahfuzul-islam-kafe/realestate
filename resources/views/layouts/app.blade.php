@@ -36,9 +36,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Profile Page</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Logout</a>
-                        </li>
+                       
                     @else
                         <li class="nav-item active">
                             <a class="nav-link" href="">Buy</a>
