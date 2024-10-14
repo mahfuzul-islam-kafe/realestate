@@ -163,14 +163,14 @@
                             neufs, n'ayant pas encore fait l'objet d'un transfert de propriété.</li>
                     </ul>
                 </div>
-
+{{-- 
                 <div class="col-12">
                     <p>
                         <a href="https://support.myselogerpro.com/hc/fr/articles/360000607939-Charte-SeLoger"
                             class="text-decoration-underline text-wrap"
                             target="_blank">https://support.myselogerpro.com/hc/fr/articles/360000607939-Charte-SeLoger</a>
                     </p>
-                </div>
+                </div> --}}
 
                 <div class="col-12">
                     <p class="text-decoration-underline fw-500 margin-top-35 padding-left-40">Contenu interdit au sein
@@ -261,12 +261,12 @@
                     </ul>
                 </div>
 
-                <div class="col-12">
+                {{-- <div class="col-12">
                     <p>
                         <a class="text-decoration-underline text-wrap"
                             href="https://support.myselogerpro.com/hc/fr/articles/360006057939--Charte-SeLoger">https://support.myselogerpro.com/hc/fr/articles/360006057939--Charte-SeLoger</a>
                     </p>
-                </div>
+                </div> --}}
 
                 <div class="col-12">
                     <p class="text-decoration-underline fw-500 margin-top-35 padding-left-40">Contenu interdit au sein
