@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('last_name');
             $table->string('email')->unique();
             $table->string('password');
             $table->string('phone')->nullable();
@@ -21,6 +22,8 @@ return new class extends Migration
             $table->boolean('is_subscribed')->default(false);
             $table->string('profile_image')->nullable();
             $table->string('social_login')->nullable();
+            $table->string('company_name')->nullable();
+            $table->string('license_number')->nullable();
             $table->timestamp('last_login')->nullable();
             $table->timestamps();
         

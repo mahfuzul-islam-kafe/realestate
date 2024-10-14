@@ -99,7 +99,7 @@
                     <li><a class="dropdown-item no-hover" href="#">Option 3</a></li>
                 </ul>
             </div>
-            <a href="{{route('login')}}" class="btn btn-outline-dark rounded-pill">Login</a>
+            <a href="{{ route('login') }}" class="btn btn-outline-dark border-radius-10 border-1 padding-x-21 padding-y-7">Login</a>
         </div>
     </div>
     <section class="center-section margin-top-47 ">
@@ -107,59 +107,52 @@
             <div class="fw-500 fs-40 text-center ">Registration</div>
         </div>
 
-
-        <form action="{{ route('register') }}" method="POST" class="form  margin-top-47  col-md-6 container">
-            @csrf
-            <div class="form-group margin-bottom-18">
-                <label for="">First name</label>
-
-                <input type="text" class="form-control rounded-pill" id="" placeholder="" name="name"
-                    required>
+        <form action="" class="form margin-top-47 col-md-8 container">
+            <div class="row">
+                <div class="form-group margin-bottom-18 col-md-6">
+                    <label for="company_name">Company name</label>
+                    <input type="text" class="form-control border-radius-11" id="company_name" name="company_name"
+                        placeholder="Remax">
+                </div>
+                <div class="form-group margin-bottom-18 col-md-6">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control border-radius-11" id="name" name="name"
+                        placeholder="John Doe">
+                </div>
             </div>
-            <div class="form-group margin-bottom-18">
-                <label for="">Last name</label>
 
-                <input type="text" class="form-control rounded-pill" id="email" placeholder="" name="last_name"
-                    required>
+            <div class="form-group margin-bottom-18">
+                <label for="license_number">License Number</label>
+                <input type="text" class="form-control border-radius-11" id="license_number" name="license_number"
+                    placeholder="xxx - xxx - xxx">
             </div>
             <div class="form-group margin-bottom-18">
                 <label for="email">Email</label>
-
-                <input type="text" class="form-control rounded-pill" id="email" placeholder="" name="email"
-                    required>
+                <input type="email" class="form-control border-radius-11" id="email" name="email"
+                    placeholder="Ex: david.doe@mail.com">
             </div>
             <div class="form-group margin-bottom-18">
                 <label for="password">Password</label>
-
-                <input type="password" class="form-control rounded-pill" id="password" name="password">
-                @error('password')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
+                <input type="password" class="form-control border-radius-11" id="password" name="password"
+                    placeholder="............">
             </div>
             <div class="form-group margin-bottom-18">
-                <label for="password">Confirm Password</label>
-
-                <input type="password" class="form-control rounded-pill" id="password" name="password_confirmation">
-            </div>
-            <div class="form-group margin-bottom-18">
-                <label for="">Phone number</label>
-
-                <input type="text" class="form-control rounded-pill" id="email" placeholder="">
+                <label for="phone_number">Phone number</label>
+                <input type="text" class="form-control border-radius-11" id="phone_number" name="phone_number"
+                    placeholder="">
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                    style="border-radius: 3px !important;">
-                <label class="form-check-label" for="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="" id="receive_communications"
+                    name="receive_communications" style="border-radius: 3px !important;">
+                <label class="form-check-label" for="receive_communications">
                     Receive Kemea communications
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                    style="border-radius: 3px !important;">
-                <label class="form-check-label" for="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="" id="terms_conditions"
+                    name="terms_conditions" style="border-radius: 3px !important;">
+                <label class="form-check-label" for="terms_conditions">
                     I accept the <a href="#">Terms of Service</a> and the <a href="#">Kemea Privacy
                         Policy.</a>
                 </label>
@@ -169,6 +162,7 @@
                 class="btn btn-primary w-100 mt-3 rounded-pill margin-top-25 margin-bottom-52 fs-18">Sign
                 up</button>
         </form>
+
 
 
     </section>

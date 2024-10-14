@@ -7,11 +7,28 @@
   width: 666px;
 }
 
+  .responsive-padding{
+    padding-right: 43px;
+    padding-left: 43px;
+  }
+
+.table-responsive table{
+  width: 50%;
+}
 @media (max-width: 768px) {
   .col-desk-mobile-440,
   .col-desk-mobile-666 {
     width: 100%;
   }
+  .table-responsive table{
+    width: 100%;
+  }
+ 
+    .responsive-padding{
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+  
 }
 
 .affordability_calculator label{

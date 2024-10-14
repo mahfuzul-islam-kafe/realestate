@@ -42,7 +42,10 @@
                     </li>
 
                 </ul>
+
+
                 <ul class="navbar-nav ms-auto gap-4 align-items-center d-none d-lg-flex ">
+<<<<<<< HEAD
                     <li class="nav-item">
                         <a class="nav-link " href="">Log in</a>
                     </li>
@@ -52,7 +55,38 @@
                             href="">Sign up</a>
                     </li>
 
+=======
+                    @auth
+>>>>>>> 01c48e08ecec6ea7e388d020ec610ef9bbf1fecf
 
+                        <div class="dropdown text-end">
+                            <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ auth()->user()->name }}
+                            </a>
+                            <ul class="dropdown-menu text-small">
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <form action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item" href="#">Sign out</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ route('login') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary rounded-pill " style="width: 101.2px;height: 42px;"
+                                href="{{ route('register') }}">Sign up</a>
+                        </li>
+                    @endauth
                 </ul>
 
 
