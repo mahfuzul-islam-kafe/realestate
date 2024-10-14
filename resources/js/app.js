@@ -9,26 +9,37 @@ import Alpine from 'alpinejs'
 import toastr from "toastr/build/toastr.min.js";
 
 window.Alpine = Alpine
+
+
 Alpine.start()
 
 
-    document.addEventListener('DOMContentLoaded', function () {
-        // Select all elements with the class 'property-primary_slider'
-        document.querySelectorAll('.property-primary_slider').forEach(function (sliderEl, index) {
-            // Initialize a Swiper for each element
-            new Swiper(sliderEl, {
-                direction: 'horizontal',   // Slider direction
-                autoplay: 0,   // Slider direction
-                effect: 'cube',
-                loop: true,              // Enable looping
-                pagination: {
-                    el: sliderEl.querySelector('.swiper-pagination'),  // Target each card's pagination
-                    clickable: true,       // Make pagination dots clickable
-                },
-            });
+document.addEventListener('DOMContentLoaded', function () {
+    // Select all elements with the class 'property-primary_slider'
+    document.querySelectorAll('.property-primary_slider').forEach(function (sliderEl, index) {
+        // Initialize a Swiper for each element
+        new Swiper(sliderEl, {
+            direction: 'horizontal', // Slider direction
+            autoplay: 0, // Slider direction
+            effect: 'cube',
+            loop: true, // Enable looping
+            pagination: {
+                el: sliderEl.querySelector('.swiper-pagination'), // Target each card's pagination
+                clickable: true, // Make pagination dots clickable
+            },
         });
     });
+});
 
+
+function toggleSelection(event) {
+    let value = event.target.value;
+    if (event.target.checked) {
+        this.selects.push(value);
+    } else {
+        this.selects = this.selects.filter(item => item !== value);
+    }
+}
 
 
 const formGroups = document.querySelectorAll('.form-group-inner');
@@ -55,8 +66,8 @@ formGroups.forEach((group) => {
     }
 });
 for (let e of document.querySelectorAll(
-    'input[type="range"].slider-progress'
-)) {
+        'input[type="range"].slider-progress'
+    )) {
     e.style.setProperty("--value", e.value);
     e.style.setProperty("--min", e.min == "" ? "0" : e.min);
     e.style.setProperty("--max", e.max == "" ? "100" : e.max);

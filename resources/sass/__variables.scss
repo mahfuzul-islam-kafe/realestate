@@ -1,4 +1,221 @@
-$font-family-sans-serif: "Inter",
+@font-face {
+    font-family: 'Aeonik';
+    src: url('/resources/fonts/aeonikpro/Aeonik Pro Medium-normal-500-100.ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aeonik';
+    src: url('/resources/fonts/aeonikpro/Aeonik Pro Medium-normal-500-100.ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url('/resources/fonts/aeonikprotrial/TRIAL with GR and CY/AeonikProTRIAL-Light.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aeonik';
+    src: url('/resources/fonts/aeonikprotrial/TRIAL with GR and CY/AeonikProTRIAL-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aeonik';
+    src: url('/resources/fonts/aeonikpro/Aeonik Pro Medium-normal-500-100.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aeonik';
+    src: url('/resources/fonts/aeonikprotrial/TRIAL with GR and CY/AeonikProTRIAL-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aeonik';
+    src: url('/resources/fonts/aeonikpro/black-normal-900-100.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aeonik';
+    src: url('/resources/fonts/aeonikpro/black-normal-900-100.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+// @font-face {
+//     font-family: 'CarosSoft';
+//     src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-extralight.otf');
+//     font-weight: 200;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'CarosSoft';
+//     src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-extralightit.otf');
+//     font-weight: 200;
+//     font-style: italic;
+// }
+
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-thin.otf');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-thinit.otf');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-lightit.otf');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-light.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-it.otf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-medium.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-mediumit.otf');
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-bold.otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-boldit.otf');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-extrabold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-extraboldit.otf');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-heavy.otf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-heavyit.otf');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-black.otf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-blackit.otf');
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-medium.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-light.otf');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CarosSoft';
+    src: url('/resources/fonts/Caros Soft Font/Fontspring-DEMO-carossoft-it.otf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+$font-family-sans-serif: 'Aeonik',
+'CarosSoft',
 system-ui,
 -apple-system,
 "Segoe UI",
@@ -59,10 +276,8 @@ $h5-font-size: $font-size-base !default;
 $h6-font-size: $font-size-base !default;
 
 
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 90%
-) !default;
+$container-max-widths: (sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 90%) !default;
