@@ -29,11 +29,7 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->colors([
-<<<<<<< HEAD
                 'primary' => Color::hex('#0666EB'),
-=======
-                'primary' => '#0666eb',
->>>>>>> 01c48e08ecec6ea7e388d020ec610ef9bbf1fecf
             ])
             ->brandLogo(asset('assets/images/logo.svg'))
             ->favicon(asset('assets/images/attributes/logo.svg'))
