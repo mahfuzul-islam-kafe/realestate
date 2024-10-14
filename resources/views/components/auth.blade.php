@@ -109,7 +109,7 @@
         </div>
     </div>
 </div>
-<div class="offcanvas show offcanvas-start text-bg-dark" tabindex="-1" id="authTextToggle"
+<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="authTextToggle"
     aria-labelledby="authTextToggleLabel">
     <div class="offcanvas-header ">
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
