@@ -11,12 +11,16 @@ Route::view('/confidential', 'pages.confidential');
 Route::view('affordability_calculator', 'pages.affordability_calculator');
 
 Route::get('/test', function () {
-    $properties = Property::with('ad_type', 'property_type', 'property_condition', 'entry_condition')->get();
-    dd($properties);    
+      dd('yes this is a test');
 });
+
+
 Auth::routes();
 
-
+// Route::get('/logout', function (Request $request) {
+//     Auth::logout();
+//     return redirect('/'); 
+// });
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -9,14 +9,16 @@
     <title>Document</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <style>
+        .main{
+            height: 100vh;
+        }
         .auth-left {
             background: #000000;
-            height: auto;
+            height: 100vh;
+            
         }
 
-
-
-
+        
         li {
 
             list-style: none;
@@ -78,33 +80,6 @@
             </div>
         </div>
         <div class="col-md-6 auth-right">
-            <div class="nav container d-flex justify-content-between align-items-center margin-top-15">
-                <div>
-                    <button class="btn  d-sm-block d-md-none" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#authTextToggle" aria-controls="authTextToggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                            class="bi bi-list" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="d-flex gap-4 align-items-center">
-                    <div class="dropdown">
-                        <button class="btn btn-light dropdown-toggle no-hover" type="button" id="dropdownMenuButton"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            EN
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item no-hover" href="#">Option 1</a></li>
-                            <li><a class="dropdown-item no-hover" href="#">Option 2</a></li>
-                            <li><a class="dropdown-item no-hover" href="#">Option 3</a></li>
-                        </ul>
-                    </div>
-                    <div class="btn btn-outline-dark rounded-pill">Sign up</div>
-                </div>
-            </div>
-
             {{ $slot }}
         </div>
     </div>

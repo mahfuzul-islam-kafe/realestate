@@ -16,6 +16,7 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'Admin',
+            'last_name' => 'last name',
             'email' => 'admin@gmail.com',
             'password' => Hash::make('password'), // Hashing the password
             'role' => 'admin',
@@ -27,6 +28,7 @@ class UserSeeder extends Seeder
         ]);
         User::create([
             'name' => 'Admin User 1',
+            'last_name' => 'last name',
             'email' => 'admin1@gmail.com',
             'password' => Hash::make('password'), // Hashing the password
             'role' => 'admin',
@@ -39,6 +41,7 @@ class UserSeeder extends Seeder
 
         User::create([
             'name' => 'Admin User 2',
+            'last_name' => 'last name',
             'email' => 'admin2@gmail.com',
             'password' => Hash::make('password'),
             'role' => 'admin',
@@ -52,6 +55,7 @@ class UserSeeder extends Seeder
         // Agent Users
         User::create([
             'name' => 'Agent User 1',
+            'last_name' => 'last name',
             'email' => 'agent1@gmail.com',
             'password' => Hash::make('password'),
             'role' => 'agent',
@@ -64,6 +68,7 @@ class UserSeeder extends Seeder
 
         User::create([
             'name' => 'Agent User 2',
+            'last_name' => 'last name',
             'email' => 'agent2@gmail.com',
             'password' => Hash::make('password'),
             'role' => 'agent',
@@ -78,6 +83,7 @@ class UserSeeder extends Seeder
         for ($i = 1; $i <= 6; $i++) {
             User::create([
                 'name' => 'User ' . $i,
+                'last_name' => 'last name',
                 'email' => 'user' . $i . '@gmail.com',
                 'password' => Hash::make('password'),
                 'role' => 'user',
