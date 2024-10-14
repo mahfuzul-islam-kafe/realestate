@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AgentController;
 use App\Http\Controllers\PageController;
 use App\Models\Property;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +18,10 @@ Route::get('/test', function () {
 });
 Route::get('login-as-agent', [PageController::class, 'loginAsAgent'])->name('login.agent');
 Route::get('register-as-agent', [PageController::class, 'registerAsAgent'])->name('register.agent');
+Route::post('register-as-agent', [AgentController::class, 'register'])->name('agent.register.post');
+Route::group(['prefix' => 'agent', 'as' => 'agent.'], function () {
+    Route::get('/dashboard', [AgentController::class, 'dashboard'])->name('dashboard');
+});
 
 Auth::routes();
 
