@@ -76,57 +76,94 @@
 </div>
 @endsection --}}
 <x-auth>
+    <div class="nav container d-flex justify-content-between align-items-center margin-top-15">
+        <div>
+            <button class="btn  d-sm-block d-md-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#authTextToggle" aria-controls="authTextToggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </button>
+        </div>
+        <div class="d-flex gap-4 align-items-center">
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle no-hover" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    EN
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item no-hover" href="#">Option 1</a></li>
+                    <li><a class="dropdown-item no-hover" href="#">Option 2</a></li>
+                    <li><a class="dropdown-item no-hover" href="#">Option 3</a></li>
+                </ul>
+            </div>
+            <a href="{{ route('login') }}" class="btn btn-outline-dark border-radius-10 border-1 padding-x-21 padding-y-7">Login</a>
+        </div>
+    </div>
     <section class="center-section margin-top-47 ">
         <div class="col-md-4 text-center">
             <div class="fw-500 fs-40 text-center ">Registration</div>
         </div>
-        
 
-            <form action="" class="form  margin-top-47  col-md-6 container">
-                <div class="form-group margin-bottom-18">
-                    <label for="">First name</label>
-    
-                    <input type="text" class="form-control rounded-pill" id="" placeholder="">
+        <form action="" class="form margin-top-47 col-md-8 container">
+            <div class="row">
+                <div class="form-group margin-bottom-18 col-md-6">
+                    <label for="company_name">Company name</label>
+                    <input type="text" class="form-control border-radius-11" id="company_name" name="company_name"
+                        placeholder="Remax">
                 </div>
-                <div class="form-group margin-bottom-18">
-                    <label for="">Last name</label>
-    
-                    <input type="text" class="form-control rounded-pill" id="email" placeholder="">
+                <div class="form-group margin-bottom-18 col-md-6">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control border-radius-11" id="name" name="name"
+                        placeholder="John Doe">
                 </div>
-                <div class="form-group margin-bottom-18">
-                    <label for="email">Email</label>
-    
-                    <input type="text" class="form-control rounded-pill" id="email"
-                        placeholder="">
-                </div>
-                <div class="form-group margin-bottom-18">
-                    <label for="password">Password</label>
-    
-                    <input type="password" class="form-control rounded-pill" id="password" >
-                </div>
-                <div class="form-group margin-bottom-18">
-                    <label for="">Phone number</label>
-    
-                    <input type="text" class="form-control rounded-pill" id="email" placeholder="">
-                </div>
-    
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="border-radius: 3px !important;">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Receive Kemea communications
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="border-radius: 3px !important;">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        I accept the <a href="#">Terms of Service</a> and the <a href="#">Kemea Privacy Policy.</a>
-                    </label>
-                </div>
-    
-                <button type="submit" class="btn btn-primary w-100 mt-3 rounded-pill margin-top-25 margin-bottom-52 fs-18">Sign
-                    up</button>
-            </form>
-        
+            </div>
+
+            <div class="form-group margin-bottom-18">
+                <label for="license_number">License Number</label>
+                <input type="text" class="form-control border-radius-11" id="license_number" name="license_number"
+                    placeholder="xxx - xxx - xxx">
+            </div>
+            <div class="form-group margin-bottom-18">
+                <label for="email">Email</label>
+                <input type="email" class="form-control border-radius-11" id="email" name="email"
+                    placeholder="Ex: david.doe@mail.com">
+            </div>
+            <div class="form-group margin-bottom-18">
+                <label for="password">Password</label>
+                <input type="password" class="form-control border-radius-11" id="password" name="password"
+                    placeholder="............">
+            </div>
+            <div class="form-group margin-bottom-18">
+                <label for="phone_number">Phone number</label>
+                <input type="text" class="form-control border-radius-11" id="phone_number" name="phone_number"
+                    placeholder="">
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="receive_communications"
+                    name="receive_communications" style="border-radius: 3px !important;">
+                <label class="form-check-label" for="receive_communications">
+                    Receive Kemea communications
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="terms_conditions"
+                    name="terms_conditions" style="border-radius: 3px !important;">
+                <label class="form-check-label" for="terms_conditions">
+                    I accept the <a href="#">Terms of Service</a> and the <a href="#">Kemea Privacy
+                        Policy.</a>
+                </label>
+            </div>
+
+            <button type="submit"
+                class="btn btn-primary w-100 mt-3 rounded-pill margin-top-25 margin-bottom-52 fs-18">Sign
+                up</button>
+        </form>
+
+
 
     </section>
 </x-auth>

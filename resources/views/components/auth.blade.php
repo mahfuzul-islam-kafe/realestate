@@ -9,16 +9,17 @@
     <title>Document</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <style>
-        .main{
-            height: 100vh;
-        }
-        .auth-left {
-            background: #000000;
-            height: 100vh;
-            
+        .main {
+            /* height: 100vh; */
         }
 
-        
+        .auth-left {
+            /* background: #000000; */
+            height: auto;
+
+        }
+
+
         li {
 
             list-style: none;
@@ -33,6 +34,7 @@
 
         .left-box {
             width: 554px;
+            background: #000000;
             margin: 110px auto;
         }
 
@@ -55,29 +57,40 @@
 <div class="main">
     <div class="d-flex">
         <div class="col-md-6 d-none d-md-block auth-left">
-            <div class="left-box text-light">
-                <h2 class="fw-500 fs-40 mb-4 ">By entering in your Kemea account...</h2>
-                <div class="margin-top-75">
+            @if (request()->routeIs('login'))
+                <div class="left-box text-light">
+                    <h2 class="fw-500 fs-40 mb-4 ">By entering in your Kemea account...</h2>
+                    <div class="margin-top-75">
 
-                    <div class="d-flex align-items-center margin-y-68 ">
-                        <span class="fs-35 me-4">1</span>
-                        <p class="fw-20 mb-0">Our hunters take care of everything for you.</p>
-                    </div>
-                    <div class="d-flex align-items-center margin-y-68 ">
-                        <span class="fs-35 me-4">2</span>
-                        <p class="fw-20 mb-0">The consultation is free and without obligation.</p>
-                    </div>
-                    <div class="d-flex align-items-center margin-y-68 ">
-                        <span class="fs-35 me-4">3</span>
-                        <p class="fw-20 mb-0">We accompany you until the signing of the deed</p>
-                    </div>
-                    <div class="d-flex align-items-center margin-y-68 ">
-                        <span class="fs-35 me-4">4</span>
-                        <p class="fw-20 mb-0">We give you access to the Off Market.</p>
+                        <div class="d-flex align-items-center margin-y-68 ">
+                            <span class="fs-35 me-4">1</span>
+                            <p class="fw-20 mb-0">Our hunters take care of everything for you.</p>
+                        </div>
+                        <div class="d-flex align-items-center margin-y-68 ">
+                            <span class="fs-35 me-4">2</span>
+                            <p class="fw-20 mb-0">The consultation is free and without obligation.</p>
+                        </div>
+                        <div class="d-flex align-items-center margin-y-68 ">
+                            <span class="fs-35 me-4">3</span>
+                            <p class="fw-20 mb-0">We accompany you until the signing of the deed</p>
+                        </div>
+                        <div class="d-flex align-items-center margin-y-68 ">
+                            <span class="fs-35 me-4">4</span>
+                            <p class="fw-20 mb-0">We give you access to the Off Market.</p>
+                        </div>
                     </div>
                 </div>
-
-            </div>
+            @elseif (request()->routeIs('register.agent'))
+                <div class="w-100 h-100">
+                    <img src="{{ asset('assets/register-agent.png') }}" class="img-fluid h-100" alt=""
+                        srcset="">
+                </div>
+            @else
+                <div class="w-100">
+                    <img src="{{ asset('assets/login-agent.png') }}" class="img-fluid h-100" alt=""
+                        srcset="">
+                </div>
+            @endif
         </div>
         <div class="col-md-6 auth-right">
             {{ $slot }}
@@ -113,7 +126,7 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 
 </html>
