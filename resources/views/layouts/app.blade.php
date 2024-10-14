@@ -63,19 +63,7 @@
 
 
                 <ul class="navbar-nav ms-auto gap-4 align-items-center d-none d-lg-flex ">
-<<<<<<< HEAD
-                    <li class="nav-item">
-                        <a class="nav-link " href="">Log in</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="btn btn-primary rounded-pill " style="width: 101.2px;height: 42px;"
-                            href="">Sign up</a>
-                    </li>
-
-=======
                     @auth
->>>>>>> 01c48e08ecec6ea7e388d020ec610ef9bbf1fecf
 
                         <div class="dropdown text-end">
                             <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
