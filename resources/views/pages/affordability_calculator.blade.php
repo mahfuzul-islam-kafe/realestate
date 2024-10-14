@@ -106,7 +106,7 @@
                 </div>
             </div>
         </section>
-        <section class="container-fluid margin-top-40">
+        <section class="margin-top-40">
             <div class="row">
                 <div class="col-12 text-center">
                     <h2 class="margin-top-15 fs-28">How we calculate how much house you can afford?</h2>

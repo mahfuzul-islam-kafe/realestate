@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 
@@ -7,13 +8,15 @@ Route::view('/', 'home');
 Route::view('/listing', 'pages.listing');
 Route::view('/confidential', 'pages.confidential');
 
-    Route::view('mansion', 'pages.mansion');
+Route::view('mansion', 'pages.mansion');
 Route::view('affordability_calculator', 'pages.affordability_calculator');
 
 Route::get('/test', function () {
-      dd('yes this is a test');
+    $properties = Property::with('ad_type', 'property_type', 'property_condition', 'entry_condition')->get();
+    dd($properties);
 });
-
+Route::get('login-as-agent', [PageController::class, 'loginAsAgent'])->name('login.agent');
+Route::get('register-as-agent', [PageController::class, 'registerAsAgent'])->name('register.agent');
 
 Auth::routes();
 
