@@ -22,10 +22,10 @@
         </div>
     </div>
     <div class="margin-top-15 d-flex flex-column flex-gap-6 padding-x-8">
-        <span class="fs-15 fw-medium aeonik-pro-medium">Cottage - Eliezer Yaffe St.</span>
-        <span class="fs-15 fw-normal aeonik-pro-trial">Ra'anana, Israél</span>
-        <small class="fs-14 aeonik-pro-trial" style="color: #75808A">150 m² - 3 rooms - 1 parking </small>
-        <span class="fs-18  fw-900 aeonik-pro-trial">22 700 000 ₪ </span>
+        <span class="fs-15 fw-medium ">Cottage - Eliezer Yaffe St.</span>
+        <span class="fs-15 fw-normal ">Ra'anana, Israél</span>
+        <small class="fs-14 " style="color: #75808A">150 m² - 3 rooms - 1 parking </small>
+        <span class="fs-18  fw-900 ">22 700 000 ₪ </span>
     </div>
     <div x-data="{ showPhone: false }">
         <!-- First Button -->

@@ -12,8 +12,8 @@
 
 <body>
     <header>
-        <nav style="height: 77px"
-            class="navbar  navbar-expand-lg navbar-light bg-light border border-secondary border-bottom-1   bg-white rounded aeonik-pro-trial fw-500 padding-top-22 padding-bottom-23">
+        <nav id="topNav"
+            class="navbar  navbar-expand-lg navbar-light bg-light   padding-top-22 padding-bottom-23">
             <div class="container ">
                 <a class="navbar-brand p-0" href=""><img style="object-fit: contain" height="55"
                         width="130" src="{{ asset('assets/images/logo.svg') }}" alt=""></a>
@@ -23,8 +23,8 @@
                     <i class="fa fa-bars"></i>
                 </button>
 
-                <ul class="navbar-nav ms-5 gap-4 d-none d-lg-flex">
-                    <li class="nav-item active">
+                <ul class="navbar-nav ms-5 flex-gap-50 d-none d-lg-flex ">
+                    <li class="nav-item active  ">
                         <a class="nav-link" href="">Buy</a>
                     </li>
 
@@ -34,7 +34,7 @@
 
                     <li class="nav-item">
 
-                        <a class="nav-link" href="">My Kenma</a>
+                        <a class="nav-link " href="">My Kenma</a>
                     </li>
 
                     <li class="nav-item">
@@ -44,7 +44,7 @@
                 </ul>
                 <ul class="navbar-nav ms-auto gap-4 align-items-center d-none d-lg-flex ">
                     <li class="nav-item">
-                        <a class="nav-link " href="">Login</a>
+                        <a class="nav-link " href="">Log in</a>
                     </li>
 
                     <li class="nav-item">
@@ -59,7 +59,7 @@
                 <div>
         </nav>
     </header>
-    <main>  
+    <main>
         {{ $slot }}
     </main>
     <footer>
