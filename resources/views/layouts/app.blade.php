@@ -23,23 +23,41 @@
                     <i class="fa fa-bars"></i>
                 </button>
 
-                <ul class="navbar-nav ms-5 flex-gap-50 d-none d-lg-flex ">
-                    <li class="nav-item active  ">
-                        <a class="nav-link" href="">Buy</a>
-                    </li>
+                
+                <ul class="navbar-nav ms-5 flex-gap-50 d-none d-lg-flex">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Rent</a>
-                    </li>
 
-                    <li class="nav-item">
+                    @agent
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Plan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Logout</a>
+                        </li>
+                    @else
+                        <li class="nav-item active">
+                            <a class="nav-link" href="">Buy</a>
+                        </li>
 
-                        <a class="nav-link " href="">My Kenma</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Rent</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Promote with us</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">My Kenma</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Promote with us</a>
+                        </li>
+                    @endagent
+
 
                 </ul>
 
