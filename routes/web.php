@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AgentController;
 use App\Http\Controllers\PageController;
 use App\Models\Property;
 use Illuminate\Support\Facades\Route;
@@ -17,7 +18,12 @@ Route::get('/test', function () {
 });
 Route::get('login-as-agent', [PageController::class, 'loginAsAgent'])->name('login.agent');
 Route::get('register-as-agent', [PageController::class, 'registerAsAgent'])->name('register.agent');
-
+Route::group(['controller' => PageController::class], function () {
+    Route::get('/form', 'form')->name('view.form');
+});
+Route::group(['controller' => AgentController::class], function () {
+    Route::post('/form/submit', 'formSubmit')->name('form.submit');
+});
 Auth::routes();
 
 // Route::get('/logout', function (Request $request) {

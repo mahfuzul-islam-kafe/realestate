@@ -25,32 +25,7 @@ class UserSeeder extends Seeder
             'profile_image' => null,
             'social_login' => null,
             'last_login' => now(),
-        ]);
-        User::create([
-            'name' => 'Admin User 1',
-            'last_name' => 'last name',
-            'email' => 'admin1@gmail.com',
-            'password' => Hash::make('password'), // Hashing the password
-            'role' => 'admin',
-            'is_subscribed' => true,
-            'phone' => '1234567890',
-            'profile_image' => null,
-            'social_login' => null,
-            'last_login' => now(),
-        ]);
-
-        User::create([
-            'name' => 'Admin User 2',
-            'last_name' => 'last name',
-            'email' => 'admin2@gmail.com',
-            'password' => Hash::make('password'),
-            'role' => 'admin',
-            'is_subscribed' => false,
-            'phone' => '0987654321',
-            'profile_image' => null,
-            'social_login' => null,
-            'last_login' => now(),
-        ]);
+        ]); 
 
         // Agent Users
         User::create([
