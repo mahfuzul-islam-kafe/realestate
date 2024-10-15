@@ -3,7 +3,7 @@
         <h1 class="fs-35 fw-medium">Find the right property, right away</h1>
         <h2 class="fs-20 fw-100">Kemea supports your property research in Israel at every stage</h2>
     </section>
-    <nav class="sticky-top w-100 margin-y-20 mx-0 padding-y-10  postion-relative" style="background:#fff; ">
+    <nav class="sticky-top w-100 margin-y-20 mx-0 padding-y-10  postion-relative filter-nav" style="background:#fff; ">
         <div class="container filter-bar" style="background:#fff ">
             <div class="form-group-inner filter-search">
                 <input type="text" class="form-control" id="search" placeholder="">

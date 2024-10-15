@@ -1,0 +1,51 @@
+#agency-heading {
+    position: relative;
+    padding: 0px !important;
+}
+
+.agency-cover {
+    object-fit: fill;
+    height: 491px;
+    width: 100%;
+
+    @include mobile {
+
+        height: 240px;
+    }
+
+}
+
+.agency-card {
+    box-shadow: 2px  2px 2px 2px #51505058;
+    position: absolute;
+    bottom: -140px;
+    right: 10%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 189px;
+    background-color: #fff;
+    width: 80%;
+
+    @include mobile {
+        min-height: 189px; 
+        bottom: -165px;
+        right: 0%;
+        width: 100%;
+    }
+}
+
+
+.agency-logo{
+    height: 133px;
+    width: 125px;
+    object-fit: contain;
+}
+
+.agency-schedule{
+    list-style: none;
+    padding: 15px 30px;
+    margin: 0px;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    font-family: Ae;
+}
