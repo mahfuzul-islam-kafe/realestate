@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
         User::create([
             'name' => 'Admin',
             'last_name' => 'last name',
-            'email' => 'admin@admin.com',
+            'email' => 'admin@gmail.com',
             'password' => Hash::make('password'), // Hashing the password
             'role' => 'admin',
             'is_subscribed' => true,
@@ -25,7 +25,7 @@ class UserSeeder extends Seeder
             'profile_image' => null,
             'social_login' => null,
             'last_login' => now(),
-        ]);
+        ]); 
 
         // Agent Users
         User::create([
