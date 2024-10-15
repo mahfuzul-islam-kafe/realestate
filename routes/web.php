@@ -10,6 +10,7 @@ Route::view('/listing', 'pages.listing');
 Route::view('/confidential', 'pages.confidential');
 
 Route::view('mansion', 'pages.mansion');
+Route::view('agent-forms', 'pages.agents.forms');
 Route::view('affordability_calculator', 'pages.affordability_calculator');
 
 Route::get('/test', function () {
