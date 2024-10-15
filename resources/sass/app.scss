@@ -14,6 +14,11 @@
 @import 'mahfuz.scss';
 @import 'affordability_calculator.scss';
 
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 p {
     margin: 0 !important;
@@ -102,6 +107,12 @@ a {
 
 
 @for $i from 1 through 100 {
+
+    .gutter-#{$i} {
+        column-gap: #{$i}px;
+        row-gap: #{$i}px;
+    }
+
     .margin-#{$i} {
         margin: #{$i}px !important;
     }
@@ -385,10 +396,25 @@ $weights:(100,
 }
 
 
+.filter-nav {
 
+    overflow: inherit;
+
+    @include mobile {
+        overflow-x: auto;
+        overflow-y: visible;
+
+    }
+
+    /* Enables horizontal scrolling */
+    /* Keeps the vertical overflow unrestricted */
+
+
+
+}
 
 .filter-bar {
-    
+
 
     height: 50px;
     gap: 10px;
@@ -519,3 +545,5 @@ $weights:(100,
 
     }
 }
+
+@import 'agency'

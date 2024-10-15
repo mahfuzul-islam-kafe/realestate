@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
 Route::view('/listing', 'pages.listing');
+Route::view('/agency', 'pages.agency');
 Route::view('/confidential', 'pages.confidential');
 
 Route::view('mansion', 'pages.mansion');
