@@ -38,25 +38,28 @@
     color: #999999 !important;
     font-size: 13px;
 }
-.input-group {
-  .form-control {
-    border-radius: 0.4rem 0 0 0.4rem; 
-    box-shadow: none; 
-  }
-
-  .input-group-text {
-    border-left: none; 
-    border-radius: 0 0.4rem 0.4rem 0; 
-    background-color: transparent;
-    padding-left: 10px; 
-    padding-right: 10px; 
-    color: #e2e2e2;
-  }
-
-  input {
-    border-right: none; 
+.col-desk-mobile-440{
+  .input-group {
+    .form-control {
+      border-radius: 0.4rem 0 0 0.4rem; 
+      box-shadow: none; 
+    }
+  
+    .input-group-text {
+      border-left: none; 
+      border-radius: 0 0.4rem 0.4rem 0; 
+      background-color: transparent;
+      padding-left: 10px; 
+      padding-right: 10px; 
+      color: #e2e2e2;
+    }
+  
+    input {
+      border-right: none; 
+    }
   }
 }
+
 .card-custom {
     border-radius: 12px;
     padding: 0;
