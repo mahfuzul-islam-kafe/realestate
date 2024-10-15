@@ -18,9 +18,19 @@
                         Ahuza St 70. Ramana
                     </a>
                 </div>
-                <div class="col-md-3">
-
-                </div>
+                <div class="col-md-3 middle">
+                    <ul class="agency-schedule">
+                        <li>
+                            <span>Sunday - Monday</span> <span>- 9:30 - 19:00</span>
+                        </li>
+                        <li>
+                            <span>Sunday - Monday</span> <span>- 9:30 - 19:00</span>
+                        </li>
+                        <li>
+                            <span>Sunday - Monday</span> <span>- 9:30 - 19:00</span>
+                        </li>
+                    </ul>
+                </div>  
             </div>
         </div>
     </section>

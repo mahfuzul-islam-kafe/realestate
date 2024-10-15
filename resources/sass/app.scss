@@ -155,11 +155,12 @@ a {
     }
 
     .margin-x-#{$i} {
-        padding: inherit #{$i}px;
+        margin-right: #{$i}px;
+        margin-left: #{$i}px;
     }
 
     .margin-y-#{$i} {
-        margin: #{$i}px;
+        margin-top: #{$i}px;
         margin-bottom: #{$i}px;
     }
 
