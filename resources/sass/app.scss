@@ -13,10 +13,23 @@
 @import 'bootstrapOverwrite';
 @import 'mahfuz.scss';
 @import 'affordability_calculator.scss';
-p{
+@import 'agent-form.scss';
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
     margin: 0 !important;
     padding: 0 !important;
 }
+
+
+
+/* Add other font styles as needed */
+
 
 .form-group-inner {
     position: relative;
@@ -58,8 +71,6 @@ a {
     a {
         color: $primary !important;
     }
-
-
 }
 
 .breadcrumb {
@@ -97,6 +108,12 @@ a {
 
 
 @for $i from 1 through 100 {
+
+    .gutter-#{$i} {
+        column-gap: #{$i}px;
+        row-gap: #{$i}px;
+    }
+
     .margin-#{$i} {
         margin: #{$i}px !important;
     }
@@ -138,11 +155,12 @@ a {
     }
 
     .margin-x-#{$i} {
-        padding: inherit #{$i}px;
+        margin-right: #{$i}px;
+        margin-left: #{$i}px;
     }
 
     .margin-y-#{$i} {
-        margin: #{$i}px;
+        margin-top: #{$i}px;
         margin-bottom: #{$i}px;
     }
 
@@ -165,7 +183,6 @@ a {
     }
 
     .border-radius-#{$i} {
-
         border-radius:#{$i}px;
     }
 }
@@ -182,6 +199,19 @@ $weights:(100,
     900,
 );
 
+
+#topNav {
+    box-shadow: 1px 1px 1px #75808a37;
+    height: 77px;
+    font-family: 'Aeonik';
+
+    .nav-link,
+    .btn {
+        letter-spacing: -0.24px;
+        font-weight: 300 !important;
+
+    }
+}
 
 @each $weight in $weights {
     .fw-#{$weight} {
@@ -230,6 +260,8 @@ $weights:(100,
     background-color: #ffffff;
     height: 37px;
     width: 180px;
+    font-family: 'Aeonik Pro Trial';
+    font-weight: 100;
 
     img {
         height: 13px;
@@ -292,42 +324,228 @@ $weights:(100,
     }
 }
 
+.property-primary {
+    font-family: 'Aeonik' !important;
+
+    button,
+    a {
+        font-family: 'Aeonik' !important;
+    }
+}
+
 .property-primary_slider {
     --swiper-theme-color: #ffffff;
     --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, .8);
     width: 302px;
     overflow: hidden;
     position: relative;
-    
+
+
     img {
         width: 302px;
         height: 286px;
         border-radius: 12px;
     }
-   
-.icon{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 10;
-    i{
-        transition: .1s cubic-bezier(0.075, 0.82, 0.165, 1);
-        color: #fff;
-        &:hover{
-            transform: scale(1.3);
-        }
-    }
 
+    .icon {
+
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+
+        i {
+            transition: .1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            color: #fff;
+            font-size: 24px;
+
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+
+    }
 }
+
+.aeonik-pro-trial {
+    font-family: 'Aeonik Pro Trial';
+}
+
+.aeonik-pro-medium {
+    font-family: 'Aeonik Pro Medium';
+}
+
+.aeonik-pro-revolut {
+    font-family: 'Aeonik Pro Revolut';
+}
+
+.caros-soft {
+    font-family: 'CarosSoft';
 }
 
 @media (max-width: 768px) {
     .property-primary_slider {
-        width: 100%; /* Make slider take full width on smaller screens */
+        width: 100%;
+        /* Make slider take full width on smaller screens */
     }
 
     .property-primary_slider img {
-        width: 100%; /* Adjust the image width to match the slider's width */
-        height: auto; /* Maintain aspect ratio by auto-adjusting height */
+        width: 100%;
+        /* Adjust the image width to match the slider's width */
+        height: auto;
+        /* Maintain aspect ratio by auto-adjusting height */
     }
 }
+
+
+.filter-nav {
+
+    overflow: inherit;
+
+    @include mobile {
+        overflow-x: auto;
+        overflow-y: visible;
+
+    }
+
+    /* Enables horizontal scrolling */
+    /* Keeps the vertical overflow unrestricted */
+
+
+
+}
+
+.filter-bar {
+
+
+    height: 50px;
+    gap: 10px;
+    position: relative;
+    display: flex;
+
+
+    .toggle-button {
+        min-width: 116px;
+        height: 44px;
+        display: flex;
+        border: #191C1F 1px solid;
+
+        border-radius: 99px;
+        overflow: hidden;
+
+
+        input {
+            display: none;
+        }
+
+        .active {
+            color: #fff;
+            background-color: #191C1F;
+            overflow: hidden;
+        }
+
+        div {
+
+
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+            width: 50%;
+
+            &:first-child {
+                border-right: 1px solid #191C1F;
+            }
+
+            &:last-child {
+                border-left: 1px solid #191C1F;
+            }
+
+
+        }
+
+
+    }
+
+    .filter-search {
+        input {
+            width: 243px;
+            height: 44px;
+            border: #191C1F 1px solid;
+            border-radius: 99px;
+            outline: none;
+        }
+
+        label {
+            color: #191C1F;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+    }
+
+    .dropdown {
+        z-index: 100;
+        background-color: #fff;
+        position: absolute;
+        z-index: 20;
+        padding: 0px 15px;
+        width: 155px;
+
+        button {
+            all: unset;
+            /* Resets all styles to inherit from parent elements */
+            display: inline-block;
+            /* Ensures the button acts like an inline block */
+            cursor: pointer;
+            /* Shows the pointer cursor when hovering over the button */
+        }
+
+        button:focus {
+            outline: none;
+            /* Removes the focus outline */
+        }
+
+        border: #191C1F 1px solid;
+
+        border-radius: 99px;
+
+        .dropdown-content {
+            background-color: #fff;
+            display: none;
+        }
+
+        &.active {
+
+            border-radius: 20px;
+
+            .dropdown-content {
+                padding: 10px 0px;
+                border-top: 1px solid #191C1F;
+                display: block;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+            }
+        }
+
+        .dropdown-btn {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: none;
+            background: none;
+            outline: none;
+            min-height: 44px;
+
+        }
+
+
+    }
+}
+
+@import 'agency'

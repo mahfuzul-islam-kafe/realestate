@@ -22,6 +22,8 @@ return new class extends Migration
             $table->boolean('is_subscribed')->default(false);
             $table->string('profile_image')->nullable();
             $table->string('social_login')->nullable();
+            $table->string('company_name')->nullable();
+            $table->string('license_number')->nullable();
             $table->timestamp('last_login')->nullable();
             $table->timestamps();
         

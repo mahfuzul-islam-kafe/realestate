@@ -1,0 +1,88 @@
+.ads-type {
+    display: inline-block;
+    position: relative;
+    border-radius: 9px;
+    border: 1px solid #DDDDDD;
+    padding: 20px 40px;
+    cursor: pointer;
+    width: auto;
+    text-align: center;
+    transition: border-color 0.3s, background-color 0.3s;
+
+    label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto 10px;
+        height: 30px;
+        width: 35px;
+    }
+
+    p {
+        color: #222222;
+        font-size: 18px;
+        transition: color 0.3s;
+    }
+
+    &:hover {
+        border-color: #0047FF;
+        background-color: #f0f8ff;
+    }
+
+    &.selected {
+        border-color: #0047FF;
+        background-color: #0047FF;
+
+        p {
+            color: #ffffff; 
+        }
+
+        img {
+            filter: brightness(0) invert(1); 
+        }
+    }
+}
+.form-check-input[type=checkbox]{
+    border-radius: 3px !important;
+}
+.btn-group {
+    .btn {
+        &.btn-outline-dark {
+            color: #363636; // Text color
+            border-color: #E2E8F0; // Border color
+            background-color: transparent; // Default background
+
+            &:hover {
+                background-color: #F5F5F5; // Background color on hover
+                color: #0047FF; // Text color on hover
+            }
+        }
+    }
+
+    // Change background and text color when the associated radio button is checked
+    input[type="radio"]:checked + label {
+        background-color: #F5F5F5; // Selected background color
+        color: #0047FF; // Change text color to blue when selected
+        border-color: #0047FF; // Border color when selected
+    }
+
+    // Hide the actual radio buttons
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+

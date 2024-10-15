@@ -28,6 +28,8 @@ class User extends Authenticatable
         'profile_image',
         'social_login',
         'last_login',
+        'company_name',
+        'license_number',
     ];
 
     /**

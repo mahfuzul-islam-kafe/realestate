@@ -29,8 +29,8 @@ class UserSeeder extends Seeder
 
         // Agent Users
         User::create([
-            'name' => 'Agent User 1',
-            'last_name' => 'last name',
+            'name' => 'Abdur',
+            'last_name' => 'Rahman',
             'email' => 'agent1@gmail.com',
             'password' => Hash::make('password'),
             'role' => 'agent',
@@ -42,8 +42,8 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
-            'name' => 'Agent User 2',
-            'last_name' => 'last name',
+            'name' => 'Mahafuzul',
+            'last_name' => 'Islam',
             'email' => 'agent2@gmail.com',
             'password' => Hash::make('password'),
             'role' => 'agent',
@@ -57,9 +57,9 @@ class UserSeeder extends Seeder
         // Regular Users
         for ($i = 1; $i <= 6; $i++) {
             User::create([
-                'name' => 'User ' . $i,
-                'last_name' => 'last name',
-                'email' => 'user' . $i . '@gmail.com',
+                'name' => 'Rayhan ' . $i,
+                'last_name' => 'Kazi',
+                'email' => 'rayhan' . $i . '@gmail.com',
                 'password' => Hash::make('password'),
                 'role' => 'user',
                 'is_subscribed' => false,
