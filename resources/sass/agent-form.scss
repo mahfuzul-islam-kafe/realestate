@@ -57,29 +57,27 @@
 .form-check-input[type=checkbox]{
     border-radius: 3px !important;
 }
-.step-3{
+.property-details{
     .btn-group {
         .btn {
             &.btn-outline-dark {
-                color: #363636; // Text color
-                border-color: #E2E8F0; // Border color
-                background-color: transparent; // Default background
+                color: #363636; 
+                border-color: #E2E8F0; 
+                background-color: transparent;
     
                 &:hover {
-                    background-color: #F5F5F5; // Background color on hover
-                    color: #0047FF; // Text color on hover
+                    background-color: #F5F5F5; 
+                    color: #0047FF; 
                 }
             }
         }
     
-        // Change background and text color when the associated radio button is checked
         input[type="radio"]:checked + label {
-            background-color: #F5F5F5; // Selected background color
-            color: #0047FF; // Change text color to blue when selected
-            border-color: #0047FF; // Border color when selected
+            background-color: #F5F5F5; 
+            color: #0047FF;
+            border-color: #0047FF; 
         }
     
-        // Hide the actual radio buttons
         input[type="radio"] {
             position: absolute;
             opacity: 0;
@@ -122,3 +120,84 @@
     }
 }
 
+.upload-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  
+    &:hover {
+      border-color: #1f2a57;
+    }
+  
+    .upload-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%; 
+  
+      .icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1f2a57;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: white;
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+  
+      p {
+        font-size: 16px;
+        color: #333;
+        margin: 0;  
+      }
+  
+      .file-input {
+        opacity: 0; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+    }
+  
+    .delete-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #333;
+      font-size: 18px;
+      cursor: pointer;
+  
+      &:hover {
+        color: #ff0000;
+      }
+    }
+  }
+  .label-style{
+    color:  rgba(29, 35, 78, 0.8) !important;
+  }
+  .payments-dates-more{
+    .form-label{
+        color: #1D234E !important;
+        margin-bottom: 18px !important;
+        font-size: 18px !important;
+    }
+    .input-group-text{
+        background-color: #E2E8F0 !important;
+    }
+  }

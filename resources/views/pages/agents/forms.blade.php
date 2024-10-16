@@ -90,7 +90,7 @@
                 </div>
             </div>
         </div>
-        <div class="step-3 margin-top-40">
+        <div class="step-3 property-details margin-top-40">
             <div class="row mb-3">
                 <div class="col">
                     <label for="num_rooms" class="form-label">Number of rooms*</label>
@@ -304,7 +304,179 @@
             </div>
 
         </div>
+        <div class="step-4 margin-top-40">
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label fs-18">Description of the property*</label>
+                <div class="d-flex justify-content-between align-items-center fs-13 margin-bottom-11">
+                    <span>Did you know: an ad without a description hardly gets any calls</span> <span>0/400</span>
+                </div>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="height: 330px"></textarea>
+            </div>
+        </div>
+        <div class="step-5 margin-top-40">
+            <div class="upload">
+                <label for="formFile" class="form-label">You have nothing to worry about, in the gallery the image
+                    will
+                    appear in its original size* 0/10</label>
+                <div class="upload-area">
+                    <div class="upload-content">
+                        <div class="icon-container">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <p>Drag here images and videos</p>
+                        <input type="file" class="file-input" accept="image/*, video/*" multiple />
+                        <div class="delete-icon">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="upload-link margin-top-40">
+                <div class="">
+                    <label for="upload-link" class="form-label fs-18" style="color: #1D234E">If you have a link for
+                        the Matterport 3D
+                        view, you can attach it to showcase the 3D view in the property gallery</label>
+                    <input type="text" class="form-control" id="upload-link" placeholder="https://">
+                </div>
+            </div>
+        </div>
+        <div class="step-6 margin-top-40">
 
+
+            <div class="row mb-3">
+
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Your name?*</label>
+                    <input type="text" class="form-control" id="name" placeholder="David" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="phone" class="form-label">At what number can those interested reach you?
+                        *</label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <img src="https://flagcdn.com/w20/il.png" alt="Country Flag">
+
+                        </span>
+
+                        <input type="tel" class="form-control" id="phone" placeholder="" required>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <a href="#" class="text-decoration-none fs-18" style="color: rgba(29, 35, 78, 0.8)">
+                    <i class="fa-solid fa-circle-plus"></i> Add another contact
+                </a>
+            </div>
+
+            <div class="d-flex flex-wrap">
+                <div class="col form-check">
+                    <input type="checkbox" class="form-check-input" id="advertisingMail" required>
+                    <label class="form-check-label label-style" for="advertisingMail">
+                        I confirm the receipt of advertising mail related to the ad I published on the Kemea website
+                    </label>
+                </div>
+
+                <div class="col form-check">
+                    <input type="checkbox" class="form-check-input" id="terms" required>
+                    <label class="form-check-label label-style" for="terms">
+                        I have read and agreed to the <a href="#" class="text-decoration-underline">Terms &
+                            Conditions</a>
+                    </label>
+                </div>
+            </div>
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="updates">
+                <label class="form-check-label label-style" for="updates">
+                    I would love to receive updates, publications, suggestions or tips regarding the Kemea
+                    bulletin board
+                </label>
+            </div>
+
+        </div>
+        <div class="rent-step-3 payments-dates-more margin-top-40">
+            <div class="row g-3 margin-bottom-40">
+                <div class="col-md-3">
+                    <label for="surface-build" class="form-label">Surface build*</label>
+                    <div class="input-group">
+                        <input type="number" id="surface-build" class="form-control" placeholder="000">
+                        <span class="input-group-text">m²</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="garden-surface" class="form-label">Garden surface</label>
+                    <div class="input-group">
+                        <input type="number" id="garden-surface" class="form-control" placeholder="000">
+                        <span class="input-group-text">m²</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="total-surface" class="form-label">Total Surface*</label>
+                    <div class="input-group">
+                        <input type="number" id="total-surface" class="form-control" placeholder="000">
+                        <span class="input-group-text">m²</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 margin-bottom-40">
+
+                <div class="col-md-6">
+                    <label for="payments" class="form-label">Number of payments*</label>
+                    <select id="payments" class="form-select">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="price" class="form-label">Price*</label>
+                    <div class="input-group">
+                        <input type="number" id="price" class="form-control" placeholder="000">
+                        <span class="input-group-text">NIS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 margin-bottom-40">
+
+                <div class="col-md-3">
+                    <label for="arnona" class="form-label">Arnona for 2 months</label>
+                    <div class="input-group">
+                        <input type="number" id="arnona" class="form-control" placeholder="000">
+                        <span class="input-group-text">NIS</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="house-vaard" class="form-label">House Vaad</label>
+                    <div class="input-group">
+                        <input type="number" id="house-vaard" class="form-control" placeholder="000">
+                        <span class="input-group-text">NIS</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="entry-date" class="form-label">Entry date*</label>
+                    <input type="text" id="entry-date" class="form-control" placeholder="DD/MM/YY">
+                    <div class="margin-top-15">
+                        <div class="form-check form-check-inline margin-right-50">
+                            <input class="form-check-input" type="checkbox" id="immediately" value="immediately" checked>
+                            <label class="form-check-label" for="immediately">Immediately</label>
+                        </div>
+                        <div class="form-check form-check-inline margin-right-50">
+                            <input class="form-check-input" type="checkbox" id="flexible" value="flexible" checked>
+                            <label class="form-check-label" for="flexible">Flexible</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="long-term" value="long-term" checked>
+                            <label class="form-check-label" for="long-term">Long term</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
 </x-app>

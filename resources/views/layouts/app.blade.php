@@ -60,24 +60,32 @@
 
 
 
-                <ul class="navbar-nav ms-auto gap-4 align-items-center d-none d-lg-flex ">
+                <ul class="navbar-nav ms-auto align-items-center d-none d-lg-flex ">
                     @auth
 
-                        <div class="dropdown text-end">
-                            <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                        <div class="dropdown">
+                            <a href="#"
+                                class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle user-dropdown"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                {{ auth()->user()->name }}
+                                <img src="{{ asset('assets/images/attributes/threeline.svg') }}" alt=""
+                                    style="width: 24px; height: 24px; margin-right: 5px;">
+                                <img src="{{ asset('assets/images/attributes/usericon.svg') }}" alt=""
+                                    style="width: 24px; height: 24px;">
                             </a>
-                            <ul class="dropdown-menu text-small">
-                                <li><a class="dropdown-item" href="#">Settings</a></li>
-                                <li><a class="dropdown-item" href="#">Profile</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
+                            <ul class="dropdown-menu text-small dropdown-menu-end shadow-custom-for-user-dropdown">
+                                <li><a class="dropdown-item" href="{{ route('user.notification') }}"><img
+                                            src="{{ asset('assets/images/attributes/bell-ringing.svg') }}"
+                                            alt="">Notifications</a></li>
+                                <li><a class="dropdown-item" href="#"><img
+                                            src="{{ asset('assets/images/attributes/user_profile_man.svg') }}"
+                                            alt="">Profile</a></li>
+
                                 <li>
                                     <form action="{{ route('logout') }}" method="POST">
                                         @csrf
-                                        <button type="submit" class="dropdown-item" href="#">Sign out</button>
+                                        <button type="submit" class="dropdown-item"><img
+                                                src="{{ asset('assets/images/attributes/logout.svg') }}" alt="">Log
+                                            out</button>
                                     </form>
                                 </li>
                             </ul>
