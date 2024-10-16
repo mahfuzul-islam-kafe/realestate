@@ -14,7 +14,7 @@
         }
 
         .auth-left {
-            /* background: #000000; */
+            background: #000000; 
             height: auto;
 
         }

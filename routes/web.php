@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\AgentController;
-use App\Http\Controllers\AgentController;
 use App\Http\Controllers\PageController;
 use App\Models\Property;
 use Illuminate\Support\Facades\Route;
