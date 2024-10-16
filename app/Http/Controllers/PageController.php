@@ -21,4 +21,9 @@ class PageController extends Controller
         $conditions = PropertyCondition::all();
         return view('pages.form',compact('types', 'conditions'));
     }
+    public function registered(){
+        
+        return view('pages.user-registered');
+    }
+    
 }

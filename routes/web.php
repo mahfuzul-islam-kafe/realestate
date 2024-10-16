@@ -22,6 +22,7 @@ Route::get('login-as-agent', [PageController::class, 'loginAsAgent'])->name('log
 Route::get('register-as-agent', [PageController::class, 'registerAsAgent'])->name('register.agent');
 Route::group(['controller' => PageController::class], function () {
     Route::get('/form', 'form')->name('view.form');
+    Route::get('/user-registered', 'registered');
 });
 Route::group(['controller' => AgentController::class], function () {
     Route::post('/form/submit', 'formSubmit')->name('form.submit');
