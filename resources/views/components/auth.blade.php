@@ -14,7 +14,7 @@
         }
 
         .auth-left {
-            background: #000000; 
+            background: #000000;
             height: auto;
 
         }
@@ -56,8 +56,8 @@
 </head>
 <div class="main">
     <div class="d-flex">
-        <div class="col-md-6 d-none d-md-block auth-left">
-            @if (request()->routeIs('login'))
+        <div class="col-md-6 d-none d-md-block @if (request()->routeIs('login') || request()->routeIs('register')) auth-left @endif">
+            @if (request()->routeIs('login') || request()->routeIs('register'))
                 <div class="left-box text-light">
                     <h2 class="fw-500 fs-40 mb-4 ">By entering in your Kemea account...</h2>
                     <div class="margin-top-75">
@@ -82,12 +82,12 @@
                 </div>
             @elseif (request()->routeIs('register.agent'))
                 <div class="w-100 h-100">
-                    <img src="{{ asset('assets/register-agent.png') }}" class="img-fluid h-100" alt=""
+                    <img src="{{ asset('assets/register-agent.png') }}" class="img-fluid h-100 w-100" alt=""
                         srcset="">
                 </div>
             @else
                 <div class="w-100">
-                    <img src="{{ asset('assets/login-agent.png') }}" class="img-fluid h-100" alt=""
+                    <img src="{{ asset('assets/login-agent.png') }}" class="img-fluid h-100 w-100" alt=""
                         srcset="">
                 </div>
             @endif
