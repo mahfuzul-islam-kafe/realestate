@@ -83,14 +83,14 @@
             </div>
             <div class="col-12">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" checked>
                     <label class="form-check-label" for="gridCheck">
                         Ground floor
                     </label>
                 </div>
             </div>
         </div>
-        <div class="step-3">
+        <div class="step-3 margin-top-40">
             <div class="row mb-3">
                 <div class="col">
                     <label for="num_rooms" class="form-label">Number of rooms*</label>
@@ -127,113 +127,182 @@
 
                 <div class="col">
                     <label class="form-label">Ground/covered car park*</label>
-                    <div class="ads-type">
-                        <input class="form-check-input" type="radio" name="car_park" id="car_park_none"
-                            value="none">
-                        <label class="form-check-label" for="car_park_none">None</label>
-                    </div>
-                    <div class="ads-type">
-                        <input class="form-check-input" type="radio" name="car_park" id="car_park_1"
-                            value="1">
-                        <label class="form-check-label" for="car_park_1">1</label>
-                    </div>
-                    <div class="ads-type">
-                        <input class="form-check-input" type="radio" name="car_park" id="car_park_2"
-                            value="2">
-                        <label class="form-check-label" for="car_park_2">2</label>
-                    </div>
-                    <div class="ads-type">
-                        <input class="form-check-input" type="radio" name="car_park" id="car_park_3_plus"
-                            value="3+">
-                        <label class="form-check-label" for="car_park_3_plus">3+</label>
+                    <div class="btn-group" role="group" aria-label="Ground/covered car park">
+                        <input type="radio" class="btn-check" name="car_park" id="car_park_none" value="none"
+                            autocomplete="off">
+                        <label class="btn btn-outline-dark padding-x-20" for="car_park_none">None</label>
+
+                        <input type="radio" class="btn-check" name="car_park" id="car_park_1" value="1"
+                            autocomplete="off">
+                        <label class="btn btn-outline-dark padding-x-35" for="car_park_1">1</label>
+
+                        <input type="radio" class="btn-check" name="car_park" id="car_park_2" value="2"
+                            autocomplete="off">
+                        <label class="btn btn-outline-dark padding-x-35" for="car_park_2">2</label>
+
+                        <input type="radio" class="btn-check" name="car_park" id="car_park_3_plus" value="3+"
+                            autocomplete="off">
+                        <label class="btn btn-outline-dark padding-x-30" for="car_park_3_plus">3+</label>
                     </div>
                 </div>
+
             </div>
 
             <div class="row mb-3">
-                <div class="col">
-                    <label for="total_surface" class="form-label">Total Surface*</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="total_surface" placeholder="000">
-                        <span class="input-group-text">m²</span>
+                <div class="col-md-6">
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="total_surface" class="form-label">Total Surface*</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="total_surface" placeholder="000">
+                                <span class="input-group-text">m²</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="price" class="form-label">Price*</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="price" placeholder="000">
+                                <span class="input-group-text">NIS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="entry_date" class="form-label">Entry date*</label>
+                        <input type="text" class="form-control" id="entry_date" placeholder="DD/MM/YY">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="immediately">
+                                <label class="form-check-label" for="immediately">Immediately</label>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="flexible">
+                                <label class="form-check-label" for="flexible">Flexible</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <label for="price" class="form-label">Price*</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="price" placeholder="000">
-                        <span class="input-group-text">NIS</span>
+
+                <div class="col-md-6">
+                    <div class="mb-3 additional-property-details">
+                        <label class="form-label">More about the property*</label>
+                        <div class="row">
+                            <div class="col-md-4 mb-2">
+                                <input type="checkbox" class="btn-check" id="access_disabled" autocomplete="off">
+                                <label
+                                    class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-start"
+                                    for="access_disabled">
+                                    <img src="{{ asset('assets/images/attributes/wheelchair.svg') }}" alt="">
+                                    Access for disabled
+                                </label>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="checkbox" class="btn-check" id="elevators" autocomplete="off">
+                                <label
+                                    class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-start"
+                                    for="elevators">
+                                    <img src="{{ asset('assets/images/attributes/elevetors.svg') }}" alt="">
+                                    Elevators
+                                </label>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="checkbox" class="btn-check" id="renovated" autocomplete="off">
+                                <label
+                                    class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-start"
+                                    for="renovated">
+                                    <img src="{{ asset('assets/images/attributes/renovator.svg') }}" alt="">
+                                    Renovated
+                                </label>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="checkbox" class="btn-check" id="air_conditioner" autocomplete="off">
+                                <label
+                                    class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-start"
+                                    for="air_conditioner">
+                                    <img src="{{ asset('assets/images/attributes/air-conditionner.svg') }}"
+                                        alt=""> Air conditioner
+                                </label>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="checkbox" class="btn-check" id="furnitures_included"
+                                    autocomplete="off">
+                                <label
+                                    class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-start"
+                                    for="furnitures_included">
+                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
+                                    Furnitures included
+                                </label>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="checkbox" class="btn-check" id="mamad" autocomplete="off">
+                                <label
+                                    class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-start"
+                                    for="mamad">
+                                    <img src="{{ asset('assets/images/attributes/mamad.svg') }}" alt=""> Mamad
+                                </label>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="checkbox" class="btn-check" id="bars" autocomplete="off">
+                                <label
+                                    class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-start"
+                                    for="bars">
+                                    <img src="{{ asset('assets/images/attributes/bars.svg') }}" alt=""> Bars
+                                </label>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="checkbox" class="btn-check" id="unit" autocomplete="off">
+                                <label
+                                    class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-start"
+                                    for="unit">
+                                    <img src="{{ asset('assets/images/attributes/unit.svg') }}" alt=""> Unit
+                                </label>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="checkbox" class="btn-check" id="personal_mazgan" autocomplete="off">
+                                <label
+                                    class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-start"
+                                    for="personal_mazgan">
+                                    <img src="{{ asset('assets/images/attributes/mazgan.svg') }}" alt="">
+                                    Personal Mazgan
+                                </label>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="checkbox" class="btn-check" id="water_heater" autocomplete="off">
+                                <label
+                                    class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-start"
+                                    for="water_heater">
+                                    <img src="{{ asset('assets/images/attributes/heater.svg') }}" alt="">
+                                    Water heater
+                                </label>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="checkbox" class="btn-check" id="kosher_kitchen" autocomplete="off">
+                                <label
+                                    class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-start"
+                                    for="kosher_kitchen">
+                                    <img src="{{ asset('assets/images/attributes/kosher.svg') }}" alt="">
+                                    Kosher kitchen
+                                </label>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <input type="checkbox" class="btn-check" id="storage" autocomplete="off">
+                                <label
+                                    class="btn btn-outline-dark w-100 d-flex align-items-center justify-content-start"
+                                    for="storage">
+                                    <img src="{{ asset('assets/images/attributes/storage.svg') }}" alt="">
+                                    Storage
+                                </label>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
-            <div class="mb-3">
-                <label for="entry_date" class="form-label">Entry date*</label>
-                <input type="text" class="form-control" id="entry_date" placeholder="DD/MM/YY">
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">More about the property*</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="access_disabled">
-                    <label class="form-check-label" for="access_disabled">Access for disabled</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="elevators">
-                    <label class="form-check-label" for="elevators">Elevators</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="renovated">
-                    <label class="form-check-label" for="renovated">Renovated</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="air_conditioner">
-                    <label class="form-check-label" for="air_conditioner">Air conditioner</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="furnitures_included">
-                    <label class="form-check-label" for="furnitures_included">Furnitures included</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="bars">
-                    <label class="form-check-label" for="bars">Bars</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="unit">
-                    <label class="form-check-label" for="unit">Unit</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="mamad">
-                    <label class="form-check-label" for="mamad">Mamad</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="personal_mazgan">
-                    <label class="form-check-label" for="personal_mazgan">Personal Mazgan</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="water_heater">
-                    <label class="form-check-label" for="water_heater">Water heater</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="kosher_kitchen">
-                    <label class="form-check-label" for="kosher_kitchen">Kosher kitchen</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="storage">
-                    <label class="form-check-label" for="storage">Storage</label>
-                </div>
-            </div>
-
-            <div class="mb-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="immediately">
-                    <label class="form-check-label" for="immediately">Immediately</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="flexible">
-                    <label class="form-check-label" for="flexible">Flexible</label>
-                </div>
-            </div>
         </div>
 
     </div>

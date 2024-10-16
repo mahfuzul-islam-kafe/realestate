@@ -57,32 +57,68 @@
 .form-check-input[type=checkbox]{
     border-radius: 3px !important;
 }
-.btn-group {
-    .btn {
-        &.btn-outline-dark {
-            color: #363636; // Text color
-            border-color: #E2E8F0; // Border color
-            background-color: transparent; // Default background
-
-            &:hover {
-                background-color: #F5F5F5; // Background color on hover
-                color: #0047FF; // Text color on hover
+.step-3{
+    .btn-group {
+        .btn {
+            &.btn-outline-dark {
+                color: #363636; // Text color
+                border-color: #E2E8F0; // Border color
+                background-color: transparent; // Default background
+    
+                &:hover {
+                    background-color: #F5F5F5; // Background color on hover
+                    color: #0047FF; // Text color on hover
+                }
             }
+        }
+    
+        // Change background and text color when the associated radio button is checked
+        input[type="radio"]:checked + label {
+            background-color: #F5F5F5; // Selected background color
+            color: #0047FF; // Change text color to blue when selected
+            border-color: #0047FF; // Border color when selected
+        }
+    
+        // Hide the actual radio buttons
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+}
+.additional-property-details {
+    .btn-check {
+        border-color: #E2E8F0 !important; 
+        color: rgba(29, 35, 78) !important; 
+    }
+
+    .btn-check:checked + .btn {
+        border-color: #0047FF !important; 
+        background-color: #0047FF !important; 
+        color: #ffffff !important; 
+        img {
+            filter: brightness(0) invert(1); 
         }
     }
 
-    // Change background and text color when the associated radio button is checked
-    input[type="radio"]:checked + label {
-        background-color: #F5F5F5; // Selected background color
-        color: #0047FF; // Change text color to blue when selected
-        border-color: #0047FF; // Border color when selected
+    .btn-outline-dark {
+        border: 1px solid #E2E8F0;
+        img{
+            width: 15px;
+            height: 20px;
+            margin-right: 15px;
+        }
     }
 
-    // Hide the actual radio buttons
-    input[type="radio"] {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
+    .btn-outline-dark:hover {
+        border: 1px solid #0047FF;
+
+        background-color: #0047FF !important; 
+        color: #ffffff  !important; 
+        img {
+            filter: brightness(0) invert(1); 
+        }
     }
 }
 
