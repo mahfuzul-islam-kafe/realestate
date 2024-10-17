@@ -102,9 +102,10 @@
                             passe</button>
                     </form>
 
-                    <div class="margin-top-5 deactivate-account">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#deactivateModal">Deactivate
-                            Account?</a>
+                    <div class="margin-top-5 deactivate-account ">
+                        <a href="#"data-bs-toggle="modal"
+                            class="{{ auth()->user()->status === 1 ? 'text-danger' : 'text-success' }}"
+                            data-bs-target="#toggleStatusModal">{{ auth()->user()->status === 1 ? 'Deactivate Account' : 'Reactivate Account' }}</a>
                     </div>
                 </div>
             </div>
@@ -134,22 +135,27 @@
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="deactivateModal" tabindex="-1" aria-labelledby="deactivateModalLabel"
+    <div class="modal fade" id="toggleStatusModal" tabindex="-1" aria-labelledby="toggleStatusModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="deactivateModalLabel">Confirm Account Deactivation</h5>
+                    <h5 class="modal-title" id="toggleStatusModalLabel">
+                        {{ auth()->user()->status === 1 ? 'Confirm Account Deactivation' : 'Confirm Account Reactivation' }}
+                    </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Are you sure you want to deactivate your account? This action cannot be undone.
+                    {{ auth()->user()->status === 1 ? 'Are you sure you want to deactivate your account?' : 'Are you sure you want to reactivate your account?' }}
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <form action="{{ route('user.account.deactivate') }}" method="POST" id="deactivateForm">
+                    <form action="{{ route('user.account.deactivate') }}" method="POST">
                         @csrf
-                        <button type="submit" class="btn btn-danger">Deactivate</button>
+                        <button type="submit"
+                            class="btn text-white {{ auth()->user()->status === 1 ? 'btn-danger ' : 'btn-success' }}">
+                            {{ auth()->user()->status === 1 ? 'Deactivate' : 'Reactivate' }}
+                        </button>
                     </form>
                 </div>
             </div>
