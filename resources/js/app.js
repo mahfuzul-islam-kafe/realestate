@@ -29,6 +29,19 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
     });
+    document.querySelectorAll('.property-row_slider').forEach(function (sliderEl, index) {
+        // Initialize a Swiper for each element
+        new Swiper(sliderEl, {
+            direction: 'horizontal', // Slider direction
+            autoplay: 0, // Slider direction
+            effect: 'fade',
+            loop: true, // Enable looping
+            pagination: {
+                el: sliderEl.querySelector('.swiper-pagination'), // Target each card's pagination
+                clickable: true, // Make pagination dots clickable
+            },
+        });
+    });
 });
 
 

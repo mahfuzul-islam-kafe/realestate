@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -23,12 +24,21 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+
         return [
-            'name' => fake()->name(),
+            'name' => fake()->firstName(),
+            'last_name' => fake()->lastName(),
             'email' => fake()->unique()->safeEmail(),
+            'phone' => fake()->phoneNumber(),
+            'is_subscribed' => true,
+            'role' => 'user',
+            'profile_image' => '/assets/images/avatar.png',
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
+            'birth_date' => fake()->dateTimeBetween('-70 year', '-20 year'),
+            'birth_place' => fake()->country(),
+            'nationality' => fake()->country()
         ];
     }
 
@@ -37,8 +47,27 @@ class UserFactory extends Factory
      */
     public function unverified(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return $this->state(fn(array $attributes) => [
             'email_verified_at' => null,
+        ]);
+    }
+
+    public function admin(): static
+    {
+        return $this->state(fn(array $attributes) => [
+            'role' => 'admin'
+        ]);
+    }
+    public function user(): static
+    {
+        return $this->state(fn(array $attributes) => [
+            'role' => 'user'
+        ]);
+    }
+    public function agent(): static
+    {
+        return $this->state(fn(array $attributes) => [
+            'role' => 'agent'
         ]);
     }
 }

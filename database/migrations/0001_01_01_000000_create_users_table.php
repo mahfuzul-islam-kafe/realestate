@@ -22,11 +22,13 @@ return new class extends Migration
             $table->boolean('is_subscribed')->default(false);
             $table->string('profile_image')->nullable();
             $table->string('social_login')->nullable();
-            $table->string('company_name')->nullable();
-            $table->string('license_number')->nullable();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('remember_token')->nullable();
             $table->timestamp('last_login')->nullable();
+            $table->date('birth_date')->nullable();
+            $table->string('nationality')->nullable();
+            $table->string('birth_place')->nullable();
             $table->timestamps();
-        
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

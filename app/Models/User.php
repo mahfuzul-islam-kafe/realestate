@@ -65,6 +65,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Property::class);
     }
+
+    public function agency()
+    {
+        return $this->hasOne(Agency::class, 'agent_id', 'id');
+    }
+
     protected function casts(): array
     {
         return [

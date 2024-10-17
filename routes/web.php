@@ -40,3 +40,10 @@ Auth::routes();
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::group(['prefix' => 'publish-your-property','as'=>'publish.property.'],function(){
+    Route::view('/','pages.agents.publish-your-property')->name('home');
+    Route::view('/sell','pages.agents.sell-your-property')->name('sell');
+    Route::view('/rent','pages.agents.rent-your-property')->name('rent');
+});

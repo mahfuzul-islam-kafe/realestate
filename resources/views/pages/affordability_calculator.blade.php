@@ -195,9 +195,9 @@
                     </ul>
                 </div>
 
-                <div class="col-10">
+                <div class="col-12 col-md-10">
                     <div class="table-responsive d-flex justify-content-center margin-top-80 margin-bottom-100">
-                        <table class="table table-bordered">
+                        <table class="table table-bordeed cost-table">
                             <thead>
                                 <tr>
                                     <th>Percentage</th>
