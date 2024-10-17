@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('property_conditions', function (Blueprint $table) {
+        Schema::create('buyers', function (Blueprint $table) {
             $table->id();
-            $table->string('display_name');
-            $table->string('slug');
+            $table->foreignId('buyer_id')->constrained('users', 'id')->cascadeOnDelete();
+            $table->string('sex')->nullable();
+            $table->dateTime('birth_date')->nullable();
+            $table->string('nationality')->nullable();
+            $table->string('birth_place')->nullable();
             $table->timestamps();
         });
     }
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('property_conditions');
+        Schema::dropIfExists('buyers');
     }
 };

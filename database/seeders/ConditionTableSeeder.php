@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ConditionTableSeeder extends Seeder
 {
@@ -13,7 +13,7 @@ class ConditionTableSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('property_conditions')->insert([
+        DB::table('conditions')->insert([
             ['display_name' => 'Good', 'slug' => 'good'],
             ['display_name' => 'Needs Renovation', 'slug' => 'needs-renovation'],
             ['display_name' => 'New', 'slug' => 'new'],

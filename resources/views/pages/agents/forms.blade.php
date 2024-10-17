@@ -81,17 +81,20 @@
                 </div>
 
             </div>
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck" checked>
-                    <label class="form-check-label" for="gridCheck">
-                        Ground floor
-                    </label>
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" checked>
+                        <label class="form-check-label" for="gridCheck">
+                            Ground floor
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="step-3 property-details margin-top-40">
-            <div class="row mb-3">
+            <div class="row margin-bottom-40">
                 <div class="col">
                     <label for="num_rooms" class="form-label">Number of rooms*</label>
                     <input type="text" class="form-control" id="num_rooms" placeholder="000">
@@ -461,7 +464,8 @@
                     <input type="text" id="entry-date" class="form-control" placeholder="DD/MM/YY">
                     <div class="margin-top-15">
                         <div class="form-check form-check-inline margin-right-50">
-                            <input class="form-check-input" type="checkbox" id="immediately" value="immediately" checked>
+                            <input class="form-check-input" type="checkbox" id="immediately" value="immediately"
+                                checked>
                             <label class="form-check-label" for="immediately">Immediately</label>
                         </div>
                         <div class="form-check form-check-inline margin-right-50">
@@ -469,7 +473,8 @@
                             <label class="form-check-label" for="flexible">Flexible</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="long-term" value="long-term" checked>
+                            <input class="form-check-input" type="checkbox" id="long-term" value="long-term"
+                                checked>
                             <label class="form-check-label" for="long-term">Long term</label>
                         </div>
                     </div>

@@ -42,3 +42,35 @@
         color: #717171;
     }
   }
+  //profile
+  .profile-card {
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+.btn-profile {
+    border-radius: 25px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.deactivate-account {
+  
+    text-align: right;
+    
+}
+.mandat-card {
+  background-color: rgba(6, 102, 235, 0.05); 
+  text-align: start;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border-radius: 20px;
+  height: 120px;
+  p {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #191C1F;
+  }
+}

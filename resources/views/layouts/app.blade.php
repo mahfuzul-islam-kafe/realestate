@@ -76,7 +76,7 @@
                                 <li><a class="dropdown-item" href="{{ route('user.notification') }}"><img
                                             src="{{ asset('assets/images/attributes/bell-ringing.svg') }}"
                                             alt="">Notifications</a></li>
-                                <li><a class="dropdown-item" href="#"><img
+                                <li><a class="dropdown-item" href="{{ route('user.profile') }}"><img
                                             src="{{ asset('assets/images/attributes/user_profile_man.svg') }}"
                                             alt="">Profile</a></li>
 

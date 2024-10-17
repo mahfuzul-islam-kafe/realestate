@@ -34,6 +34,10 @@ Route::group(['prefix' => 'agent', 'as' => 'agent.'], function () {
 });
 Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
     Route::get('/notification', [UserController::class, 'notification'])->name('notification');
+    Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+    Route::post('/profile/update', [UserController::class, 'updateProfile'])->name('profile.update');
+    Route::post('/password/update', [UserController::class, 'updatePassword'])->name('password.update');
+    Route::post('/account/deactivate', [UserController::class, 'deactivateAccount'])->name('account.deactivate');
 });
 
 Auth::routes();
@@ -45,3 +49,10 @@ Auth::routes();
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::group(['prefix' => 'publish-your-property','as'=>'publish.property.'],function(){
+    Route::view('/','pages.agents.publish-your-property')->name('home');
+    Route::view('/sell','pages.agents.sell-your-property')->name('sell');
+    Route::view('/rent','pages.agents.rent-your-property')->name('rent');
+});

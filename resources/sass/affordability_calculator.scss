@@ -12,8 +12,11 @@
     padding-left: 43px;
   }
 
-.table-responsive table{
+.cost-table{
   width: 50%;
+  @include mobile{
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   .col-desk-mobile-440,

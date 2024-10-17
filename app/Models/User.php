@@ -65,6 +65,16 @@ class User extends Authenticatable
     {
         return $this->hasMany(Property::class);
     }
+
+    public function agency()
+    {
+        return $this->hasOne(Agency::class, 'agent_id', 'id')->withDefault();
+    }
+    public function buyer()
+    {
+        return $this->hasOne(Buyer::class, 'buyer_id', 'id')->withDefault();
+    }
+
     protected function casts(): array
     {
         return [

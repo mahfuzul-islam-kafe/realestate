@@ -1,4 +1,5 @@
 <div class="property-primary ">
+    
     <div class="property-primary_slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
