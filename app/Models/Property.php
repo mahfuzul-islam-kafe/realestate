@@ -31,7 +31,11 @@ class Property extends Model
     }
     public function agency()
     {
-        return $this->belongsTo(Agency::class, 'agency_id ');
+        return $this->belongsTo(Agency::class, 'agency_id');
+    }
+    public function type()
+    {
+        return $this->belongsTo(Type::class, 'type_id');
     }
     public function images()
     {

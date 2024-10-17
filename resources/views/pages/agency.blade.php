@@ -14,7 +14,7 @@
                         {{ $agency->agency_name }}
                     </h3>
                     <p class="caros-soft fs-14 fw-light">
-                        152 Properties • Member since 2023
+                        {{$agency->properties->count()}} Properties • Member since {{$agency->created_at->format('Y')}}
                     </p>
 
                     <a href="" class="aeonik fs-14 fw-300">
@@ -33,7 +33,7 @@
                     </ul>
 
                 </div>
-                @dd($agency->properties)
+
                 <div
                     class="col-lg-4 col-md-6 col-12 d-flex justify-content-center align-items-center justify-content-md-start justify-content-lg-end">
                     <div class="agency-contact margin-right-40">
@@ -57,7 +57,8 @@
 
     <section class="container">
         <h1 class="aeonik fs-25 fw-400 margin-bottom-40">
-            RE/MAX Ra'anana : 87 houses and apartments for sale
+            {{ $agency->agency_name }} : {{ $agency->propertiesListedFor('sell')->count() }} houses and apartments for
+            sale
         </h1>
         <div class="row">
             <div class="col-xl-3 d-none d-xl-block ">
@@ -101,14 +102,15 @@
             </div>
             <div class="col-md-12 col-lg-12 col-xl-9">
 
-                @for ($i = 1; $i <= 12; $i++)
+                @foreach ($propertiesSells as $property)
                     <div class="row row-cols-1 mb-3">
 
 
-                        <x-property-row />
+                        <x-property-row :property="$property" />
 
                     </div>
-                @endfor
+                @endforeach ()
+
             </div>
 
         </div>

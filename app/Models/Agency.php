@@ -32,4 +32,8 @@ class Agency extends Model
     {
         return $this->hasMany(Property::class);
     }
+    public function propertiesListedFor($type)
+    {
+        return $this->properties()->where('listed_for', $type)->get();
+    }
 }

@@ -30,6 +30,8 @@ class PageController extends Controller
     }
     public function agencyPage(?string $slug, Agency $agency)
     {
-        return view('pages.agency', compact('agency'));
+        $propertiesSells = $agency->propertiesListedFor('sell');
+        $propertiesRents = $agency->propertiesListedFor('rent');
+        return view('pages.agency', compact('agency', 'propertiesSells', 'propertiesRents'));
     }
 }
