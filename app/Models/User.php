@@ -70,6 +70,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(Agency::class, 'agent_id', 'id');
     }
+    public function buyer()
+    {
+        return $this->hasOne(Buyer::class, 'buyer_id', 'id');
+    }
 
     protected function casts(): array
     {

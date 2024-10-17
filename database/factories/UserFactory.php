@@ -36,12 +36,17 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
-            'birth_date' => fake()->dateTimeBetween('-70 year', '-20 year'),
-            'birth_place' => fake()->country(),
-            'nationality' => fake()->country()
+
         ];
     }
 
+    public function sex($sex): static
+    {
+        return $this->state(fn(array $attributes) => [
+            'name' => fake()->firstName(['Monsieur' => 'male', 'Madame' => 'female'][$sex]),
+            'last_name' => fake()->lastName(['Monsieur' => 'male', 'Madame' => 'female'][$sex]),
+        ]);
+    }
     /**
      * Indicate that the model's email address should be unverified.
      */
@@ -69,5 +74,14 @@ class UserFactory extends Factory
         return $this->state(fn(array $attributes) => [
             'role' => 'agent'
         ]);
+    }
+
+    public function active(): static
+    {
+        return $this->state(fn(array $attributes) => ['status' => 1]);
+    }
+    public function deactive(): static
+    {
+        return $this->state(fn(array $attributes) => ['status' => 0]);
     }
 }
