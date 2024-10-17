@@ -25,5 +25,7 @@ class PageController extends Controller
         
         return view('pages.user-registered');
     }
-    
+    public function agencyPage(){
+        
+    }
 }
