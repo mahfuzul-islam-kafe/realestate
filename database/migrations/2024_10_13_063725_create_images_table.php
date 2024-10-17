@@ -13,8 +13,8 @@ return new class extends Migration {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
             $table->foreignId('property_id')->constrained('properties')->onDelete('cascade');
-            $table->boolean('featured');
-            $table->boolean('three_sixty');
+            $table->boolean('featured')->default(false);
+            $table->boolean('three_sixty')->default(false);
             $table->boolean('internal')->default(true);
             $table->string('path');
             $table->timestamps();

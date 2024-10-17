@@ -17,16 +17,20 @@ class Property extends Model
     // {
     //     return $this->belongsTo(EntryCondition::class, 'entry_condition');
     // }
-    public function property_condition()
-    {
-        return $this->belongsTo(PropertyCondition::class, 'property_condition');
-    }
-    public function property_type()
-    {
-        return $this->belongsTo(PropertyType::class, 'property_type');
-    }
+    // public function property_condition()
+    // {
+    //     return $this->belongsTo(PropertyCondition::class, 'property_condition');
+    // }
+    // public function property_type()
+    // {
+    //     return $this->belongsTo(PropertyType::class, 'property_type');
+    // }
     public function agent()
     {
         return $this->belongsTo(User::class, 'agent_id'); 
+    }
+    public function images()
+    {
+        return $this->hasMany(Image::class); 
     }
 }
