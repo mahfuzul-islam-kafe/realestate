@@ -21,7 +21,7 @@ return new class extends Migration {
 
             $table->enum('listed_for', ['sell', 'rent']);
 
-            $table->decimal('price', 10, 2)->nullable();
+            $table->bigInteger('price')->nullable();
             $table->integer('payments')->nullable();
             $table->integer('arnona_for_2_months')->nullable();
             $table->integer('house_vaad')->nullable();
