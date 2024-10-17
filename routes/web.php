@@ -19,6 +19,8 @@ Route::get('/test', function () {
     $properties = Property::with('ad_type', 'property_type', 'property_condition', 'entry_condition')->get();
     dd($properties);
 });
+Route::get('/agencies/{slug?}_{agency}', [PageController::class, 'agencyPage'])->name('agency.view');
+
 Route::get('login-as-agent', [PageController::class, 'loginAsAgent'])->name('login.agent');
 Route::get('register-as-agent', [PageController::class, 'registerAsAgent'])->name('register.agent');
 Route::group(['controller' => PageController::class], function () {
@@ -51,8 +53,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::group(['prefix' => 'publish-your-property','as'=>'publish.property.'],function(){
-    Route::view('/','pages.agents.publish-your-property')->name('home');
-    Route::view('/sell','pages.agents.sell-your-property')->name('sell');
-    Route::view('/rent','pages.agents.rent-your-property')->name('rent');
+Route::group(['prefix' => 'publish-your-property', 'as' => 'publish.property.'], function () {
+    Route::view('/', 'pages.agents.publish-your-property')->name('home');
+    Route::view('/sell', 'pages.agents.sell-your-property')->name('sell');
+    Route::view('/rent', 'pages.agents.rent-your-property')->name('rent');
 });

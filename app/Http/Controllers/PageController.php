@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Agency;
 use App\Models\PropertyCondition;
 use App\Models\PropertyType;
 use Illuminate\Http\Request;
@@ -16,16 +17,19 @@ class PageController extends Controller
     {
         return view('auth.registerAsAgent');
     }
-    public function form(){
+    public function form()
+    {
         $types = PropertyType::all();
         $conditions = PropertyCondition::all();
-        return view('pages.form',compact('types', 'conditions'));
+        return view('pages.form', compact('types', 'conditions'));
     }
-    public function registered(){
-        
+    public function registered()
+    {
+
         return view('pages.user-registered');
     }
-    public function agencyPage(){
-        
+    public function agencyPage(?string $slug, Agency $agency)
+    {
+        return view('pages.agency', compact('agency'));
     }
 }

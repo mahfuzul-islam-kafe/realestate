@@ -27,10 +27,14 @@ class Property extends Model
     // }
     public function agent()
     {
-        return $this->belongsTo(User::class, 'agent_id'); 
+        return $this->belongsTo(User::class, 'agent_id');
+    }
+    public function agency()
+    {
+        return $this->belongsTo(Agency::class, 'agency_id ');
     }
     public function images()
     {
-        return $this->hasMany(Image::class); 
+        return $this->hasMany(Image::class);
     }
 }
