@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\UserController;
 use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,7 @@ Route::get('login-as-agent', [PageController::class, 'loginAsAgent'])->name('log
 Route::get('register-as-agent', [PageController::class, 'registerAsAgent'])->name('register.agent');
 Route::group(['controller' => PageController::class], function () {
     Route::get('/form', 'form')->name('view.form');
+    Route::get('/user-registered', 'registered');
 });
 Route::group(['controller' => AgentController::class], function () {
     Route::post('/form/submit', 'formSubmit')->name('form.submit');
@@ -29,6 +31,13 @@ Route::group(['controller' => AgentController::class], function () {
 Route::post('register-as-agent', [AgentController::class, 'register'])->name('agent.register.post');
 Route::group(['prefix' => 'agent', 'as' => 'agent.'], function () {
     Route::get('/dashboard', [AgentController::class, 'dashboard'])->name('dashboard');
+});
+Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
+    Route::get('/notification', [UserController::class, 'notification'])->name('notification');
+    Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+    Route::post('/profile/update', [UserController::class, 'updateProfile'])->name('profile.update');
+    Route::post('/password/update', [UserController::class, 'updatePassword'])->name('password.update');
+    Route::post('/account/deactivate', [UserController::class, 'deactivateAccount'])->name('account.deactivate');
 });
 
 Auth::routes();

@@ -15,6 +15,7 @@
 @import 'affordability_calculator.scss';
 @import 'agent-form.scss';
 @import 'property_publish.scss';
+@import 'user-dashboard.scss';
 
 .middle {
     display: flex;
@@ -541,5 +542,18 @@ $weights:(100,
 
     }
 }
-
+.user-dropdown::after{
+    content: none !important;
+}
+.shadow-custom-for-user-dropdown {
+    border: none !important;
+    box-shadow: 0 0 .8rem rgba(0, 0, 0, 0.15) !important;
+}
+.dropdown-menu-end{
+    img{
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+    }
+}
 @import 'agency'
