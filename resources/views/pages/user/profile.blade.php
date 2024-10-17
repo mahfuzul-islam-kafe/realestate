@@ -6,7 +6,7 @@
             <div class="col-md-7">
                 <div class="profile-card shadow padding-y-35 padding-x-20">
                     <h5 class="fs-18 margin-bottom-23">Identité</h5>
-                  
+
                     <form action="{{ route('user.profile.update') }}" method="POST">
                         @csrf
                         <div class="row g-3 margin-bottom-18">
@@ -24,13 +24,13 @@
                             <div class="col-md-4">
                                 <input type="text" class="form-control rounded-pill" name="name"
                                     value="{{ isset(auth()->user()->name) ? auth()->user()->name : '' }}"
-                                    placeholder="John" >
+                                    placeholder="John">
                             </div>
 
                             <div class="col-md-4">
                                 <input type="text" class="form-control rounded-pill" name="last_name"
                                     value="{{ isset(auth()->user()->last_name) ? auth()->user()->last_name : '' }}"
-                                    placeholder="Doe" >
+                                    placeholder="Doe">
                             </div>
                         </div>
 
@@ -44,27 +44,26 @@
                                     </span>
                                     <input type="text" class="form-control rounded-end-pill" name="phone"
                                         value="{{ isset(auth()->user()->phone) ? auth()->user()->phone : '' }}"
-                                        placeholder="53 288 9282" >
+                                        placeholder="53 288 9282">
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <input type="email" class="form-control rounded-pill" name="email"
                                     value="{{ isset(auth()->user()->email) ? auth()->user()->email : '' }}"
-                                    placeholder="johndoe@gmail.com" >
+                                    placeholder="johndoe@gmail.com">
                             </div>
                         </div>
 
                         <div class="row g-3 mt-3">
                             <div class="col-md-4">
                                 <input type="date" class="form-control rounded-pill" name="birth_date"
-                                    value="{{ isset(auth()->user()->birth_date) ? auth()->user()->birth_date : '' }}"
-                                    >
+                                    value="{{ isset(auth()->user()->birth_date) ? auth()->user()->birth_date : '' }}">
                             </div>
                             <div class="col-md-4">
                                 <input type="text" class="form-control rounded-pill" name="birth_place"
                                     value="{{ isset(auth()->user()->birth_place) ? auth()->user()->birth_place : '' }}"
-                                    placeholder="Lieu de naissance" >
+                                    placeholder="Lieu de naissance">
                             </div>
                             <div class="col-md-4">
                                 <select class="form-select rounded-pill" name="nationality">
@@ -85,18 +84,27 @@
             <div class="col-md-5">
                 <div class="profile-card shadow padding-x-25 padding-y-22">
                     <h5 class="fs-18 margin-bottom-22">Modifier mon mot de passe</h5>
-                    <form>
+                    <form action="{{ route('user.password.update') }}" method="POST">
+                        @csrf
                         <div class="margin-bottom-17">
-                            <input type="password" class="form-control rounded-pill" placeholder="Mot de passe">
+                            <input type="password" class="form-control rounded-pill" name="current_password"
+                                placeholder="Mot de passe actuel" required>
                         </div>
                         <div class="margin-bottom-24">
-                            <input type="password" class="form-control rounded-pill" placeholder="Nouveau mot de passe">
+                            <input type="password" class="form-control rounded-pill" name="new_password"
+                                placeholder="Nouveau mot de passe" required>
                         </div>
-                        <button type="button" class="btn btn-primary btn-profile w-100">Changer mon mot de
+                        <div class="margin-bottom-24">
+                            <input type="password" class="form-control rounded-pill" name="new_password_confirmation"
+                                placeholder="Confirmer le nouveau mot de passe" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-profile w-100">Changer mon mot de
                             passe</button>
                     </form>
+
                     <div class="margin-top-5 deactivate-account">
-                        <a href="#">Désactiver le compte ?</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#deactivateModal">Deactivate
+                            Account?</a>
                     </div>
                 </div>
             </div>
@@ -121,6 +129,28 @@
             <div class="col-md-3">
                 <div class="mandat-card p-4 rounded-3">
                     <p>Un seul engagement ne pas acheter un des biens</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="deactivateModal" tabindex="-1" aria-labelledby="deactivateModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deactivateModalLabel">Confirm Account Deactivation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to deactivate your account? This action cannot be undone.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <form action="{{ route('user.account.deactivate') }}" method="POST" id="deactivateForm">
+                        @csrf
+                        <button type="submit" class="btn btn-danger">Deactivate</button>
+                    </form>
                 </div>
             </div>
         </div>

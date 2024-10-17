@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\ValidationException;
+
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -41,5 +45,31 @@ class UserController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'Profile updated successfully');
+    }
+    public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'current_password' => 'required|string',
+            'new_password' => 'required|string|min:8|confirmed',
+        ]);
+
+
+        if (!Hash::check($request->current_password, Auth::user()->password)) {
+            throw ValidationException::withMessages([
+                'current_password' => ['The current password is incorrect.'],
+            ]);
+        }
+        Auth::user()->update(['password' => Hash::make($request->new_password)]);
+
+        return redirect()->back()->with('success', 'Password changed successfully.');
+    }
+    public function deactivateAccount(Request $request)
+    {
+        $user = Auth::user();
+
+        $user->status = 0;
+        $user->save();
+
+        return redirect()->route('home')->with('success', 'Your account has been deactivated.');
     }
 }
