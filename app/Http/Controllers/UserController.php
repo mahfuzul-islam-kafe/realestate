@@ -20,6 +20,7 @@ class UserController extends Controller
     }
     public function updateProfile(Request $request)
     {
+
         $request->validate([
             'sex' => 'nullable|string|max:10',
             'last_name' => 'nullable|string|max:50',
@@ -32,17 +33,30 @@ class UserController extends Controller
         ]);
 
         $data = $request->all();
+
         $user = auth()->user();
         $user->update([
-            'sex' => $data['sex'],
+
             'last_name' => $data['last_name'],
             'name' => $data['name'],
             'phone' => $data['phone'],
             'email' => $data['email'],
+
+        ]);
+
+
+
+        $user->buyer()->updateOrCreate(['buyer_id' => auth()->id()], [
+            'sex' => $data['sex'],
             'birth_date' => $data['birth_date'],
             'birth_place' => $data['birth_place'],
             'nationality' => $data['nationality'],
         ]);
+
+        
+
+
+
 
         return redirect()->back()->with('success', 'Profile updated successfully');
     }

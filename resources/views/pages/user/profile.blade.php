@@ -13,10 +13,10 @@
                             <div class="col-md-4">
                                 <select class="form-select rounded-pill" name="sex">
                                     <option value="Monsieur"
-                                        {{ isset(auth()->user()->sex) && auth()->user()->sex == 'Monsieur' ? 'selected' : '' }}>
+                                        {{ isset(auth()->user()->buyer->sex) && auth()->user()->buyer->sex == 'Monsieur' ? 'selected' : '' }}>
                                         Monsieur</option>
                                     <option value="Madame"
-                                        {{ isset(auth()->user()->sex) && auth()->user()->sex == 'Madame' ? 'selected' : '' }}>
+                                        {{ isset(auth()->user()->buyer->sex) && auth()->user()->buyer->sex == 'Madame' ? 'selected' : '' }}>
                                         Madame</option>
                                 </select>
                             </div>
@@ -58,17 +58,17 @@
                         <div class="row g-3 mt-3">
                             <div class="col-md-4">
                                 <input type="date" class="form-control rounded-pill" name="birth_date"
-                                    value="{{ isset(auth()->user()->birth_date) ? auth()->user()->birth_date : '' }}">
+                                    value="{{ isset(auth()->user()->buyer->birth_date) ? auth()->user()->buyer->birth_date->format('Y-m-d') : '' }}">
                             </div>
                             <div class="col-md-4">
                                 <input type="text" class="form-control rounded-pill" name="birth_place"
-                                    value="{{ isset(auth()->user()->birth_place) ? auth()->user()->birth_place : '' }}"
+                                    value="{{ isset(auth()->user()->buyer->birth_place) ? auth()->user()->buyer->birth_place : '' }}"
                                     placeholder="Lieu de naissance">
                             </div>
                             <div class="col-md-4">
                                 <select class="form-select rounded-pill" name="nationality">
                                     <option value="French"
-                                        {{ isset(auth()->user()->nationality) && auth()->user()->nationality == 'French' ? 'selected' : '' }}>
+                                        {{ isset(auth()->user()->buyer->nationality) && auth()->user()->buyer->nationality == 'French' ? 'selected' : '' }}>
                                         French</option>
                                 </select>
                             </div>

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('buyer_id')->constrained('users', 'id')->cascadeOnDelete();
             $table->string('sex')->nullable();
-            $table->date('birth_date')->nullable();
+            $table->dateTime('birth_date')->nullable();
             $table->string('nationality')->nullable();
             $table->string('birth_place')->nullable();
             $table->timestamps();
