@@ -10,4 +10,8 @@ class UserController extends Controller
     {
         return view('pages.user.notification');
     }
+    public function profile()
+    {
+        return view('pages.user.profile');
+    }
 }
