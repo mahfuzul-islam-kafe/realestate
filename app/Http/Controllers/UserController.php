@@ -36,7 +36,7 @@ class UserController extends Controller
         $user->update([
             'sex' => $data['sex'],
             'last_name' => $data['last_name'],
-            'name' => $data['first_name'],
+            'name' => $data['name'],
             'phone' => $data['phone'],
             'email' => $data['email'],
             'birth_date' => $data['birth_date'],
