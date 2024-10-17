@@ -28,10 +28,16 @@ class PageController extends Controller
 
         return view('pages.user-registered');
     }
+    public function afterListing()
+    {
+
+        return view('pages.after-listing');
+    }
     public function agencyPage(?string $slug, Agency $agency)
     {
         $propertiesSells = $agency->propertiesListedFor('sell');
         $propertiesRents = $agency->propertiesListedFor('rent');
         return view('pages.agency', compact('agency', 'propertiesSells', 'propertiesRents'));
     }
+
 }
