@@ -80,10 +80,18 @@ class UserController extends Controller
     public function deactivateAccount(Request $request)
     {
         $user = Auth::user();
+        if ($user->status === 1) {
+         
+            $user->status = 0; 
+            $message = 'Your account has been deactivated.';
+        } else {
+           
+            $user->status = 1; 
+            $message = 'Your account has been reactivated.';
+        }
 
-        $user->status = 0;
-        $user->save();
+        $user->save(); 
 
-        return redirect()->route('home')->with('success', 'Your account has been deactivated.');
+        return redirect()->route('home')->with('success', $message);
     }
 }
