@@ -35,6 +35,7 @@ Route::group(['prefix' => 'agent', 'as' => 'agent.'], function () {
 Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
     Route::get('/notification', [UserController::class, 'notification'])->name('notification');
     Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+    Route::post('/profile/update', [UserController::class, 'updateProfile'])->name('profile.update');
 });
 
 Auth::routes();
