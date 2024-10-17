@@ -66,9 +66,9 @@
             </div>
         </section>
         <section class="margin-top-65">
-            <div class="row g-3">
-                <div class="col-md-3 bg-tags ">
-                    <div class="tags">
+            <div class="row g-5">
+                <div class="col-md-3  ">
+                    <div class="tags bg-tags">
                         <div class="fw-500 fs-18">
                             Accélérez votre achat.
                         </div>
@@ -77,8 +77,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 bg-tags">
-                    <div class="tags">
+                <div class="col-md-3 ">
+                    <div class="tags bg-tags">
                         <div class="fw-500 fs-18">
                             Achetez au bon prix.
                         </div>
@@ -87,8 +87,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 bg-tags">
-                    <div class="tags">
+                <div class="col-md-3 ">
+                    <div class="tags bg-tags">
                         <div class="fw-500 fs-18">
                             Accédez à 100% des biens.
                         </div>
@@ -97,8 +97,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 bg-tags">
-                    <div class="tags">
+                <div class="col-md-3">
+                    <div class="tags  bg-tags">
                         <div class="fw-500 fs-18">
                             Achetez sereinement.
                         </div>
@@ -128,7 +128,7 @@
                         now</a>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="{{ asset('assets/images/team.jpg') }}" alt="" class="personalized-img ">
+                    <img src="{{ asset('assets/images/room.jpg') }}" alt="" class="personalized-img ">
                 </div>
             </div>
         </section>
