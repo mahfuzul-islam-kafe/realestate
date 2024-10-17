@@ -68,11 +68,11 @@ class User extends Authenticatable
 
     public function agency()
     {
-        return $this->hasOne(Agency::class, 'agent_id', 'id');
+        return $this->hasOne(Agency::class, 'agent_id', 'id')->withDefault();
     }
     public function buyer()
     {
-        return $this->hasOne(Buyer::class, 'buyer_id', 'id');
+        return $this->hasOne(Buyer::class, 'buyer_id', 'id')->withDefault();
     }
 
     protected function casts(): array

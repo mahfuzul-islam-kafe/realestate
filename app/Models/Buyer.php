@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Buyer extends Model
 {
+    protected $guarded = [];
+    public $casts = ['birth_date' => 'date'];
     use HasFactory;
 }
