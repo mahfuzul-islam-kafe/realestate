@@ -10,6 +10,10 @@ class Agency extends Model
 {
     use HasFactory;
 
+    public function agent()
+    {
+        return $this->belongsTo(User::class, 'agent_id');
+    }
     public function schedule(): Attribute
     {
         return Attribute::make(

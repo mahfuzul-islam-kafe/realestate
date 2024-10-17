@@ -7,7 +7,10 @@ use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
-Route::view('/listing', 'pages.listing');
+
+// Route::get('/listings',)
+Route::get('/properties', [PageController::class, 'properties']);
+Route::get('/properties/{slug?}_{property}', [PageController::class, 'property'])->name('property');
 Route::view('/agency', 'pages.agency');
 Route::view('/confidential', 'pages.confidential');
 
@@ -51,8 +54,14 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::group(['prefix' => 'publish-your-property','as'=>'publish.property.'],function(){
-    Route::view('/','pages.agents.publish-your-property')->name('home');
-    Route::view('/sell','pages.agents.sell-your-property')->name('sell');
-    Route::view('/rent','pages.agents.rent-your-property')->name('rent');
+Route::group(['prefix' => 'publish-your-property', 'as' => 'publish.property.'], function () {
+    Route::view('/', 'pages.agents.publish-your-property')->name('home');
+    Route::view('/sell', 'pages.agents.sell-your-property')->name('sell');
+    Route::view('/rent', 'pages.agents.rent-your-property')->name('rent');
+});
+
+Route::get('test', function () {
+    $property = Property::first();
+
+    dd($property->url());
 });

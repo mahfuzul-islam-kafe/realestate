@@ -1,19 +1,13 @@
 <div class="property-primary ">
-    
+
     <div class="property-primary_slider">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="https://picsum.photos/600/600" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://picsum.photos/600/600" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://picsum.photos/600/600" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://picsum.photos/600/600" alt="">
-            </div>
+            @foreach ($property->featuredimages as $image)
+                <div class="swiper-slide">
+                    <img src="{{ $image->getUrl() }}" alt="">
+                </div>
+            @endforeach
+
         </div>
         <div class="swiper-pagination"></div>
 
@@ -23,10 +17,12 @@
         </div>
     </div>
     <div class="margin-top-15 d-flex flex-column flex-gap-6 padding-x-8">
-        <span class="fs-15 fw-medium ">Cottage - Eliezer Yaffe St.</span>
-        <span class="fs-15 fw-normal ">Ra'anana, Israél</span>
-        <small class="fs-14 " style="color: #75808A">150 m² - 3 rooms - 1 parking </small>
-        <span class="fs-18  fw-900 ">22 700 000 ₪ </span>
+        <a class="fs-15 fw-medium text-dark"
+            href="{{ $property->url() }}"> {{$property->name()}} </a>
+        <span class="fs-15 fw-normal ">{{ $property->area }}, {{ $property->country }}</span>
+        <small class="fs-14 " style="color: #75808A">{{ $property->totalSurfaceArea() }} - {{ $property->totalRooms() }}
+            - {{ $property->totalParkings() }} </small>
+        <span class="fs-18  fw-900 ">{{ $property->price() }} </span>
     </div>
     <div x-data="{ showPhone: false }">
         <!-- First Button -->
@@ -37,7 +33,8 @@
 
         <!-- Second Button -->
         <a href="tel:0538768986" class="show-phone-button margin-top-12" x-show="showPhone">
-            <span class="text-primary">Anna</span><span>053-876-8986</span>
+            <span
+                class="text-primary">{{ $property->agent->name }}</span><span>{{ $property->agency->contact_number }}</span>
         </a>
     </div>
 

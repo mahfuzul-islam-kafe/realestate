@@ -4,13 +4,13 @@
             <div class="col-md-8">
 
                 <h1 class="fs-30 p-0 m-0">
-                    Cottage - Eliezer Yaffe St.
+                    {{ $property->name() }}
                 </h1>
                 <ul class="px-3 m-0 mt-1">
                     <li>
                         <a href="" class="text-dark fs-17">
 
-                            Eliezer Yaffe St., Ra’anana District, Israel
+                            {{ $property->fullAddress() }}
 
                         </a>
                     </li>
@@ -29,21 +29,23 @@
         </div>
         <div class="row g-3 mt-1">
             <div class="col-lg-6 col-md-12">
-                <img class="rounded  img-rect" style="height: 100%" src="https://picsum.photos/seed/picsum/1080/1080"
+
+                <img class="rounded  img-rect" style="height: 100%" src="{{ @$property->featuredimages[0]->getUrl() }}"
                     alt="">
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="row g-3">
                     <div class="col-md-6 col-6"><img class="rounded  img-rect"
-                            src="https://picsum.photos/seed/picsum/1080/1080" alt=""></div>
+                            src="{{ @$property->featuredimages[1]->getUrl() }}" alt=""></div>
                     <div class="col-md-6 col-6"><img class="rounded  img-rect "
-                            src="https://picsum.photos/seed/picsum/1080/1080" alt=""></div>
+                            src="{{ @$property->featuredimages[2]->getUrl() }}" alt=""></div>
                     <div class="col-md-6 col-6"><img class="rounded  img-rect"
-                            src="https://picsum.photos/seed/picsum/1080/1080" alt=""></div>
+                            src="{{ @$property->featuredimages[3]->getUrl() }}" alt=""></div>
                     <div class="col-md-6 col-6 position-relative"><img class="rounded  img-rect"
-                            src="https://picsum.photos/seed/picsum/1080/1080" alt="">
-                        <a class="bg-light d-none d-md-block padding-y-8 padding-x-18 fs-15 text-decoration-underline text-dark border-radius-20 position-absolute" style="bottom:9px;right:18px;"
-                            href="">See all 30 pictures</a>
+                            src="{{ @$property->featuredimages[4]->getUrl() }}" alt="">
+                        <a class="bg-light d-none d-md-block padding-y-8 padding-x-18 fs-15 text-decoration-underline text-dark border-radius-20 position-absolute"
+                            style="bottom:9px;right:18px;" href="">See all {{ $property->images()->count() }}
+                            pictures</a>
                     </div>
                 </div>
             </div>
@@ -77,20 +79,18 @@
                     <div class="tab-pane fade show active" id="pills-desc" role="tabpanel"
                         aria-labelledby="pills-desc-tab">
 
-                        <p class="fw-bold fs-40 margin-bottom-35">22 700 000 ₪ </p>
-                        <p class="fs-18  margin-bottom-30 ">Eliezer Yaffe Street, Ra’anana District, Israel</p>
+                        <p class="fw-bold fs-40 margin-bottom-35">{{ $property->price() }} </p>
+                        <p class="fs-18  margin-bottom-30 ">{{ $property->fullAddress() }}</p>
                         <div class=" p-0 m-0 d-flex flex-wrap flex-gap-10 margin-bottom-35">
                             <div class="attribute-primary">
                                 <img height="19" src="{{ asset('assets/images/attributes/home.svg') }}"
-                                    alt=""> <span>530 m<sup>2</sup></span>
+                                    alt=""> {{ $property->totalSurfaceArea() }}</span>
                             </div>
-                            <div
-                                class="attribute-primary">
+                            <div class="attribute-primary">
                                 <img height="19" src="{{ asset('assets/images/attributes/bed.svg') }}"
-                                    alt=""> 7 Rooms
+                                    alt=""> {{ $property->rooms_count }} Rooms
                             </div>
-                            <div
-                                class="attribute-primary">
+                            <div class="attribute-primary">
                                 <img height="19" src="{{ asset('assets/images/attributes/bath.svg') }}"
                                     alt=""> 4 Baths
                             </div>
@@ -100,25 +100,7 @@
                             Description
                         </h3>
                         <p class="margin-bottom-30">
-                            Apartment currently in T2 configuration to be renovated in T3 furnished, located on the 5th
-                            and last floor of a building in Marseille of 8 units in good condition.
-                            <br>
-                            <br>
-                            The apartment is composed of an entrance, a living room, a kitchen, a bedroom, a shower
-                            room, a toilet and a balcony.
-                            <br>
-                            <br>
-
-                            Ideally located in the St Victor district next to the Old Port, the Abbey, the Fort St
-                            Nicolas and close to all amenities.
-                            <br>
-                            <br>
-
-                            The monthly rent of this apartment is 1 100 € including charges.
-                            <br>
-                            <br>
-
-                            Possibility LCD; 140 € in average the night on Airbnb.
+                            {!! $property->property_description !!}
                         </p>
 
                         <div style="height: 1px;width:100%;background-color:#DDDDDD"></div>
@@ -129,50 +111,52 @@
                         <div class="row row-cols-md-2 row-cols-1 row-cols-lg-3 g-3 margin-bottom-30 g-3">
                             <ul class="ls-none d-flex flex-column flex-gap-30">
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Type of property</span> <span class="fw-bold">Cottage</span>
+                                    <span>Type of property</span> <span
+                                        class="fw-bold">{{ $property->type->display_name }}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Property condition</span> <span class="fw-bold">Renovated</span>
+                                    <span>Property condition</span> <span
+                                        class="fw-bold">{{ $property->condition->display_name }}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>City</span> <span class="fw-bold">Ra'anana</span>
+                                    <span>City</span> <span class="fw-bold">{{ $property->city }}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Address</span> <span class="fw-bold">23 Eliezer Yaffe Street</span>
+                                    <span>Address</span> <span class="fw-bold">{{ $property->street }}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Area</span> <span class="fw-bold">South</span>
-                                </li>
-                            </ul>
-                            <ul class="ls-none d-flex flex-column flex-gap-30">
-                                <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Number of floors</span> <span class="fw-bold">5</span>
-                                </li>
-                                <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Number of rooms</span> <span class="fw-bold">5</span>
-                                </li>
-                                <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Number of balcony</span> <span class="fw-bold">1</span>
-                                </li>
-                                <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Ground/covered car park</span> <span class="fw-bold">2</span>
-                                </li>
-                                <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Surface build</span> <span class="fw-bold">330 m<sup>2</sup></span>
+                                    <span>Area</span> <span class="fw-bold">{{$property->area}}</span>
                                 </li>
                             </ul>
                             <ul class="ls-none d-flex flex-column flex-gap-30">
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Total surface</span> <span class="fw-bold">539 m<sup>2</sup></span>
+                                    <span>Number of floors</span> <span class="fw-bold">{{$property->total_floor}}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Entry date</span> <span class="fw-bold">01/12/23</span>
+                                    <span>Number of rooms</span> <span class="fw-bold">{{$property->rooms_count}}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Entry condition</span> <span class="fw-bold">Flexible</span>
+                                    <span>Number of balcony</span> <span class="fw-bold">{{$property->balcony_count}}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Price</span> <span class="fw-bold">22 700 000 ₪ </span>
+                                    <span>Ground/covered car park</span> <span class="fw-bold">{{$property->carpark_count}}</span>
+                                </li>
+                                <li class="d-flex flex-gap-15 fs-15">
+                                    <span>Surface build</span> <span class="fw-bold">{{$property->surface_build}} m² </span>
+                                </li>
+                            </ul>
+                            <ul class="ls-none d-flex flex-column flex-gap-30">
+                                <li class="d-flex flex-gap-15 fs-15">
+                                    <span>Total surface</span> <span class="fw-bold">{{$property->total_surface}} m² </span>
+                                </li>
+                                <li class="d-flex flex-gap-15 fs-15">
+                                    <span>Entry date</span> <span class="fw-bold">{{$property->entry_date()}} </span>
+                                </li>
+                                <li class="d-flex flex-gap-15 fs-15">
+                                    <span>Entry condition</span> <span class="fw-bold">{{$property->flexible ? 'Flexible' : 'Not Flexible'}}</span>
+                                </li>
+                                <li class="d-flex flex-gap-15 fs-15">
+                                    <span>Price</span> <span class="fw-bold">{{$property->price()}} </span>
                                 </li>
 
                             </ul>
@@ -257,12 +241,12 @@
                     style="width: 90%">
                     <div class="card-body padding-x-28 padding-y-25 ">
                         <div class="d-flex  align-items-center gap-3 margin-bottom-40">
-                            <img height="67" width="67" src="{{ asset('assets/companyLogo.png') }}"
+                            <img height="67" width="67" src="{{ asset($property->agency->logo) }}"
                                 alt="">
-                            <p class="fs-20 mt-4">RE/MAX Agency</p>
+                            <p class="fs-20 mt-4">{{$property->agency->agency_name}}</p>
                         </div>
 
-                        <p class="border border-radius-10 padding-y-15 padding-x-11 margin-bottom-14">
+                        <p class="border border-radius-10 padding-y-15 padding-x-11 margin-bottom-14 p-2">
                             Good morning,
                             <br>
                             <br>
