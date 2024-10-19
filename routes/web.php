@@ -7,7 +7,10 @@ use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
-Route::view('/listing', 'pages.listing');
+
+// Route::get('/listings',)
+Route::get('/properties', [PageController::class, 'properties']);
+Route::get('/properties/{slug?}_{property}', [PageController::class, 'property'])->name('property');
 Route::view('/agency', 'pages.agency');
 Route::view('/confidential', 'pages.confidential');
 
@@ -60,4 +63,13 @@ Route::group(['prefix' => 'publish-your-property', 'as' => 'publish.property.'],
     Route::view('/', 'pages.agents.publish-your-property')->name('home');
     Route::view('/sell', 'pages.agents.sell-your-property')->name('sell');
     Route::view('/rent', 'pages.agents.rent-your-property')->name('rent');
+<<<<<<< HEAD
+});
+
+Route::get('test', function () {
+    $property = Property::first();
+
+    dd($property->url());
+=======
+>>>>>>> f12a8268b26ee332f270c75fd1cd7b71e025c923
 });
