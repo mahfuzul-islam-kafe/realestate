@@ -30,7 +30,8 @@ Route::group(['controller' => PageController::class], function () {
     Route::get('/after-listing', 'afterListing');
 });
 Route::group(['controller' => AgentController::class], function () {
-    Route::post('/form/submit', 'formSubmit')->name('form.submit');
+    Route::post('/create/property', 'createProperty')->name('create.property');
+    Route::get('/rent/property', 'rentProperty')->name('rent.property');
 });
 Route::post('register-as-agent', [AgentController::class, 'register'])->name('agent.register.post');
 Route::group(['prefix' => 'agent', 'as' => 'agent.'], function () {

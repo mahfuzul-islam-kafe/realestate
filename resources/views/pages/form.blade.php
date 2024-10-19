@@ -1,6 +1,6 @@
 <x-app>
 
-    <form action="{{route('form.submit')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{route('create.property')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="col-md-6 mx-auto mt-3">
 

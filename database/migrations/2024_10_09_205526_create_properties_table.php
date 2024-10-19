@@ -37,9 +37,9 @@ return new class extends Migration {
             $table->boolean('access_for_disabled')->nullable();
             $table->boolean('elevators')->nullable();
             $table->boolean('renovated')->nullable();
-            $table->boolean('air_conditionner')->nullable();
+            $table->boolean('air_conditioner')->nullable();
             $table->boolean('furnitures_included')->nullable();
-            $table->boolean('mammad')->nullable();
+            $table->boolean('mamad')->nullable();
             $table->boolean('bars')->nullable();
             $table->boolean('personal_mazgan')->nullable();
             $table->boolean('water_heater')->nullable();

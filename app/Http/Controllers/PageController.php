@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Agency;
+use App\Models\Condition;
 use App\Models\PropertyCondition;
 use App\Models\PropertyType;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -19,8 +21,8 @@ class PageController extends Controller
     }
     public function form()
     {
-        $types = PropertyType::all();
-        $conditions = PropertyCondition::all();
+        $types = Type::all();
+        $conditions = Condition::all();
         return view('pages.form', compact('types', 'conditions'));
     }
     public function registered()

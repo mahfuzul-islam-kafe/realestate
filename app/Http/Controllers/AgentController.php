@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Condition;
 use App\Models\Property;
+use App\Models\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -10,14 +12,21 @@ use Illuminate\Support\Facades\Validator;
 
 class AgentController extends Controller
 {
-    public function formSubmit(Request $request)
+    public function rentProperty(){
+        $types = Type::all();
+        $conditions = Condition::all();
+        return view('pages.agents.rent-your-property',compact('conditions', 'types'));
+    }
+    public function createProperty(Request $request)
     {
 
-        // dd($request->all());
         $data = new Property;
-        $data->property_type = $request->property_type;
-        $data->name = $request->name;
-        $data->number = $request->number;
+
+        $data->agency_id  = 1;
+        $data->listed_for = 'rent';
+        $data->type_id = $request->type_id;
+        // $data->name = $request->name;
+        // $data->number = $request->number;
         $data->property_description = $request->property_description;
         $data->total_surface = $request->total_surface;
         $data->surface_build = $request->surface_build;
@@ -31,7 +40,7 @@ class AgentController extends Controller
         $data->access_for_disabled = $request->access_for_disabled ? 1 : 0;
         $data->elevators = $request->elevators ? 1 : 0;
         $data->renovated = $request->renovated ? 1 : 0;
-        $data->air_conditionner = $request->air_conditionner ? 1 : 0;
+        $data->air_conditioner = $request->air_conditioner ? 1 : 0;
         $data->furnitures_included = $request->furnitures_included ? 1 : 0;
         $data->mamad = $request->mamad ? 1 : 0;
         $data->bars = $request->bars ? 1 : 0;
@@ -50,7 +59,7 @@ class AgentController extends Controller
         $data->street_number = $request->street_number;
         $data->area = $request->area;
         $data->matterport_link = $request->matterport_link;
-        $data->property_condition = $request->property_condition;
+        $data->condition_id = $request->condition_id;
         $data->immediately = $request->immediately;
         $data->immediately = $request->immediately ? 1 : 0;
         $data->flexible = $request->flexible ? 1 : 0;
