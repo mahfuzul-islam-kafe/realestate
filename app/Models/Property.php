@@ -67,22 +67,8 @@ class Property extends Model
     {
         return number_format($this->price, thousands_separator: ' ')  . ' ₪';
     }
-    // public function ad_type()
-    // {
-    //     return $this->belongsTo(AdType::class, 'ad_type');
-    // }
-    // public function entry_condition()
-    // {
-    //     return $this->belongsTo(EntryCondition::class, 'entry_condition');
-    // }
-    // public function property_condition()
-    // {
-    //     return $this->belongsTo(PropertyCondition::class, 'property_condition');
-    // }
-    public function agency()
-    {
-        return $this->belongsTo(Agency::class, 'agency_id');
-    }
+
+ 
 
     public function agent()
     {
@@ -97,6 +83,11 @@ class Property extends Model
     {
         return $this->belongsTo(Condition::class, 'condition_id');
     }
+    public function agency()
+    {
+        return $this->belongsTo(Agency::class, 'agency_id');
+    }
+  
 
     public function images()
     {

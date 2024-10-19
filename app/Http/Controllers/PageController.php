@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Condition;
 use App\Models\Property;
+use App\Models\Agency;
 use App\Models\PropertyCondition;
 use App\Models\PropertyType;
 use App\Models\Type;
@@ -36,8 +37,13 @@ class PageController extends Controller
     }
     public function form()
     {
+<<<<<<< HEAD
         $types = Type::all();
         $conditions = Condition::all();
+=======
+        $types = PropertyType::all();
+        $conditions = PropertyCondition::all();
+>>>>>>> f12a8268b26ee332f270c75fd1cd7b71e025c923
         return view('pages.form', compact('types', 'conditions'));
     }
     public function registered()
@@ -45,4 +51,19 @@ class PageController extends Controller
 
         return view('pages.user-registered');
     }
+<<<<<<< HEAD
+=======
+    public function afterListing()
+    {
+
+        return view('pages.after-listing');
+    }
+    public function agencyPage(?string $slug, Agency $agency)
+    {
+        $propertiesSells = $agency->propertiesListedFor('sell');
+        $propertiesRents = $agency->propertiesListedFor('rent');
+        return view('pages.agency', compact('agency', 'propertiesSells', 'propertiesRents'));
+    }
+
+>>>>>>> f12a8268b26ee332f270c75fd1cd7b71e025c923
 }

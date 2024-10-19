@@ -22,11 +22,15 @@ Route::get('/test', function () {
     $properties = Property::with('ad_type', 'property_type', 'property_condition', 'entry_condition')->get();
     dd($properties);
 });
+Route::get('/agencies/{slug?}_{agency}', [PageController::class, 'agencyPage'])->name('agency.view');
+
 Route::get('login-as-agent', [PageController::class, 'loginAsAgent'])->name('login.agent');
 Route::get('register-as-agent', [PageController::class, 'registerAsAgent'])->name('register.agent');
+
 Route::group(['controller' => PageController::class], function () {
     Route::get('/form', 'form')->name('view.form');
     Route::get('/user-registered', 'registered');
+    Route::get('/after-listing', 'afterListing');
 });
 Route::group(['controller' => AgentController::class], function () {
     Route::post('/form/submit', 'formSubmit')->name('form.submit');
@@ -58,10 +62,13 @@ Route::group(['prefix' => 'publish-your-property', 'as' => 'publish.property.'],
     Route::view('/', 'pages.agents.publish-your-property')->name('home');
     Route::view('/sell', 'pages.agents.sell-your-property')->name('sell');
     Route::view('/rent', 'pages.agents.rent-your-property')->name('rent');
+<<<<<<< HEAD
 });
 
 Route::get('test', function () {
     $property = Property::first();
 
     dd($property->url());
+=======
+>>>>>>> f12a8268b26ee332f270c75fd1cd7b71e025c923
 });
