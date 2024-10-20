@@ -37,13 +37,8 @@ class PageController extends Controller
     }
     public function form()
     {
-<<<<<<< HEAD
         $types = Type::all();
         $conditions = Condition::all();
-=======
-        $types = PropertyType::all();
-        $conditions = PropertyCondition::all();
->>>>>>> f12a8268b26ee332f270c75fd1cd7b71e025c923
         return view('pages.form', compact('types', 'conditions'));
     }
     public function registered()
