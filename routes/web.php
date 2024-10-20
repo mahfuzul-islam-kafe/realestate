@@ -62,13 +62,10 @@ Route::group(['prefix' => 'publish-your-property', 'as' => 'publish.property.'],
     Route::view('/', 'pages.agents.publish-your-property')->name('home');
     Route::view('/sell', 'pages.agents.sell-your-property')->name('sell');
     Route::view('/rent', 'pages.agents.rent-your-property')->name('rent');
-<<<<<<< HEAD
 });
 
 Route::get('test', function () {
     $property = Property::first();
 
     dd($property->url());
-=======
->>>>>>> f12a8268b26ee332f270c75fd1cd7b71e025c923
 });
