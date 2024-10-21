@@ -17,4 +17,27 @@
             margin-top: 50px;
         }
     }
+
+    // .step-footer{
+    //     position: absolute;
+    //     width: 90%;
+    //     bottom: 20px;
+    // }
+
+
+    
+}
+
+#upload-photos-and-videos{
+    display: flex;
+    gap:10px;
+    flex-wrap: wrap;
+}
+.dz-image{
+    img{
+        object-fit: cover;
+        height: 300px !important;
+        width: 350px !important;
+    }
+   
 }

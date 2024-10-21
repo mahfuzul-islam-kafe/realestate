@@ -15,7 +15,9 @@ return Application::configure(basePath: dirname(__DIR__))
         }
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->alias(['role' => RoleMiddleware::class]);
+        $middleware->alias(['role' => RoleMiddleware::class])->validateCsrfTokens(except:[
+            '/file/post'
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

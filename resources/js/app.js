@@ -7,7 +7,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import Bootstrap JS bundl
 import Swiper from "swiper/bundle";
 import Alpine from 'alpinejs'
 import toastr from "toastr/build/toastr.min.js";
-
+import Dropzone from "dropzone";
 window.Alpine = Alpine
 
 
@@ -86,3 +86,11 @@ for (let e of document.querySelectorAll(
     e.style.setProperty("--max", e.max == "" ? "100" : e.max);
     e.addEventListener("input", () => e.style.setProperty("--value", e.value));
 }
+
+
+Dropzone.autoDiscover = false;
+
+let myDropzone = new Dropzone("#upload-photos-and-videos", { url: "/file/post"});
+myDropzone.on("addedfile", file => {
+    console.log(`File added: ${file.name}`);
+});

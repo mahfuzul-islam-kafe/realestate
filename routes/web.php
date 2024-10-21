@@ -6,10 +6,10 @@ use App\Http\Controllers\UserController;
 use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'home');
+// Route::view('/', 'home');
 
 // Route::get('/listings',)
-Route::get('/properties', [PageController::class, 'properties']);
+Route::get('/', [PageController::class, 'properties']);
 Route::get('/properties/{slug?}_{property}', [PageController::class, 'property'])->name('property');
 Route::view('/agency', 'pages.agency');
 Route::view('/confidential', 'pages.confidential');
@@ -61,12 +61,18 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['prefix' => 'publish-your-property', 'as' => 'publish.property.'], function () {
     Route::view('/', 'pages.agents.publish-your-property')->name('home');
-    Route::view('/sell', 'pages.agents.sell-your-property')->name('sell');
-    Route::view('/rent', 'pages.agents.rent-your-property')->name('rent');
+    Route::view('/sell', 'pages.agents.property.sell-your-property')->name('sell');
+    Route::view('/rent', 'pages.agents.property.rent-your-property')->name('rent');
 });
 
 Route::get('test', function () {
     $property = Property::first();
 
     dd($property->url());
+});
+
+
+Route::post('/file/post', function () {
+
+    return response(['success'], 200);
 });
