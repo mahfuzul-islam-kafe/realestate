@@ -161,7 +161,7 @@
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
                                     <span>Entry condition</span> <span
-                                        class="fw-bold">{{ $property->flexible ? 'Flexible' : 'Not Flexible' }}</span>
+                                        class="fw-bold">{{ $property->immediately ? 'Immediately' : 'Flexible' }}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
                                     <span>Price</span> <span class="fw-bold">{{ $property->price() }} </span>
