@@ -9,7 +9,9 @@ use Illuminate\Support\Facades\Route;
 // Route::view('/', 'home');
 
 // Route::get('/listings',)
-Route::get('/', [PageController::class, 'properties']);
+// Route::get('/', [PageController::class, 'properties']);
+Route::get('/', [PageController::class, 'homeSell'])->name('home.sell');
+Route::get('/rent', [PageController::class, 'homeRent'])->name('home.rent');
 Route::get('/properties/{slug?}_{property}', [PageController::class, 'property'])->name('property');
 Route::view('/agency', 'pages.agency');
 Route::view('/confidential', 'pages.confidential');
@@ -29,7 +31,7 @@ Route::get('register-as-agent', [PageController::class, 'registerAsAgent'])->nam
 
 Route::group(['controller' => PageController::class], function () {
     Route::get('/form', 'form')->name('view.form');
-    Route::get('/user-registered', 'registered');
+    Route::get('/my-kemea', 'myKemea')->name('myKemea');
     Route::get('/after-listing', 'afterListing');
 });
 Route::group(['controller' => AgentController::class], function () {

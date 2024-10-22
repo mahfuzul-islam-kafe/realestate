@@ -15,8 +15,10 @@
     <div class="property-row_details">
         <div class="property-row_details_text">
 
-            <h4 class="mb-2">Detached {{ $property->type->display_name }} - {{ $property->street }},
-                {{ $property->city }}</h4>
+            <a href="{{ $property->url() }}">
+                <h4 class="mb-2 text-dark">Detached {{ $property->type->display_name }} - {{ $property->street }},
+                    {{ $property->city }}</h4>
+            </a>
             <div>
                 <span class="price me-2">
                     {{ $property->price }} <span class="fs-40">₪</span>

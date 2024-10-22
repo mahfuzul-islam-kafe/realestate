@@ -14,8 +14,8 @@
     <header>
         <nav id="topNav" class="navbar  navbar-expand-lg navbar-light bg-light   padding-top-22 padding-bottom-23">
             <div class="container ">
-                <a class="navbar-brand p-0" href=""><img style="object-fit: contain" height="55"
-                        width="130" src="{{ asset('assets/images/logo.svg') }}" alt=""></a>
+                <a class="navbar-brand p-0" href="{{ route('home.sell') }}"><img style="object-fit: contain"
+                        height="55" width="130" src="{{ asset('assets/images/logo.svg') }}" alt=""></a>
 
                 <button class="btn btn-primary ms-auto rounded-circle d-lg-none d-block" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -40,15 +40,15 @@
                 @else
                     <ul class="navbar-nav ms-5 flex-gap-50 d-none d-lg-flex">
                         <li class="nav-item active">
-                            <a class="nav-link" href="">Buy</a>
+                            <a class="nav-link" href="{{ route('home.sell') }}">Buy</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="">Rent</a>
+                            <a class="nav-link" href="{{ route('home.rent') }}">Rent</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="">My Kenma</a>
+                            <a class="nav-link" href="{{ route('myKemea') }}">My Kenma</a>
                         </li>
 
                         <li class="nav-item">

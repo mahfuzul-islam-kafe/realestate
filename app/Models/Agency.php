@@ -25,9 +25,9 @@ class Agency extends Model
     public function url()
     {
         return route(
-            'agency',
+            'agency.view',
             [
-                'slug' => Str::slug($this->name()),
+                'slug' => Str::slug($this->agency_name),
                 'agency' => $this
             ]
         );
