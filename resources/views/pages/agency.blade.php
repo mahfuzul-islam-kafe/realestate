@@ -5,7 +5,7 @@
             <div class="row  h-100 g-3 p-4">
 
                 <div class="middle col-lg-2 col-md-6 col-12">
-                    <img src="{{ Storage::url($agency->logo) }}" class="agency-logo" alt="{{ $agency->agency_name }}"
+                    <img src="{{ asset($agency->logo) }}" class="agency-logo" alt="{{ $agency->agency_name }}"
                         title="{{ $agency->agency_name }}">
                 </div>
                 <div
@@ -14,7 +14,8 @@
                         {{ $agency->agency_name }}
                     </h3>
                     <p class="caros-soft fs-14 fw-light">
-                        {{$agency->properties->count()}} Properties • Member since {{$agency->created_at->format('Y')}}
+                        {{ $agency->properties->count() }} Properties • Member since
+                        {{ $agency->created_at->format('Y') }}
                     </p>
 
                     <a href="" class="aeonik fs-14 fw-300">
