@@ -96,7 +96,7 @@ class PropertyFactory extends Factory
 
         $features = [
             'house_vaad' => rand(0, 1),
-            'mammad' => rand(0, 1),
+            'mamad' => rand(0, 1),
             'bars' => rand(0, 1),
             'unit' => rand(0, 1),
             'personal_mazgan' => rand(0, 1),
@@ -105,7 +105,7 @@ class PropertyFactory extends Factory
             'storage' => rand(0, 1),
             'elevators' => rand(0, 1),
             'renovated' => rand(0, 1),
-            'air_conditionner' => rand(0, 1),
+            'air_conditioner' => rand(0, 1),
             'furnitures_included' => rand(0, 1),
             'access_for_disabled' => rand(0, 1),
         ];
