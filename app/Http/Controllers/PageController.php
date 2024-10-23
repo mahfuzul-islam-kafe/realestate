@@ -71,4 +71,12 @@ class PageController extends Controller
     public function saleOut(){
         return view('pages.sale-out');
     }
+    public function toStudy(){
+        $properties = Property::where('listed_for', 'sell')->latest()->paginate(12);
+        return view('pages.to-study',compact('properties'));
+    }
+    public function favorites(){
+        $properties = Property::where('listed_for', 'sell')->latest()->paginate(12);
+        return view('pages.favorites',compact('properties'));
+    }
 }
