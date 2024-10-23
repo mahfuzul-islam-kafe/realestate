@@ -99,7 +99,7 @@
                     <li><a class="dropdown-item no-hover" href="#">Option 3</a></li>
                 </ul>
             </div>
-            <a href="{{route('login')}}" class="btn btn-outline-dark rounded-pill">Login</a>
+            <a href="{{ route('login') }}" class="btn btn-outline-dark rounded-pill">Login</a>
         </div>
     </div>
     <section class="center-section margin-top-47 ">
@@ -144,22 +144,22 @@
                 <input type="password" class="form-control rounded-pill" id="password" name="password_confirmation">
             </div>
             <div class="form-group margin-bottom-18">
-                <label for="">Phone number</label>
+                <label for="phone">Phone number</label>
 
-                <input type="text" class="form-control rounded-pill" id="email" placeholder="">
+                <input type="text" class="form-control rounded-pill" id="phone" placeholder="" name="phone">
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                <input class="form-check-input" type="checkbox" value="" id="receivekemea"
                     style="border-radius: 3px !important;">
-                <label class="form-check-label" for="flexCheckDefault">
+                <label class="form-check-label" for="receivekemea">
                     Receive Kemea communications
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                <input class="form-check-input" type="checkbox" value="" id="terms_n_condition"
                     style="border-radius: 3px !important;">
-                <label class="form-check-label" for="flexCheckDefault">
+                <label class="form-check-label" for="terms_n_condition">
                     I accept the <a href="#">Terms of Service</a> and the <a href="#">Kemea Privacy
                         Policy.</a>
                 </label>

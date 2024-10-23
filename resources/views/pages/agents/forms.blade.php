@@ -350,7 +350,7 @@
 
                 <div class="col-md-6">
                     <label for="name" class="form-label">Your name?*</label>
-                    <input type="text" class="form-control" id="name" placeholder="David" required>
+                    <input type="text" class="form-control" id="name" placeholder="David" name="" required>
                 </div>
 
                 <div class="col-md-6">
