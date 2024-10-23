@@ -46,8 +46,6 @@ class PageController extends Controller
 
         return view('pages.user-registered');
     }
-<<<<<<< HEAD
-=======
     public function afterListing()
     {
 
@@ -60,5 +58,10 @@ class PageController extends Controller
         return view('pages.agency', compact('agency', 'propertiesSells', 'propertiesRents'));
     }
 
->>>>>>> f12a8268b26ee332f270c75fd1cd7b71e025c923
+    public function rentOut(){
+        return view('pages.rent-out');
+    }
+    public function saleOut(){
+        return view('pages.sale-out');
+    }
 }

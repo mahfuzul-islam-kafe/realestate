@@ -128,7 +128,7 @@
                         now</a>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="{{ asset('assets/images/room.jpg') }}" alt="" class="personalized-img ">
+                    <img src="{{ asset('assets/images/team.jpg') }}" alt="" class="personalized-img ">
                 </div>
             </div>
         </section>

@@ -31,6 +31,8 @@ Route::group(['controller' => PageController::class], function () {
     Route::get('/form', 'form')->name('view.form');
     Route::get('/user-registered', 'registered');
     Route::get('/after-listing', 'afterListing');
+    Route::get('/rent-out', 'rentOut');
+    Route::get('/sale-out', 'saleOut');
 });
 Route::group(['controller' => AgentController::class], function () {
     Route::post('/create/property', 'createProperty')->name('create.property');
@@ -63,13 +65,4 @@ Route::group(['prefix' => 'publish-your-property', 'as' => 'publish.property.'],
     Route::view('/', 'pages.agents.publish-your-property')->name('home');
     Route::view('/sell', 'pages.agents.sell-your-property')->name('sell');
     Route::view('/rent', 'pages.agents.rent-your-property')->name('rent');
-<<<<<<< HEAD
-});
-
-Route::get('test', function () {
-    $property = Property::first();
-
-    dd($property->url());
-=======
->>>>>>> f12a8268b26ee332f270c75fd1cd7b71e025c923
 });
