@@ -59,6 +59,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="">Promote with us</a>
                         </li>
+                        @user
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Promote with us</a>
+                        </li>
+                        @enduser
                     </ul>
                 @endagent
 
