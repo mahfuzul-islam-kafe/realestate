@@ -235,7 +235,9 @@
                         <div class="d-flex  align-items-center gap-3 margin-bottom-40">
                             <img height="67" width="67" src="{{ asset($property->agency->logo) }}"
                                 alt="">
-                            <p class="fs-20 mt-4">{{ $property->agency->agency_name }}</p>
+                                <a href="{{$property->agency->url()}}">
+                                    <p class="fs-20 mt-4">{{ $property->agency->agency_name }}</p>
+                                </a>
                         </div>
 
                         <p class="border border-radius-10 padding-y-15 padding-x-11 margin-bottom-14 p-2">
