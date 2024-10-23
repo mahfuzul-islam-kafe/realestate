@@ -14,15 +14,22 @@ class PageController extends Controller
 {
 
 
-    public function properties()
+    public function homeSell()
     {
 
-        $properties = Property::limit(50)->get();
+        $properties = Property::where('listed_for', 'sell')->latest()->paginate(12);
+
+        return view('pages.listing', compact('properties'));
+    }
+    public function homeRent()
+    {
+
+        $properties = Property::where('listed_for', 'rent')->latest()->paginate(12);
 
         return view('pages.listing', compact('properties'));
     }
 
-    public function property( $slug, Property $property)
+    public function property($slug, Property $property)
     {
         return view('pages.property', compact('property'));
     }
@@ -41,7 +48,7 @@ class PageController extends Controller
         $conditions = Condition::all();
         return view('pages.form', compact('types', 'conditions'));
     }
-    public function registered()
+    public function myKemea()
     {
 
         return view('pages.user-registered');

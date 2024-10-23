@@ -125,94 +125,86 @@
                                     <span>Address</span> <span class="fw-bold">{{ $property->street }}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Area</span> <span class="fw-bold">{{$property->area}}</span>
+                                    <span>Area</span> <span class="fw-bold">{{ $property->area }}</span>
                                 </li>
                             </ul>
                             <ul class="ls-none d-flex flex-column flex-gap-30">
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Number of floors</span> <span class="fw-bold">{{$property->total_floor}}</span>
+                                    <span>Number of floors</span> <span
+                                        class="fw-bold">{{ $property->total_floor }}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Number of rooms</span> <span class="fw-bold">{{$property->rooms_count}}</span>
+                                    <span>Number of rooms</span> <span
+                                        class="fw-bold">{{ $property->rooms_count }}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Number of balcony</span> <span class="fw-bold">{{$property->balcony_count}}</span>
+                                    <span>Number of balcony</span> <span
+                                        class="fw-bold">{{ $property->balcony_count }}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Ground/covered car park</span> <span class="fw-bold">{{$property->carpark_count}}</span>
+                                    <span>Ground/covered car park</span> <span
+                                        class="fw-bold">{{ $property->carpark_count }}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Surface build</span> <span class="fw-bold">{{$property->surface_build}} m² </span>
+                                    <span>Surface build</span> <span class="fw-bold">{{ $property->surface_build }} m²
+                                    </span>
                                 </li>
                             </ul>
                             <ul class="ls-none d-flex flex-column flex-gap-30">
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Total surface</span> <span class="fw-bold">{{$property->total_surface}} m² </span>
+                                    <span>Total surface</span> <span class="fw-bold">{{ $property->total_surface }} m²
+                                    </span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Entry date</span> <span class="fw-bold">{{$property->entry_date()}} </span>
+                                    <span>Entry date</span> <span class="fw-bold">{{ $property->entry_date() }}
+                                    </span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Entry condition</span> <span class="fw-bold">{{$property->flexible ? 'Flexible' : 'Not Flexible'}}</span>
+                                    <span>Entry condition</span> <span
+                                        class="fw-bold">{{ $property->immediately ? 'Immediately' : 'Flexible' }}</span>
                                 </li>
                                 <li class="d-flex flex-gap-15 fs-15">
-                                    <span>Price</span> <span class="fw-bold">{{$property->price()}} </span>
+                                    <span>Price</span> <span class="fw-bold">{{ $property->price() }} </span>
                                 </li>
 
                             </ul>
                         </div>
+                        {{-- @dd($property) --}}
                         <div style="height: 1px;width:100%;background-color:#DDDDDD"></div>
                         <h3 class="fs-25 font-weight-500 margin-y-30 text-center text-md-start">
                             What this house offers
                         </h3>
                         <div class="row row-cols-md-2 row-cols-1 row-cols-lg-3 g-3 margin-bottom-30">
-                            <div class="d-flex flex-gap-20 flex-column align-items-center align-items-md-start">
-                                <div class="attribute-secondary" style="">
-                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
-                                    <span>Furniture included</span>
-                                </div>
-                                <div class="attribute-secondary" style="">
-                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
-                                    <span>Furniture included</span>
-                                </div>
-                                <div class="attribute-secondary" style="">
-                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
-                                    <span>Furniture included</span>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-gap-20 flex-column align-items-center align-items-md-start">
-                                <div class="attribute-secondary" style="">
-                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
-                                    <span>Furniture included</span>
-                                </div>
-                                <div class="attribute-secondary" style="">
-                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
-                                    <span>Furniture included</span>
-                                </div>
-                                <div class="attribute-secondary" style="">
-                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
-                                    <span>Furniture included</span>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-gap-20 flex-column align-items-center align-items-md-start">
-                                <div class="attribute-secondary" style="">
-                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
-                                    <span>Furniture included</span>
-                                </div>
-                                <div class="attribute-secondary" style="">
-                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
-                                    <span>Furniture included</span>
-                                </div>
-                                <div class="attribute-secondary" style="">
-                                    <img src="{{ asset('assets/images/attributes/furniture.svg') }}" alt="">
-                                    <span>Furniture included</span>
-                                </div>
-                            </div>
+                            @php
+                                $attributes = [
+                                    'Furniture included' => $property->furnitures_included,
+                                    'Air conditioner' => $property->air_conditionner,
+                                    'Bars' => $property->bars,
+                                    'Personal Mazgan' => $property->personal_mazgan,
+                                    'Water heater' => $property->water_heater,
+                                    'Renovated' => $property->renovated,
+                                    'Access for disabled' => $property->access_for_disabled,
+                                    'Elevators' => $property->elevators,
+                                    'Storage' => $property->storage,
+                                    'Kosher kitchen' => $property->kosher_kitchen,
+                                ];
+                            @endphp
+                            @foreach ($attributes as $label => $value)
+                                @if ($value)
+                                    <div
+                                        class="d-flex flex-gap-20 flex-column align-items-center align-items-md-start">
+                                        <div class="attribute-secondary p-3">
+                                            <img src="{{ asset('assets/images/attributes/' . Str::slug($label) . '.svg') }}"
+                                                alt="{{ $label }}">
+                                            <span>{{ $label }}</span>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach
+                           
                         </div>
 
                     </div>
-
-
                     <div class="tab-pane fade" id="pills-finance" role="tabpanel"
                         aria-labelledby="pills-finance-tab">
                         asd.</div>
@@ -229,7 +221,7 @@
                             <br>
                             <span class="fs-12">As early as today 11:00 am</span>
                         </a>
-                        <a href=""
+                        <a href="tel:{{ $property->agency->contact_number }}"
                             class="border border-dark border-radius-99 p-0 text-dark d-flex justify-content-center align-items-center gap-2"
                             style="width: 90%;height:57px;text-decoration: none">
                             <img src="{{ asset('assets/images/attributes/phone.svg') }}" alt="">
@@ -243,7 +235,9 @@
                         <div class="d-flex  align-items-center gap-3 margin-bottom-40">
                             <img height="67" width="67" src="{{ asset($property->agency->logo) }}"
                                 alt="">
-                            <p class="fs-20 mt-4">{{$property->agency->agency_name}}</p>
+                                <a href="{{$property->agency->url()}}">
+                                    <p class="fs-20 mt-4">{{ $property->agency->agency_name }}</p>
+                                </a>
                         </div>
 
                         <p class="border border-radius-10 padding-y-15 padding-x-11 margin-bottom-14 p-2">
@@ -275,7 +269,8 @@
 
                         <button
                             class="btn btn-dark border-radius-99 w-100 padding-y-13 fs-19 margin-bottom-17">Send</button>
-                        <a href="/" class="text-dark text-decoration-underline"> To the office website</a>
+                        <a href="{{ $property->agency->url() }}" class="text-dark text-decoration-underline"> To the
+                            office website</a>
                     </div>
                 </div>
 
