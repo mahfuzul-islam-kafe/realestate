@@ -30,6 +30,8 @@ class UserFactory extends Factory
             'last_name' => fake()->lastName(),
             'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->phoneNumber(),
+            'company_name' => fake()->company(),
+            'license_number' => fake()->randomNumber(8),
             'is_subscribed' => true,
             'role' => 'user',
             'profile_image' => '/assets/images/avatar.png',

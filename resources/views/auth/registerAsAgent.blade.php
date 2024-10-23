@@ -99,7 +99,7 @@
                     <li><a class="dropdown-item no-hover" href="#">Option 3</a></li>
                 </ul>
             </div>
-            <a href="{{ route('login') }}"
+            <a href="{{ route('login.agent') }}"
                 class="btn btn-outline-dark border-radius-10 border-1 padding-x-21 padding-y-7">Login</a>
         </div>
     </div>
