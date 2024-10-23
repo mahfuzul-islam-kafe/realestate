@@ -21,10 +21,6 @@
                     data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     <i class="fa fa-bars"></i>
                 </button>
-
-
-
-
                 @agent
                     <ul class="navbar-nav ms-5 flex-gap-50 d-none d-lg-flex ms-auto">
                         <li class="nav-item active">
