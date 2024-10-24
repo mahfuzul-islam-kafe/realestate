@@ -30,7 +30,7 @@
                             <a class="nav-link" href="#">My Plan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profile Page</a>
+                            <a class="nav-link" href="{{auth()->user()->agency->url()}}">Profile Page</a>
                         </li>
                     </ul>
                 @else
