@@ -16,7 +16,7 @@
             </div>
             <h2 class="fs-18 margin-bottom-15">Aucune nouvelle notification</h2>
             <p class="fs-15 margin-bottom-20">Nous vous souhaitons beaucoup de succès dans vos projets !</p>
-            <a href="{{ route('home') }}" class="btn btn-primary rounded-pill padding-y-15 padding-x-25">Retourner à la
+            <a href="{{ route('home.sell') }}" class="btn btn-primary rounded-pill padding-y-15 padding-x-25">Retourner à la
                 page
                 d'accueil</a>
         </div>

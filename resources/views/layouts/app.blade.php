@@ -156,10 +156,10 @@
 
                                     <h5 class="footer-list-title">Services</h5>
                                     <ul class="footer-list">
-                                        <li><a href="">Buy</a></li>
-                                        <li><a href="">Rent</a></li>
+                                        <li><a href="{{ route('home.sell') }}">Buy</a></li>
+                                        <li><a href="{{ route('home.rent') }}">Rent</a></li>
                                         <li><a href="">Sell</a></li>
-                                        <li><a href="">My Kemea</a></li>
+                                        <li><a href="{{ route('myKemea') }}">My Kemea</a></li>
                                         <li><a href="">Kemea Pro</a></li>
                                     </ul>
                                 </div>
