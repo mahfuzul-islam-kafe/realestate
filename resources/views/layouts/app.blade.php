@@ -30,7 +30,8 @@
                             <a class="nav-link" href="#">My Plan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profile Page</a>
+                            <a class="nav-link"
+                                href="{{ auth()->user()->agency ? auth()->user()->agency->url() : '' }}">Profile Page</a>
                         </li>
                     </ul>
                 @else
@@ -57,12 +58,12 @@
                             <a class="nav-link" href="">Promote with us</a>
                         </li>
                         @user
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('toStudy')}}">To Study</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('favorites')}}">Favorites</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('toStudy') }}">To Study</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('favorites') }}">Favorites</a>
+                            </li>
                         @enduser
                     </ul>
                 @endagent
