@@ -64,7 +64,13 @@ Auth::routes();
 
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware('auth')->group(function () {
+    Route::group(['controller' => UserController::class], function () {
+        Route::post('/favorites/add', 'favoriteAdd')->name('favorite.add');
 
+    });
+    
+});
 
 Route::group(['prefix' => 'publish-your-property', 'as' => 'publish.property.'], function () {
     Route::view('/', 'pages.agents.publish-your-property')->name('home');

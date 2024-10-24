@@ -4,7 +4,7 @@
         <div class="swiper-wrapper">
             @foreach ($property->featuredimages as $image)
                 <div class="swiper-slide">
-                    <img src="{{ $image->getUrl() }}" alt="">
+                    <img src="{{ $image->getUrl() }}" alt="" class="bg-dark">
                 </div>
             @endforeach
 
@@ -12,13 +12,21 @@
         <div class="swiper-pagination"></div>
 
         <div class="icon" x-data="{ like: false }">
-            <i class="far fa-heart" x-show="!like" x-on:click="like = true"></i>
-            <i class="fas fa-heart" x-show="like" x-on:click="like = false"></i>
+            <!-- Form for submitting the favorite action -->
+            <form x-ref="favoriteForm" method="POST" action="{{ route('favorite.add') }}">
+                @csrf
+                <input type="hidden" name="property_id" value="{{ $property->id }}">
+            </form>
+
+            <!-- Heart icons with direct form submission on click -->
+            <i class="far fa-heart" x-show="!like" x-on:click="like = true; $refs.favoriteForm.submit();"></i>
+            <i class="fas fa-heart" x-show="like" x-on:click="like = false; $refs.favoriteForm.submit();"></i>
         </div>
+
+
     </div>
     <div class="margin-top-15 d-flex flex-column flex-gap-6 padding-x-8">
-        <a class="fs-15 fw-medium text-dark"
-            href="{{ $property->url() }}"> {{$property->name()}} </a>
+        <a class="fs-15 fw-medium text-dark" href="{{ $property->url() }}"> {{ $property->name() }} </a>
         <span class="fs-15 fw-normal ">{{ $property->area }}, {{ $property->country }}</span>
         <small class="fs-14 " style="color: #75808A">{{ $property->totalSurfaceArea() }} - {{ $property->totalRooms() }}
             - {{ $property->totalParkings() }} </small>

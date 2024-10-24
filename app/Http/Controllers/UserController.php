@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Favorite;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
@@ -93,5 +94,12 @@ class UserController extends Controller
         $user->save(); 
 
         return redirect()->route('home')->with('success', $message);
+    }
+    public function favoriteAdd(Request $request){
+        $favorite = new Favorite();
+        $favorite->user_id = auth()->user()->id;
+        $favorite->property_id = $request->property_id;
+        $favorite->save();
+        return redirect()->back()->with('success', 'Favorite added successfully.');
     }
 }
