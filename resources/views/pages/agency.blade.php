@@ -2,10 +2,11 @@
     <section class="container-fluid" id="agency-heading">
         <img src="{{ asset('assets/agency.png') }}" class="agency-cover" alt="">
         @agent
-        <label style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: transparent; color: white; border:white 1px solid;border-radius:10px; padding:10px">
-            <input type="file" style="display: none;">
-            Modify The picture
-        </label>
+            <label
+                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: transparent; color: white; border:white 1px solid;border-radius:10px; padding:10px">
+                <input type="file" style="display: none;">
+                Modify The picture
+            </label>
         @endagent
         <div class="agency-card">
             <div class="row  h-100 g-3 p-4">
@@ -15,10 +16,10 @@
                         <img src="{{ asset($agency->logo) }}" class="agency-logo" alt="{{ $agency->agency_name }}"
                             title="{{ $agency->agency_name }}">
                         @agent
-                        <label for="file-input"
-                            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; color: #1D234E; border:#1D234E 1px solid;border-radius:25px; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Modify</label>
-                        <input type="file" id="file-input"
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
+                            <label for="file-input"
+                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; color: #1D234E; border:#1D234E 1px solid;border-radius:25px; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Modify</label>
+                            <input type="file" id="file-input"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
                         @endagent
                     </div>
 
@@ -59,16 +60,18 @@
                                 <a href="{{ $agency->website }}"><img
                                         src="{{ asset('assets/images/attributes/website-out.svg') }}" alt="">
                                     <span>See their website</span> </a>
-                                    @agent
+                                @if (auth()->user()->agency->id == $agency->id)
                                     <a href="">Modify</a>
-                                    @endagent
+                                @endif
+
+
                             </div>
                             <div class="d-flex justify-content-between">
                                 <a href="tel:{{ $agency->contact_number }}">
                                     <img src="{{ asset('assets/images/attributes/phone.svg') }}" alt="">
                                     <span>Show phone number</span>
                                     @agent
-                                    <a href="">Modify</a>
+                                        <a href="">Modify</a>
                                     @endagent
                                 </a>
                             </div>
