@@ -58,7 +58,10 @@
                         </li>
                         @user
                         <li class="nav-item">
-                            <a class="nav-link" href="">Promote with us</a>
+                            <a class="nav-link" href="{{route('toStudy')}}">To Study</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('favorites')}}">Favorites</a>
                         </li>
                         @enduser
                     </ul>

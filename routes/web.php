@@ -35,6 +35,9 @@ Route::group(['controller' => PageController::class], function () {
     Route::get('/after-listing', 'afterListing');
     Route::get('/rent-out', 'rentOut');
     Route::get('/sale-out', 'saleOut');
+    Route::get('/to-study', 'toStudy')->name('toStudy');
+    Route::get('/favorites', 'favorites')->name('favorites');
+
 });
 Route::group(['controller' => AgentController::class], function () {
     Route::post('/create/property', 'createProperty')->name('create.property');
