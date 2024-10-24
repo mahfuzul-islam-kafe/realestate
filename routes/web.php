@@ -66,6 +66,12 @@ Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
     Route::post('/password/update', [UserController::class, 'updatePassword'])->name('password.update');
     Route::post('/account/deactivate', [UserController::class, 'deactivateAccount'])->name('account.deactivate');
 });
+Route::middleware('auth')->group(function () {
+    Route::controller(UserController::class)->group(function () {
+        Route::post('/favorites/add', 'favoriteAdd')->name('favorite.add');
+    });
+});
+
 
 // Auth Routes
 Auth::routes();
